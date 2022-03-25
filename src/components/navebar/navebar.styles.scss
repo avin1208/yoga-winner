@@ -5,7 +5,12 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     justify-content: left;
-   
+    
+    
+    .logo-container{
+        height: 4rem;
+    }
+
    
     .options{
         color: #130707;
@@ -16,10 +21,9 @@
         margin-left: 5rem;
         cursor: pointer;
       
-
         .option{
             padding:1rem 1rem;
-            
         }
     }
+
 }
