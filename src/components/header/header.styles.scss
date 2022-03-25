@@ -1,0 +1,39 @@
+.main-head{
+    width: 100vw;
+    display: flex;
+    height: 6rem;
+
+   .search{
+       flex: 1 1 auto;
+       height: auto;
+       margin: auto;
+       padding-left: 1rem;
+       text-align: center;
+      
+       input{
+        border-radius: 25px;
+        padding: 0.5rem;
+        margin: 0 auto;
+        width: auto;
+       }
+   }
+
+   .logo{
+       flex: 1 1 auto;
+       align-items: center;
+       height: auto;
+
+       img {
+        background-size: cover;
+    }
+       
+   }
+
+   .icons{
+       flex: 1 1 auto;
+       height: auto;
+       text-align: center;
+   }
+}
+
+  

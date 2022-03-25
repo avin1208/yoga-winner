@@ -1,0 +1,26 @@
+.social-media{
+    font-size: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: flex-end;
+    text-align: center;
+    padding-right: 5rem;
+    justify-content: space-around;
+
+    a{
+        margin: 0 0.5rem;
+    }
+
+    .youtube{
+        color: red;
+        // background-color: white;
+    }
+
+    .instagram{
+        color: rgb(214, 36, 146);
+    }
+
+    .twitter{
+        color: rgb(119, 177, 231);
+    }
+}
