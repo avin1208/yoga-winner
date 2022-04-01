@@ -8,19 +8,36 @@ import { ReactComponent as Logo } from '../../assets/shopping-bag.svg';
 
 const Navebar = () => {
     return (
-        <div className="Navebar">
+        <div className="Nave-main">
+            <div className="Navebar">
+                <div className="options">
+                    <Link className="option" to='/home'>
+                        Home
+                    </Link>
+                    <Link className="option" to='/men'>
+                        Men
+                    </Link>
+                    <Link className="option" to='/ladies'>
+                        Ladies
+                    </Link>
+                    <Link className="option" to='/kids'>
+                        Kids
+                    </Link>
+                    <Link className="option" to='accessories'>
+                        Accessories
+                    </Link>
+                    <Link className="option" to='/blog'>
+                        Blog
+                    </Link>
+                    <Link className="option" to='/aboutus'>
+                        About us
+                    </Link>
+                </div>
+            </div>
+
             <Link className="logo-container" to='/'>
                 <Logo className="logo" />
             </Link>
-            <div className="options">
-                <div className="option">Home</div>
-                <div className="option">Men</div>
-                <div className="option">Ladies</div>
-                <div className="option">Kids</div>
-                <div className="option">Accessories</div>
-                <div className="option">Blog</div>
-                <div className="option">About us</div>
-            </div>
         </div>
     );
 };

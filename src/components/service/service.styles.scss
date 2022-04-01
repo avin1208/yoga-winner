@@ -1,0 +1,53 @@
+.container{
+   height: 10rem;
+   padding: 20px 10px;
+   margin-right: auto;
+   margin-left: auto;
+   display: flex;
+   width: 100%;
+   background: linear-gradient(to bottom, #626566 0%, #dfdbdd 100%);
+
+   .box{
+       width: 25%;
+
+       .rocket{
+           //width: 50px;
+           //height: 50px;
+           font-size: 10px;
+           
+
+          
+
+           .logo{   
+            text-align: center;
+            line-height: 80px;
+            color: #444;
+            width: 70px;
+            height: 50px;
+            border: 1px solid #fff;
+            border-radius: 80%;
+            background-color: rgb(233, 233, 218);
+            margin-left: 4rem;
+
+            &:hover{
+                background-color: rgb(116, 108, 108);
+            }
+
+            
+           }
+       }
+
+       .content{
+        font-size: 13px;
+        margin-left: 1rem;
+        margin-top: 1rem;
+
+           .text{
+               font-size: 15px;
+               margin-left: 1rem;
+           } 
+       }
+   }
+}
+
+   

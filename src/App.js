@@ -1,16 +1,14 @@
 import React from 'react';
 
-import Header from './components/header/header.component';
-
-import Navebar from './components/navebar/navebar.component';
-
 import './App.css';
+
+import Homepage from './pages/homepage/homepage.component';
+
 
 const App = () => {
   return ( 
      <>
-    <Header />
-    <Navebar />
+    <Homepage />
     </>
   );
 };
