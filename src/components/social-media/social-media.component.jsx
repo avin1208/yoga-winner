@@ -14,19 +14,19 @@ const SocialMedia = () => {
     return (
         <>
             <div className="social-media">
-                    <a href="https://www.youtube.com/" target="_blank">
+                    <a href="https://www.youtube.com/">
                         <FaYoutubeSquare className="youtube" />
                     </a>
 
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/">
                         <FaFacebookSquare className="facebook" />
                     </a>
 
-                    <a href="https://www.instagram.com/" target="_blank">
+                    <a href="https://www.instagram.com/">
                         <FaInstagramSquare className="instagram" />
                     </a>
 
-                    <a href="https://twitter.com/" target="_blank">
+                    <a href="https://twitter.com/">
                         <FaTwitterSquare className="twitter" />
                     </a>
             </div>

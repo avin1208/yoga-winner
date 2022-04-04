@@ -6,7 +6,12 @@ import Header from "../../components/header/header.component";
 
 import Service from "../../components/service/service.component";
 
+import Banner from "../../components/product-display/product-display.component";
+
 import './homepage.styles.scss';
+
+import ProductList from "../../components/product-list/product-list.component";
+
 
 const Homepage = () => {
     return (
@@ -32,6 +37,8 @@ const Homepage = () => {
                 </div>
             </div>
             <Service />
+            <Banner />
+            <ProductList />
         </div>
     );
 };

@@ -1,0 +1,88 @@
+.head{
+    display: flex;
+    height: 40rem;
+    display: flex;
+    margin-top: 1rem;
+
+  .row{
+    width: 50%;
+    margin-left: 5rem;
+
+   .sportswear{
+    margin-top: 1rem;
+    display: flex;
+   
+      
+    img{
+        height: 20rem;
+      }
+
+    .subtitle{
+        flex-direction: column;
+        margin-left: 4rem;
+        margin-top: 4rem;
+
+        .shop{
+            font-size: 12px;
+            padding: 5px 20px;
+            height: 20px;
+            width: 70px;
+            background: #eab129;
+            display: inline-block;
+    
+            &:hover{
+                cursor: pointer;
+                color: white;
+                background-color: black;
+            }
+          
+        }
+    }
+}
+
+    .headphones{
+    display: flex;
+ 
+    
+    img{
+        height: 20rem;
+    }
+
+        .subtitle{
+        display: flex;
+        flex-direction: column;
+        margin-left: 4rem;
+        margin-top: 4rem;
+    }
+
+        .shop{
+            font-size: 12px;
+            padding: 5px 20px;
+            height: 20px;
+            width: 70px;
+            background: #eab129;
+            display: inline-block;
+
+            &:hover{
+               cursor: pointer;
+               color: white;
+               background-color: black;
+            }
+      
+        }
+    } 
+}
+
+  .discount{
+      width: 50%;
+
+      img{
+          height: 95%;
+          width: auto;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          margin-left: 5rem;
+        
+      }
+  }
+}
