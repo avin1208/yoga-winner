@@ -12,6 +12,8 @@ import './homepage.styles.scss';
 
 import ProductList from "../../components/product-list/product-list.component";
 
+import NewProduct from "../../components/newproduct-list/newproduct-list.component";
+
 
 const Homepage = () => {
     return (
@@ -39,6 +41,7 @@ const Homepage = () => {
             <Service />
             <Banner />
             <ProductList />
+            <NewProduct />
         </div>
     );
 };

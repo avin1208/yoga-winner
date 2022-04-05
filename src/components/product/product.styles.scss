@@ -1,19 +1,46 @@
 .listofproduct{
-    width: 20%;
-    height: 240px;
+    width: 16rem;
+    height: 18rem;
     display: inline-block;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid #ebebeb;
     margin: 0 7.5px 15px;
-    margin-top: 1rem;
-
-    img{
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-size: cover;
+    margin-top: 2rem;
+      
+    .background-image{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
     }
 
+    .titleblock{
+        height: 18rem;
+        width: 16rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        text-align: end;
+        
+        .name{
+            margin-top: 14rem;
+        }
+
+    }
+
+    .price{
+        display: flex;
+        background-color: black;
+        height: 1.5rem;
+
+        .p-p{
+            text-align: start;
+            color: white;
+        }
+    }
+ 
 }
 
