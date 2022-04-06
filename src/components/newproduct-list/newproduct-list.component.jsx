@@ -1,6 +1,10 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import './newproduct-list.styles.scss'
+
+import Audio from "../newarrivals/newarrivals.component";
 
 const NewProduct = () => {
     return (
@@ -12,18 +16,19 @@ const NewProduct = () => {
                 <p>
                     Top sell for today
                 </p>
-                <div className="abc">
-                    <p>
-                        best seller
-                    </p>
-                    <p>
-                        collection
-                    </p>
-                    <p>
-                        Trending
-                    </p>
-                </div>
             </div>
+            <div className="abc">
+                <Link className="seller" to='/'>
+                    best seller
+                    </Link>
+                <Link className="collect" to='/'>
+                    collection
+                    </Link>
+                <Link className="trending" to='/'>
+                    Trending
+                    </Link>
+            </div>
+            <Audio />
         </div>
     );
 };

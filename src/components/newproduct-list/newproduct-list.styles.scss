@@ -1,9 +1,29 @@
 .newproductlist{
-
-
+    text-align: center;
 
     .titlecard{
         text-align: center;
+        color: #999;
+    }
+
+    .abc{
+        display: flex;
+        margin-left: 45rem;
+        color: #999;
+
+       
+
+        .seller{
+            margin-right: 2rem;
+        }
+
+        .collect{
+            margin-left: 5rem;
+        }
+
+        .trending{
+            margin-left: 8rem;
+        }
     }
 
 }
