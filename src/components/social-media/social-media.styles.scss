@@ -5,22 +5,28 @@
     flex-direction: flex-end;
     text-align: center;
     padding-right: 5rem;
-    justify-content: space-around;
+    justify-content: space-between;
+    cursor: pointer;
 
-    a{
-        margin: 0 0.5rem;
-    }
 
-    .youtube{
-        color: red;
-        // background-color: white;
-    }
-
-    .instagram{
-        color: rgb(214, 36, 146);
+    .facebook{
+        margin-right: 1rem;
     }
 
     .twitter{
-        color: rgb(119, 177, 231);
+        margin-right: 0.7rem;
+    }
+
+    .youtube{
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    .link-in{
+        margin-right: 1rem;
+    }
+    .google{
+        margin-top: 0.5rem;
+        margin-right: 3rem;
     }
 }

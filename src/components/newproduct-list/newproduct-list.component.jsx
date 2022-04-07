@@ -19,13 +19,13 @@ const NewProduct = () => {
             </div>
             <div className="abc">
                 <Link className="seller" to='/'>
-                    best seller
+                    BEST SELLER
                     </Link>
                 <Link className="collect" to='/'>
-                    collection
+                   COLLECTION
                     </Link>
                 <Link className="trending" to='/'>
-                    Trending
+                   TREDING
                     </Link>
             </div>
             <Audio />

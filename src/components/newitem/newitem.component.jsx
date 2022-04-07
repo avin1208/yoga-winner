@@ -12,7 +12,7 @@ const Newitem = () => {
         <div className="fgh">
             {
                 productdata
-                    .filter((item, idx) => idx === 0 || idx === 2)
+                    .filter((item, idx) => idx === 0 || idx === 2 || idx === 15)
                     .map(item => (<Product key={item.id} item={item} />
                     ))
             }

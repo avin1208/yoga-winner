@@ -1,41 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 
 import './social-media.styles.scss'
 
-import {
-    FaFacebookSquare,
-    FaInstagramSquare,
-    FaYoutubeSquare,
-    FaTwitterSquare
-} from "react-icons/fa";
+import { TiSocialYoutubeCircular } from 'react-icons/ti';
+
+import { FaFacebookF } from 'react-icons/fa';
+
+import { AiOutlineTwitter } from 'react-icons/ai';
+
+import { FaLinkedinIn } from 'react-icons/fa';
+
+import { AiOutlineGooglePlus } from 'react-icons/ai';
 
 const SocialMedia = () => {
-    const [showMediaIcons, setShowMediaIcons] = useState(false);
     return (
-        <>
-            <div className="social-media">
-                    <a href="https://www.youtube.com/">
-                        <FaYoutubeSquare className="youtube" />
-                    </a>
-
-                    <a href="https://www.facebook.com/">
-                        <FaFacebookSquare className="facebook" />
-                    </a>
-
-                    <a href="https://www.instagram.com/">
-                        <FaInstagramSquare className="instagram" />
-                    </a>
-
-                    <a href="https://twitter.com/">
-                        <FaTwitterSquare className="twitter" />
-                    </a>
+        <div className="social-media">
+            <div className="facebook">
+                <FaFacebookF size="0.5em" color="grey" />
             </div>
-            <div className="hamburger-menu">
-                <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-                </a>
+            <div className="twitter">
+                <AiOutlineTwitter size="0.5em" color="grey" />
             </div>
-        </>
-    );
+            <div className="youtube">
+                <TiSocialYoutubeCircular size="0.8em" color="grey" />
+            </div>
+            <div className="link-in">
+                <FaLinkedinIn size="0.5em" color="grey" />
+            </div>
+            <div className="google">
+                <AiOutlineGooglePlus size="0.8em" color="grey" />
+            </div>
+        </div>
+    )
 };
 
 export default SocialMedia;

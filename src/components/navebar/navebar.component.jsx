@@ -3,12 +3,13 @@ import React from "react";
 import './navebar.styles.scss';
 
 import { Link } from 'react-router-dom';
-
-import { ReactComponent as Logo } from '../../assets/shopping-bag.svg';
+import CartIcon from "../cart-icon/cart-icon.component";
 
 const Navebar = () => {
     return (
         <div className="Nave-main">
+            <div className="color">
+            </div>
             <div className="Navebar">
                 <div className="options">
                     <Link className="option" to='/home'>
@@ -32,12 +33,12 @@ const Navebar = () => {
                     <Link className="option" to='/aboutus'>
                         About us
                     </Link>
+                    <CartIcon />
                 </div>
+                
             </div>
-
-            <Link className="logo-container" to='/'>
-                <Logo className="logo" />
-            </Link>
+            <div className="color-q">
+            </div>
         </div>
     );
 };

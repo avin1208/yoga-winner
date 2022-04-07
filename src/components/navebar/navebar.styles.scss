@@ -1,33 +1,36 @@
 .Nave-main{
     justify-content: space-between;
     display: flex;
-    background: #eab129;
     height: 5rem;
+    background: #46340c;
 
-    .Navebar{
-        display: flex;
-        justify-content: space-between;
-        justify-content: left;
-    
-        .options{
-            color: #130707;
+        .Navebar{
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding-right: orem;
-            margin-left: 5rem;
-            cursor: pointer;
-          
-            .option{
-                padding:1rem 1rem;
+            justify-content: space-between;
+            background: #eab129;
+            width: 60rem;
+    
+                .options{
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-right: orem;
+                    margin-left: 12rem;
+                    cursor: pointer;
+                    
+                
+                    .option{
+                        padding:1rem 1rem;
+                        text-decoration: none;
+                        color: white;
+
+                        &:hover{
+                            cursor: pointer;
+                            color: black;
+                            text-decoration: underline black;
+                        }
+                    }
+                }
             }
         }
-    }
-
-    .logo-container{
-        height: 30%;
-        width: 30px;
-        padding: 20px;
-
-    }
-}

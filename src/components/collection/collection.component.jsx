@@ -12,7 +12,7 @@ const Collection = () => {
         <div className="xcv">
             {
                 productdata
-                    .filter((item, idx) => idx === 13 || idx === 14)
+                    .filter((item, idx) => idx === 13 || idx === 14 || idx === 0)
                     .map(item => (<Product key={item.id} item={item} />
                     ))
             }

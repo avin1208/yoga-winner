@@ -24,10 +24,12 @@
         justify-content: center;
         position: absolute;
         text-align: end;
-        overflow: hidden;
+        
         
         .name{
             margin-top: 14rem;
+            text-decoration: none;
+            color: black;
         }
 
         &:hover {
@@ -35,18 +37,28 @@
             transform: scale(1.1);
             transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
             opacity: 0.9;
+            overflow: hidden;
           }
 
     }
 
     .price{
-        display: flex;
+        display: block;
         background-color: black;
         height: 1.5rem;
+        
 
         .p-p{
             text-align: start;
             color: white;
+            display: flex;
+            
+
+            .regular-price{
+                text-decoration: line-through;
+                margin-top: 0.2rem;
+                font-size: 12px;
+            }
         }
     }
  

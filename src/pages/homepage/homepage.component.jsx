@@ -14,6 +14,10 @@ import ProductList from "../../components/product-list/product-list.component";
 
 import NewProduct from "../../components/newproduct-list/newproduct-list.component";
 
+import Sell from "../../components/sell/sell.component";
+
+import BlogDisplay from "../../components/blog-display/blog-display.component";
+
 
 const Homepage = () => {
     return (
@@ -42,6 +46,8 @@ const Homepage = () => {
             <Banner />
             <ProductList />
             <NewProduct />
+            <Sell />
+            <BlogDisplay />
         </div>
     );
 };

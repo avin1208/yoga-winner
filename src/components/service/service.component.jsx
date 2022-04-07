@@ -2,13 +2,13 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { ReactComponent as Logo } from '../../assets/rocket.svg';
+import { FaRocket } from 'react-icons/fa';
+ 
+import { FaTruck } from 'react-icons/fa';
 
-import { ReactComponent as Logo1 } from '../../assets/truck.svg';
+import { FaGift } from 'react-icons/fa';
 
-import { ReactComponent as Logo2 } from '../../assets/gift.svg';
-
-import { ReactComponent as Logo3 } from '../../assets/headphone.svg';
+import { FaHeadphonesAlt } from 'react-icons/fa';
 
 import './service.styles.scss';
 
@@ -17,7 +17,7 @@ const Service = () => {
         <div className="container">
             <div className="box">
                 <Link className="rocket" to='/'>
-                    <Logo className="logo" />
+                    <FaRocket size="4em" />
                 </Link>
                 <div className="content">
                     <Link className="text" to='return and exchange'>
@@ -30,8 +30,8 @@ const Service = () => {
             </div>
 
             <div className="box">
-                <Link className="rocket" to='/'>
-                    <Logo1 className="logo" />
+                <Link className="truck" to='/'>
+                  <FaTruck size="3em" />
                 </Link>
                 <div className="content">
                     <Link className="text" to='free shipping'>
@@ -45,8 +45,8 @@ const Service = () => {
 
 
             <div className="box">
-                <Link className="rocket" to='/'>
-                    <Logo2 className="logo" />
+                <Link className="gift" to='/'>
+                  <FaGift size="3em"/>
                 </Link>
                 <div className="content">
                     <Link className="text" to='member discount'>
@@ -60,8 +60,8 @@ const Service = () => {
 
 
             <div className="box">
-                <Link className="rocket" to='/'>
-                    <Logo3 className="logo" />
+                <Link className="music" to='/'>
+                <FaHeadphonesAlt size="3em"/>
                 </Link>
                 <div className="content">
                     <Link className="text" to='24/7 online support'>
@@ -72,8 +72,6 @@ const Service = () => {
                     </p>
                 </div>
             </div>
-
-
         </div>
     )
 }
