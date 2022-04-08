@@ -1,0 +1,181 @@
+.model-container{
+    border: none;
+    background: none;
+    
+
+    
+
+    .model-back{
+        background-image: url(https://demo.fieldthemes.com/ps_winner/home2/modules/fieldpopupnewsletter/img/background_image1.jpg);
+        width: 770px;
+        height: 450px; 
+
+        .button-u{ 
+            position: absolute;
+            font-size: 25px;
+            margin-left: 46rem;
+            border-radius: 100%;
+            border: none;
+            color:#eab129;
+            cursor: pointer;
+    
+           &:hover{
+               background-color: black; 
+         
+           }
+        }
+      
+        
+        .model-cont{
+            left: 0;
+            bottom: auto;
+            right: 0;
+            top: auto;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            text-align: center;
+
+
+            .model-post{
+                padding: 0 50px 0 353px;
+                padding-bottom: 0;
+                position: absolute;
+                top: 25%;
+
+                .model-title{
+                    color: black;
+                    font-size: 16px;
+                }
+
+                .model-subtitle{
+                    color: #999;
+                }
+
+                .model-response{
+                    margin-top: 1rem;
+                    margin-right: 3rem;
+                    position: absolute;
+                    width: 300px;
+
+                    .input{
+                        width: 100%;
+                        color: #999;
+                        padding: 0px 20px;
+                        border: 3px solid #fff;
+                        outline: none;
+                        line-height: 40px;
+                    }    
+                    
+                    .btn-close{
+                         background: #eab129;
+                         float: none;
+                         display: table;
+                         color: #fff;
+                         position: absolute;
+                         line-height: 41px;
+                         top: 0;
+                         right: 0;
+                         left: 75%;
+                         margin: 0;
+                         padding: 2px 20px;
+                         font-size: 15px; 
+                         cursor: pointer; 
+
+                         &:hover{
+                             background-color: black;
+                         }
+                    }
+                }
+
+                .popup-s{
+                margin-top: 100px;
+                font-size: 18px;
+                color: #444;
+                margin-bottom: 47px;
+                align-items: left;
+                width: 15rem;
+                text-align: left;
+                margin-left: 10px;
+                
+                    .popup-icon{
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 0.5rem;
+                        cursor: pointer;
+
+                        .facebook{
+                            line-height: 40px;
+                            font-size: 20px;
+                            width: 50px;
+                            text-align: center;
+                            height: 30px;
+                            border-radius: 50%;
+                            margin: 0 9px;
+                            border: 1px solid #ccc;
+                        }
+                        .twitter{
+                            line-height: 40px;
+                            font-size: 25px;
+                            width: 50px;
+                            text-align: center;
+                            height: 30px;
+                            border-radius: 50%;
+                            margin: 0 9px;
+                            border: 1px solid #ccc;
+                        }
+                        .youtube{
+                            line-height: 40px;
+                            font-size: 20px;
+                            width: 40px;
+                            text-align: center;
+                            height: 30px;
+                            border-radius: 50%;
+                            margin: 0 9px;
+                            border: 1px solid #ccc;
+                        }
+                        .link-in{
+                            font-size: 20px;
+                            line-height: 40px;
+                            width: 50px;
+                            text-align: center;
+                            height: 30px;
+                            border-radius: 50%;
+                            margin: 0 9px;
+                            border: 1px solid #ccc;
+                        }
+                        .google{
+                            font-size: 25px;
+                            line-height: 40px;
+                            width: 50px;
+                            text-align: center;
+                            height: 30px;
+                            border-radius: 50%;
+                            margin: 0 9px;
+                            border: 1px solid #ccc;
+                        }
+                    }
+                }
+            }
+        }
+
+        .model-bottem{
+            display: flex;
+            bottom: 20px;
+            left: 68%;
+            right: auto;
+            position: relative;
+
+            .checkboxs{
+                width: 20px;
+                height: 15px;
+                border: 1px solid #ccc;
+            }
+
+            .label-bottem{
+                font-size: 15px;
+                color: #ccc;
+            }
+        }
+    }
+}

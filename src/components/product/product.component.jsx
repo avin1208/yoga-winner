@@ -20,13 +20,14 @@ const Product = ({ item }) => {
             <div className="price">
                 <div className="p-p">
                     {price}
-                    
                     <div className="regular-price">
                         {regularPrice}
                     </div>
-                    <CartIcon />
-                    
-                </div>
+                    </div>
+                    <div className="icon-cart">
+                      <CartIcon />
+                    </div>
+               
             </div>
         </div>
     );

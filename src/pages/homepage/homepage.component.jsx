@@ -18,8 +18,14 @@ import Sell from "../../components/sell/sell.component";
 
 import BlogDisplay from "../../components/blog-display/blog-display.component";
 
+import Brand from "../../components/brand/brand.component";
+
+import Footer from "../../components/footer/footer.component";
+
+
 
 const Homepage = () => {
+
     return (
         <div className="homepage">
             <Header />
@@ -48,6 +54,8 @@ const Homepage = () => {
             <NewProduct />
             <Sell />
             <BlogDisplay />
+            <Brand />
+            <Footer />
         </div>
     );
 };

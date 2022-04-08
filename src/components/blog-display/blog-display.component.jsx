@@ -4,6 +4,8 @@ import Blog from "../blog/blog.component";
 
 import BLOG_DATA from "../../blog.data";
 
+import './blog-display.styles.scss'
+
 
 const BlogDisplay = () => {
     const [blogdata] = useState(BLOG_DATA);
