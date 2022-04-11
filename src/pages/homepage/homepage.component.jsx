@@ -23,7 +23,6 @@ import Brand from "../../components/brand/brand.component";
 import Footer from "../../components/footer/footer.component";
 
 
-
 const Homepage = () => {
 
     return (

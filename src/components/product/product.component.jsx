@@ -15,7 +15,6 @@ const Product = ({ item }) => {
                 <div className="titleblock" style={{ backgroundImage: `url(${imageUrl})` }}>
                     <Link className="name" to='/'>{title}</Link>
                 </div>
-
             </div>
             <div className="price">
                 <div className="p-p">
@@ -27,7 +26,6 @@ const Product = ({ item }) => {
                     <div className="icon-cart">
                       <CartIcon />
                     </div>
-               
             </div>
         </div>
     );

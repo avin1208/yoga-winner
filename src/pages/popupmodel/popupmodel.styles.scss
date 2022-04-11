@@ -3,27 +3,33 @@
     background: none;
     
 
-    
-
     .model-back{
         background-image: url(https://demo.fieldthemes.com/ps_winner/home2/modules/fieldpopupnewsletter/img/background_image1.jpg);
         width: 770px;
-        height: 450px; 
+        height: 450px;
 
-        .button-u{ 
-            position: absolute;
-            font-size: 25px;
-            margin-left: 46rem;
-            border-radius: 100%;
-            border: none;
-            color:#eab129;
-            cursor: pointer;
-    
-           &:hover{
-               background-color: black; 
-         
-           }
+
+        .title-butoon{
+        display: flex;
+        justify-content: flex-end;
         }
+        
+        .title-butoon button {
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            color: #eab129;
+            font-weight: 200px;
+            cursor: pointer;
+
+            &:hover{
+               background-color: black;
+            }
+          }
+        
+        
+
+       
       
         
         .model-cont{
@@ -164,7 +170,7 @@
             bottom: 20px;
             left: 68%;
             right: auto;
-            position: relative;
+            position: absolute;
 
             .checkboxs{
                 width: 20px;

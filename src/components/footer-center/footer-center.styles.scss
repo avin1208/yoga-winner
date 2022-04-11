@@ -1,0 +1,187 @@
+.footer-center{
+    width: 42%;
+   
+
+    .center-main{
+        height: 27.5rem;
+        width: 30rem;
+        position: relative;
+        z-index: 2;   
+        background: url(https://demo.fieldthemes.com/ps_winner/home2/themes/yoga_home2/assets/field-css/bg_footer_center.jpg);
+
+        .center-title{
+            float: left;
+            margin-top: 100px;
+            text-align: center;
+            width: 100%;
+            color: #666;
+
+            .title-font{
+                font-size: 26px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #fff;
+                margin-top: -5px;
+                margin-bottom: 23px;
+            }
+
+                .model-response{
+                    margin-top: 1rem;
+                    margin-left: 2.5rem;
+                    width: 250px;
+                    position: absolute;
+                    float: left;
+                    top: 40%;
+                    left: 8%;
+                    
+                    
+                    .input{
+                        width: 100%;
+                        color: #999;
+                        padding: 0px 30px;
+                        border: none;
+                        outline: none;
+                        line-height: 40px;
+                        background-color: #414141;
+                        
+                    }    
+                    
+                    .btn-close{
+                        background: #eab129;
+                        float: none;
+                        display: table;
+                        color: #fff;
+                        position: absolute;
+                        border: none;
+                        line-height: 35px;
+                        top: 0;
+                        right: 0;
+                        left: 82%;
+                        margin: 0;
+                        padding: 2px 15px;
+                        font-size: 15px; 
+                        cursor: pointer; 
+            
+            
+                         &:hover{
+                             background-color: black;
+                         }
+                    }
+            }
+        }
+
+        .social-footer{
+            float: left;
+            width: 100%;
+            text-align: center;
+            //margin-left: 2rem;
+
+            .social-name{
+                font-size: 18px;
+                color: #fff;
+                text-align: center;
+                font-weight: 700;
+                line-height: 18px;
+                padding: 50px 20px 30px;
+                text-transform: uppercase;
+                margin-bottom: -1rem;
+            }
+
+            .social-media{
+                display: flex;
+                justify-content: space-around;
+                 margin-top: 0.5rem;
+                cursor: pointer;
+                margin-left: 5rem;
+
+               
+
+                .facebook{
+                    line-height: 40px;
+                    font-size: 20px;
+                    width: 40px;
+                    text-align: center;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin: 0 9px;
+                    border: 1px solid #ccc;
+
+                    &:hover{
+                        background-color: #eab129;
+                    }
+                }
+                .twitter{
+                    line-height: 40px;
+                    font-size: 25px;
+                    width: 40px;
+                    text-align: center;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin: 0 9px;
+                    border: 1px solid #ccc;
+
+                    &:hover{
+                        background-color: #eab129;
+                    }
+                }
+                   
+                .youtube{
+                    line-height: 40px;
+                    font-size: 20px;
+                    width: 40px;
+                    text-align: center;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin: 0 9px;
+                    border: 1px solid #ccc;
+
+                    &:hover{
+                        background-color: #eab129;
+                    }
+                }
+                .link-in{
+                    font-size: 20px;
+                    line-height: 40px;
+                    width: 40px;
+                    text-align: center;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin: 0 9px;
+                    border: 1px solid #ccc;
+
+                    &:hover{
+                        background-color: #eab129;
+                    }
+                }
+                .google{
+                    font-size: 25px;
+                    line-height: 40px;
+                    width: 40px;
+                    text-align: center;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin: 0 9px;
+                    border: 1px solid #ccc;
+
+                    &:hover{
+                        background-color: #eab129;
+                    }
+                }
+                .instagram{
+                        font-size: 25px;
+                        line-height: 40px;
+                        width: 40px;
+                        text-align: center;
+                        height: 30px;
+                        border-radius: 50%;
+                        margin: 0 9px;
+                    border: 1px solid #ccc;
+
+                    &:hover{
+                        background-color: #eab129;
+                    }
+                }
+            }
+        }
+    }
+}
