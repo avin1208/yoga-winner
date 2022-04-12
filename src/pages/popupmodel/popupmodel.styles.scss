@@ -1,6 +1,16 @@
 .model-container{
     border: none;
-    background: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    bottom: 0;
+    left: 30%;
+    z-index: 1;
+    opacity: 1;
+    display: block;
+    padding-right: 15px;
     
 
     .model-back{

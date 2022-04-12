@@ -1,0 +1,188 @@
+.lad-drop{
+     z-index: 2;
+    position: absolute;
+
+    .lad-down{
+        background-color: white;
+        height: 15rem;
+        width: 30rem;
+        margin-left: 50rem;
+        padding: 25px;
+        border: 1px solid black;
+        
+        .lad-main{
+
+        
+
+
+        .lad-tl{
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            
+            .dress{
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+            }
+            .accessories{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+            }
+            .Hats{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+            }
+            .cloth{
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+                margin-top: 1.5rem;
+            }
+            .shoes{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+            }
+            .bags{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+            }
+            .Lingerie{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+            }
+        }
+
+        .lad-center{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: -6.5rem;
+
+            .handbagss{
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+                margin-top: -3.9rem;
+                margin-right: 2rem;
+            }
+            .toters{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+                margin-right: 2rem;
+            }
+            .clutches{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+                margin-right: 2rem;
+            }
+            .fashion{
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+                margin-top: 1.5rem;
+                margin-right: 2rem;
+            }
+            .accessoriess{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+                margin-right: 2rem;
+            }
+            .watch-fashion{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+                margin-right: 2rem;
+            }
+            .bagss{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+                margin-right: 2rem;
+            }
+        }
+
+        .lad-right{
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            margin-top: -10.5rem;
+
+            .shoess{
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+             
+            }
+            .clothingss{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+                
+            }
+            .coats{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+              
+            }
+            .footware{
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+                margin-top: 1.5rem;
+              
+            }
+            .rings{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+              
+            }
+            .bands{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+                
+            }
+            .diamond{
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                margin-top: 0.4rem;
+                
+            }
+        }
+
+        .lad-image{
+            img{
+                height: auto;
+                width: 30rem;
+                margin-top: 0.5rem;
+            };
+        }
+    }
+    }
+}

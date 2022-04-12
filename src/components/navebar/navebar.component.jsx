@@ -3,9 +3,17 @@ import React from "react";
 import './navebar.styles.scss';
 
 import { Link } from 'react-router-dom';
+
+import { connect } from "react-redux";
+
+import { toggleMenHidden } from '../../Redux/mendrop/mendrop.actions';
+
+import { toggleLadHidden } from'../../Redux/laddrop/laddrop.actions';
+
 import CartIcon from "../cart-icon/cart-icon.component";
 
-const Navebar = () => {
+const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch}) => {
+
     return (
         <div className="Nave-main">
             <div className="color">
@@ -15,10 +23,10 @@ const Navebar = () => {
                     <Link className="option" to='/home'>
                         Home
                     </Link>
-                    <Link className="option" to='/men'>
+                    <div className="option" onClick={toggleMenHidden}>
                         Men
-                    </Link>
-                    <Link className="option" to='/ladies'>
+                    </div>
+                    <Link className="option" to='/ladies' onClick={toggleLadHidden} >
                         Ladies
                     </Link>
                     <Link className="option" to='/kids'>
@@ -43,4 +51,13 @@ const Navebar = () => {
     );
 };
 
-export default Navebar;
+const mapDispatchToProps = dispatch => ({
+    toggleMenHidden: () => dispatch(toggleMenHidden()),
+    toggleLadHidden: () => dispatch(toggleLadHidden())
+});
+
+const mapStateToProps = ({ men: { hidden } }) => ({
+    hidden
+})
+
+export default connect(mapStateToProps ,mapDispatchToProps)(Navebar);

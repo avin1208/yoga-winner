@@ -13,16 +13,16 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { AiOutlineGooglePlus } from 'react-icons/ai';
 
 
-const Modal = ({setOpenModal}) => {
+const Modal = ({ setOpenModal }) => {
     return (
         <div className="model-container">
             <div className="model-back">
-            <div className="title-butoon">
-                <button
-                    onClick={() => {
-                        setOpenModal(false);
-                    }}
-                >X</button>
+                <div className="title-butoon">
+                    <button
+                        onClick={() => {
+                            setOpenModal(false);
+                        }}
+                    >X</button>
                 </div>
                 <div className="model-cont">
                     <div className="model-post">
@@ -59,12 +59,11 @@ const Modal = ({setOpenModal}) => {
                         </div>
                     </div>
                     <div className="model-bottem">
-                    <input className='checkboxs' type="checkbox" />
-                    <div className="label-bottem">
-                        Don't Show this Popup agian
+                        <input className='checkboxs' type="checkbox" />
+                        <div className="label-bottem">
+                            Don't Show this Popup agian
+                        </div>
                     </div>
-                </div>
-                
                 </div>
             </div>
         </div>

@@ -1,0 +1,114 @@
+.men-drop{
+   z-index: 2;
+   position: absolute;
+
+.men-down{
+    background-color: white;
+    height: 15rem;
+    width: 35rem;
+    margin-left: 45rem;
+    padding: 25px;
+    border: 1px solid black;
+   
+
+    .men-image{
+        display: flex;
+        max-width: 100%;
+        height: auto;
+        margin-top: 0.4rem;
+        justify-content: space-between;
+    
+         .men-title{
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+                margin-left: 1rem;
+
+                .top{
+                    color: black;
+                    font-size: 16px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .cocktail{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .day{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .evening{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .sundresses{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .Lingerie{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .handbag{
+                    color: black;
+                    font-size: 16px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .toter{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .cluthces{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .satchels{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .crossbody{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+                .clothing{
+                    color: black;
+                    font-size: 12px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-bottom: 0.4rem;
+                }
+            }
+        }
+   }
+}

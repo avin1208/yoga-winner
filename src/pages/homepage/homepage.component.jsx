@@ -8,6 +8,8 @@ import Service from "../../components/service/service.component";
 
 import Banner from "../../components/product-display/product-display.component";
 
+import { connect } from "react-redux";
+
 import './homepage.styles.scss';
 
 import ProductList from "../../components/product-list/product-list.component";
@@ -22,15 +24,27 @@ import Brand from "../../components/brand/brand.component";
 
 import Footer from "../../components/footer/footer.component";
 
+import MenDrop from "../../components/men-dropdown/men-dropdown.component";
 
-const Homepage = () => {
+import Ladrop from "../../components/l-dropdown/l-dropdown.component";
+
+
+const Homepage = ({ hidden, hidden2 }) => {
 
     return (
         <div className="homepage">
             <Header />
             <Navebar />
+
+            {
+                hidden ? null : <MenDrop />
+            }
+            {
+                hidden2 ? null : <Ladrop />
+            }
+            
             <div className="background-image">
-                <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldslideshow/images/slider-111.jpg" alt="Sports Wear"></img>
+            <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldslideshow/images/slider-111.jpg" alt="Sports Wear"></img>
                 <div className="box-slider">
                     <div className="title">
                     SPORTSWEAR.</div>
@@ -59,4 +73,9 @@ const Homepage = () => {
     );
 };
 
-export default Homepage;
+const mapStateToProps = ({ men: { hidden }, lad: { hidden2 } }) => ({
+    hidden, hidden2
+})
+
+
+export default connect(mapStateToProps)(Homepage);
