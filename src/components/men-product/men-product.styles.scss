@@ -1,0 +1,77 @@
+.men-product{
+    
+
+    .men-pro{
+        border: 1px solid #ebebeb;
+        height: 3rem;
+        width: 91.5rem;
+        margin-left: 20.7rem;
+        margin-top: -12.5rem;
+        display: flex;
+
+        .men-th{
+            background-color: #fff;
+            display: flex;
+
+            .men-fath{
+                padding-top: 0.8rem;
+                font-size: 25px;
+                padding-left: 1rem;
+                color: #eab129;
+
+            
+                    &:hover{
+                        color: #eab129;
+                        cursor: pointer;
+                     }
+                }
+                .men-aifi{
+                    padding-top: 0.5rem;
+                    font-size: 33px;
+                    padding-left: 1rem;
+                        &:hover{
+                            color: #eab129;
+                            cursor: pointer;
+                         }
+                }
+                }
+           .men-j{
+            padding-top: 1rem;
+
+           
+            .men-cen{
+                font-size: 15px;
+                color: #666;
+                margin-left: 35rem;
+                
+            }   
+        }
+        .box-sort{
+            display: flex;
+            padding-top: 1rem;
+            margin-left: 25rem;
+
+            .sort{
+                font-size: 15px;
+                color: #666;
+            }
+            .prefer{
+                margin-left: 1rem;
+
+                .Relvel{
+                    text-decoration: none;
+                    color: #666;
+                    font-size: 15px;
+
+                    .caret{
+                        margin-left: 10rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .fggg{
+        margin-left: 20.2rem;
+    }
+}

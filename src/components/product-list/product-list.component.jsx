@@ -6,7 +6,6 @@ import PRODUCT_DATA from "../../product.data";
 
 import './product-list.styles.scss';
 
-import Page from "../main-pagination/main-pagination.component";
 
 const ProductList = () => {
     const [productdata] = useState(PRODUCT_DATA);
@@ -24,7 +23,7 @@ const ProductList = () => {
             {
                 productdata.map((item) => (<Product key={item.id} item={item} />))
             }
-            <Page />
+           
         </div>
         
     )

@@ -1,9 +1,5 @@
 import React from "react";
 
-import Navebar from "../../components/navebar/navebar.component";
-
-import Header from "../../components/header/header.component";
-
 import Service from "../../components/service/service.component";
 
 import Banner from "../../components/product-display/product-display.component";
@@ -20,29 +16,26 @@ import Sell from "../../components/sell/sell.component";
 
 import BlogDisplay from "../../components/blog-display/blog-display.component";
 
-import Brand from "../../components/brand/brand.component";
-
-import Footer from "../../components/footer/footer.component";
-
 import MenDrop from "../../components/men-dropdown/men-dropdown.component";
 
 import Ladrop from "../../components/l-dropdown/l-dropdown.component";
 
+import Kiddrop from "../../components/kids-drop/kids-drop.component";
 
-const Homepage = ({ hidden, hidden2 }) => {
+
+const Homepage = ({ hidden, hidden2, hidden3 }) => {
 
     return (
         <div className="homepage">
-            <Header />
-            <Navebar />
-
             {
                 hidden ? null : <MenDrop />
             }
             {
                 hidden2 ? null : <Ladrop />
             }
-            
+            {
+                hidden3 ? null : <Kiddrop />
+            }
             <div className="background-image">
             <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldslideshow/images/slider-111.jpg" alt="Sports Wear"></img>
                 <div className="box-slider">
@@ -67,14 +60,12 @@ const Homepage = ({ hidden, hidden2 }) => {
             <NewProduct />
             <Sell />
             <BlogDisplay />
-            <Brand />
-            <Footer />
         </div>
     );
 };
 
-const mapStateToProps = ({ men: { hidden }, lad: { hidden2 } }) => ({
-    hidden, hidden2
+const mapStateToProps = ({ men: { hidden }, lad: { hidden2 }, kid: { hidden3 } }) => ({
+    hidden, hidden2, hidden3
 })
 
 

@@ -1,0 +1,95 @@
+.menbov{
+    border: 1px solid #ebebeb;
+    height: auto;
+    width: 15rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+
+    .menbov-title{
+        display: flex;
+        flex-direction: column;
+
+        .home-bov{
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ebebeb;
+            padding-left: 2rem;
+            height: 2rem;
+            padding-top: 1rem;
+
+            &:hover{
+                color: #eab129;
+                cursor: pointer;
+            }
+        }
+
+        .women-bov{
+            text-decoration: none;
+            color: #999;
+            border: 1px solid #ebebeb;
+            padding-left: 2rem;
+            height: 2rem;
+            padding-top: 1rem;
+
+            &:hover{
+                color: #eab129;
+                cursor: pointer;
+            }
+            .squre{
+                color: #999;
+                margin-left: 7.5rem;
+
+                &:hover{
+                    color: #eab129;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .mens-bov{
+            text-decoration: none;
+            color: #999;
+            border: 1px solid #ebebeb;
+            padding-left: 2rem;
+            height: 2rem;
+            padding-top: 1rem;
+
+            &:hover{
+                color: #eab129;
+                cursor: pointer;
+            }
+            .squre{
+                color: #999;
+                margin-left: 8.9rem;
+
+                &:hover{
+                    color: #eab129;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .fashion-bov{
+            text-decoration: none;
+            color: #999;
+            border: 1px solid #ebebeb;
+            padding-left: 2rem;
+            height: 2rem;
+            padding-top: 1rem;
+
+            &:hover{
+                color: #eab129;
+                cursor: pointer;
+            }
+            .squre{
+                color: #999;
+                margin-left: 7.4rem;
+
+                &:hover{
+                    color: #eab129;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

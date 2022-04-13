@@ -1,0 +1,218 @@
+.kids-drop{
+    z-index: 2;
+    position: absolute;
+    transition: all 0.2s ease-out;
+
+    .kids-down{
+        background-color: white;
+        height: 15rem;
+        width: 35rem;
+        margin-left: 55rem;
+        padding: 25px;
+        border: 1px solid black;
+
+        .kids-main{
+          
+
+            .kids-tl{
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+            
+                .dress{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 15px;
+                }
+                .accessories{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .Hats{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .Lingerie{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .brass{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .clothingd{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 15px;
+                    margin-top: 1.5rem;
+                }
+                .coats-j{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .blazers{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .raincoats{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .jacketss{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+            }
+                .kids-cn{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin-top: -14.4rem;
+                    margin-left: -12rem;
+                    
+                .Handbagsss{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 15px;
+                }
+                .toterr{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .clutchese{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .satchelss{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .cross-body{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .clothingd{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 15px;
+                    margin-top: 1.5rem;
+                }
+                .shoesss{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .bagsss{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .Lingerie{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+                .best-seller{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 12px;
+                    margin-top: 0.4rem;
+                }
+            }
+
+            .kids-image{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-top: -14.5rem;
+                margin-right: -1.8rem;
+               
+                .kids-imga{
+                    margin-bottom: 1.5rem;
+                    display: flex;
+                    
+                
+
+                    .kidimg-tl{
+                        font-size: 12px;
+                        padding: 1rem;
+                       
+                        .kidtl{
+                            margin-top: -0.5rem;
+                        }
+
+                        .shop{
+                            font-size: 12px;
+                            margin-top: 0.5rem;
+                            padding: 5px 20px;
+                            height: 15px;
+                            background: #eab129;
+                            display: inline-block;
+                    
+                            &:hover{
+                                cursor: pointer;
+                                color: white;
+                                background-color: black;
+                            }
+                        }
+                    }   
+                }
+                .kids-imgv{
+                    margin-bottom: 1.5rem;
+                    display: flex;
+
+                    .kidimg-tl{
+                        font-size: 12px;
+                        padding: 1rem;
+                       
+                        .kidtl{
+                            margin-top: -0.5rem;
+                        }
+
+                        .shop{
+                            font-size: 12px;
+                            margin-top: 0.5rem;
+                            padding: 5px 20px;
+                            height: 15px;
+                            background: #eab129;
+                            display: inline-block;
+                    
+                            &:hover{
+                                cursor: pointer;
+                                color: white;
+                                background-color: black;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}

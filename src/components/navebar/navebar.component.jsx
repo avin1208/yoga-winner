@@ -10,9 +10,11 @@ import { toggleMenHidden } from '../../Redux/mendrop/mendrop.actions';
 
 import { toggleLadHidden } from'../../Redux/laddrop/laddrop.actions';
 
+import { toggleKidHidden } from "../../Redux/kids-drop/kids-drop.actions";
+
 import CartIcon from "../cart-icon/cart-icon.component";
 
-const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch}) => {
+const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch, toggleKidHidden}) => {
 
     return (
         <div className="Nave-main">
@@ -23,13 +25,13 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch}) => {
                     <Link className="option" to='/home'>
                         Home
                     </Link>
-                    <div className="option" onClick={toggleMenHidden}>
+                    <div className="option" onMouseEnter={toggleMenHidden} onMouseLeave={toggleMenHidden} >
                         Men
                     </div>
-                    <Link className="option" to='/ladies' onClick={toggleLadHidden} >
+                    <Link className="option" to='/ladies' onMouseEnter={toggleLadHidden} onMouseLeave={toggleLadHidden} >
                         Ladies
                     </Link>
-                    <Link className="option" to='/kids'>
+                    <Link className="option" to='/kids' onMouseEnter={toggleKidHidden} onMouseLeave={toggleKidHidden} >
                         Kids
                     </Link>
                     <Link className="option" to='accessories'>
@@ -53,7 +55,8 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch}) => {
 
 const mapDispatchToProps = dispatch => ({
     toggleMenHidden: () => dispatch(toggleMenHidden()),
-    toggleLadHidden: () => dispatch(toggleLadHidden())
+    toggleLadHidden: () => dispatch(toggleLadHidden()),
+    toggleKidHidden: () => dispatch(toggleKidHidden()),
 });
 
 const mapStateToProps = ({ men: { hidden } }) => ({
