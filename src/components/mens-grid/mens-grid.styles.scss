@@ -1,0 +1,134 @@
+.grid-box{
+    height: 170rem;
+    margin-left: 25rem;
+    display: flex;
+    flex-direction: column;
+    columns: 2;
+
+    .box-product{
+        border: 1px solid #ebebeb;
+        height: 17rem;
+        width: 45rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+
+        .item-box{
+            display: flex;
+
+            .left-product{
+                height: 17rem;
+                width: 17rem;
+                border-right: 1px solid #ebebeb;
+                height: 17rem;
+            }
+
+            .right-text{
+                margin-top: 1rem;
+
+                .product-title{
+                    color: black;
+                    margin-left: 2rem;
+                    margin-top: 1rem;
+  
+                    .tt{
+                        text-decoration: none;
+                        color: black;
+                        font-size: 15px;
+
+                        &:hover{
+                            color: #eab129;
+                            cursor: pointer;
+                        }
+                    }  
+                }
+
+                .prod-price{
+                    margin-top: 1rem;
+                    margin-left: 2rem;
+                     
+                    .pr-price{
+                        color: #eab129;
+                    }
+
+                    .reg-price{
+                        color: #999;
+                        margin-left: 5px;
+                        text-decoration: line-through;
+                    }
+
+                    .di-price{
+                        background: #eab129;
+                        color: #fff;
+                        padding: 0 6px;
+                        font-size: 12px;
+                        vertical-align: 2px;
+                        margin-left: 0.5rem;
+                    }
+                }
+
+                .prod-desc{
+                    margin-top: 1rem;
+                    margin-left: 2rem;
+
+                    .des{
+                        color: #999;
+                        font-size: 14px;
+                    }
+                }
+
+                .stock{
+                    margin-left: 2rem;
+                    display: flex;
+
+                    .mark{
+                        color: #32cd32;
+                    }
+
+                    .ma{
+                        margin-left: 1rem;
+                        margin-top: -0.05rem;
+                        color: #999;
+                        font-size: 15px;
+                    }
+                }
+
+                .list-button{
+                    margin-left: 2rem;
+                    margin-top: -1rem;
+                
+                    .to-cart{
+                        font-size: 15px;
+                        margin-top: 1.5rem;
+                        padding: 5px 20px;
+                        height: 20px;
+                        color: #666;
+                        background: #ebebeb;
+                        display: inline-block;
+                
+                        &:hover{
+                            cursor: pointer;
+                            color: white;
+                            background-color: #eab129;
+                        }
+                    }
+                    .searchk{
+                        font-size: 15px;
+                        margin-left: 1rem;
+                        margin-top: 1.5rem;
+                        padding: 5px 10px;
+                        height: 20px;
+                        color: #666;
+                        background: #ebebeb;
+                        display: inline-block;
+                    
+                        &:hover{
+                          cursor: pointer;
+                          color: white;
+                          background-color: #eab129;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}

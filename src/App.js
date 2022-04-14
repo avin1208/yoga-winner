@@ -18,6 +18,10 @@ import Brand from './components/brand/brand.component';
 
 import Footer from './components/footer/footer.component';
 
+import Womenpage from './pages/womenpage/womenpage.component';
+
+import Kidspage from './pages/kidspage/kidspage.component';
+
 const App = () => {
   const [modalOpen, setModalOpen] = useState(true);
   return ( 
@@ -28,6 +32,8 @@ const App = () => {
      <Switch>
      <Route exact path='/' component={Homepage} />
      <Route path='/Men' component={Menpagee} />
+     <Route path='/ladies' component={Womenpage} />
+     <Route path='/kids' component={Kidspage} />
      </Switch>
      <Brand />
      <Footer />

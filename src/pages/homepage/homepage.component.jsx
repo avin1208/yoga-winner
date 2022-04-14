@@ -23,6 +23,7 @@ import Ladrop from "../../components/l-dropdown/l-dropdown.component";
 import Kiddrop from "../../components/kids-drop/kids-drop.component";
 
 
+
 const Homepage = ({ hidden, hidden2, hidden3 }) => {
 
     return (

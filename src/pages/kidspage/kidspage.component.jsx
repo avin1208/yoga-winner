@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import './menpage.styles.scss';
+import './kidspage.styles.scss';
 
 import Menbov from "../../components/menbox/menbox.component";
 
@@ -10,7 +10,9 @@ import Menproduct from "../../components/men-product/men-product.component";
 
 import Checkbox from "../../components/men-checkbox/men-checkbox.component";
 
-const Menpagee = () => {
+
+
+const Kidspage = () => {
     return (
         <div className="main-pagehj">
             <div className=" namefg">
@@ -23,7 +25,7 @@ const Menpagee = () => {
                     </Link>
                     |
                     <Link className="mh">
-                        Men
+                       Kids
                     </Link>
                 </div>
             </div>
@@ -33,10 +35,10 @@ const Menpagee = () => {
             <div className="sell-ime">
                 <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldstaticblocks/images/bn_left.jpg" alt="" />
             </div>
-
+            
         </div>
     );
 };
 
-export default Menpagee;
+export default Kidspage;
 
