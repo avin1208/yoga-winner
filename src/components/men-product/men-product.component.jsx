@@ -23,6 +23,7 @@ const Menproduct = () => {
 
     return (
         <div className="men-product">
+        <div className="men-kj">
             <div className="men-pro">
                 <div className="men-th">
                     <div className="men-fath" onClick={() => {setIndex(1)}} >
@@ -59,7 +60,8 @@ const Menproduct = () => {
             </div>
             <div className="ghhhg" hidden={index !== 2}>
              <Grid />
-            </div>        
+            </div>  
+            </div>      
         </div>
     );
 };

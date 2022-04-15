@@ -1,0 +1,234 @@
+.main-blogda{
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    .sec-blogda{
+
+        .row-blogda{
+            display: flex;
+           
+            .fr-blogda{
+                margin-left: 10rem;
+                .fr-image{
+
+                    img{
+                        height: 20rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .frimg-tl{
+                    text-decoration: none;
+                    padding-top: 2rem;
+                    margin-left: 1rem;
+                    margin-top: 2rem;
+                    font-size: 17px;
+                    color: black;
+
+                    &:hover{
+                        color: #eab123;
+                        cursor: pointer;
+                    }
+                }
+
+                .details-blog{
+                    display: flex;
+                    margin-top: 1rem;
+                    .tag{
+                        color: #eab123;
+                        margin-left: 1rem;
+                    }
+
+                    .uncate{
+                        margin-left: 0.6rem;
+                        text-decoration: none;
+                        color: #eab123;
+
+                        &:hover{
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .view{
+                        margin-left: 0.5rem;
+                        color: #eab123;
+                    }
+                }
+                .tetx-blog{
+                    color: #999;
+                    margin-left: 1rem;
+                    margin-top: 0.6rem;
+                }
+            }
+            .fr-blog{
+                    margin-left: 5rem;
+                .fr-ia{
+
+                    img{
+                        height: 20rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .frmg-tl{
+                    text-decoration: none;
+                    padding-top: 2rem;
+                    margin-left: 1rem;
+                    margin-top: 2rem;
+                    font-size: 17px;
+                    color: black;
+
+                    &:hover{
+                        color: #eab123;
+                        cursor: pointer;
+                    }
+                }
+
+                .detail-blog{
+                    display: flex;
+                    margin-top: 1rem;
+
+                    .tag{
+                        color: #eab123;
+                        margin-left: 1rem;
+                    }
+
+                    .uncate{
+                        margin-left: 0.6rem;
+                        text-decoration: none;
+                        color: #eab123;
+
+                        &:hover{
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .view{
+                        margin-left: 0.5rem;
+                        color: #eab123;
+                    }
+                }
+                .tet-blog{
+                    color: #999;
+                    margin-left: 1rem;
+                    margin-top: 0.6rem;
+                }
+            }
+        }
+        .row-blogd{
+            display: flex;
+            margin-top: 2rem;
+           
+            .fr-blogda{
+                margin-left: 10rem;
+                .fr-image{
+
+                    img{
+                        height: 20rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .frimg-tl{
+                    text-decoration: none;
+                    padding-top: 2rem;
+                    margin-left: 1rem;
+                    margin-top: 2rem;
+                    font-size: 17px;
+                    color: black;
+
+                    &:hover{
+                        color: #eab123;
+                        cursor: pointer;
+                    }
+                }
+
+                .details-blog{
+                    display: flex;
+                    margin-top: 1rem;
+                    .tag{
+                        color: #eab123;
+                        margin-left: 1rem;
+                    }
+
+                    .uncate{
+                        margin-left: 0.6rem;
+                        text-decoration: none;
+                        color: #eab123;
+
+                        &:hover{
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .view{
+                        margin-left: 0.5rem;
+                        color: #eab123;
+                    }
+                }
+                .tetx-blog{
+                    color: #999;
+                    margin-left: 1rem;
+                    margin-top: 0.6rem;
+                }
+            }
+            .fr-blog{
+                    margin-left: 5rem;
+                .fr-ia{
+
+                    img{
+                        height: 20rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .frmg-tl{
+                    text-decoration: none;
+                    padding-top: 2rem;
+                    margin-left: 1rem;
+                    margin-top: 2rem;
+                    font-size: 17px;
+                    color: black;
+
+                    &:hover{
+                        color: #eab123;
+                        cursor: pointer;
+                    }
+                }
+
+                .detail-blog{
+                    display: flex;
+                    margin-top: 1rem;
+
+                    .tag{
+                        color: #eab123;
+                        margin-left: 1rem;
+                    }
+
+                    .uncate{
+                        margin-left: 0.6rem;
+                        text-decoration: none;
+                        color: #eab123;
+
+                        &:hover{
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .view{
+                        margin-left: 0.5rem;
+                        color: #eab123;
+                    }
+                }
+                .tet-blog{
+                    color: #999;
+                    margin-left: 1rem;
+                    margin-top: 0.6rem;
+                }
+            }
+        }
+    }
+}

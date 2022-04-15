@@ -14,7 +14,8 @@ import { toggleKidHidden } from "../../Redux/kids-drop/kids-drop.actions";
 
 import CartIcon from "../cart-icon/cart-icon.component";
 
-const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch, toggleKidHidden}) => {
+
+const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch, toggleKidHidden, Homepage}) => {
 
     return (
         <div className="Nave-main">
@@ -22,12 +23,12 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch, toggleKid
             </div>
             <div className="Navebar">
                 <div className="options">
-                    <Link className="option" to='/home'>
+                    <Link className="option" to="/">
                         Home
                     </Link>
-                    <div className="option" onMouseEnter={toggleMenHidden} onMouseLeave={toggleMenHidden} >
+                    <Link className="option" onMouseEnter={toggleMenHidden} onMouseLeave={toggleMenHidden} to='/men'>
                         Men
-                    </div>
+                    </Link>
                     <Link className="option" to='/ladies' onMouseEnter={toggleLadHidden} onMouseLeave={toggleLadHidden} >
                         Ladies
                     </Link>

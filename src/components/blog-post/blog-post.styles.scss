@@ -1,0 +1,74 @@
+.main-post{
+
+
+    .sec-post{
+        border: 1px solid #ebebeb;
+        height: auto;
+        width: 15rem;
+        margin-top: 2rem;
+        margin-left: 4rem;
+
+        .post-tile{
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ebebeb;
+            padding-left: 2rem;
+            height: 2rem;
+            padding-top: 0.5rem;
+
+            .recent{
+                margin-top: 0.2rem;
+                margin-left: -0.5rem;
+                color: #666;
+            }
+        }
+
+        .post-middel{
+            padding-bottom: 1rem;
+            .blog-pot1{
+                display: flex;
+                
+
+                img{
+                    margin-left: 1rem;
+                    margin-top: 1rem;
+                }
+                .p-t{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1rem;
+                
+                    .pot-titl{
+                        color: #999;
+                        font-size: 13px;
+                        margin-left: 1.2rem;
+                        margin-top: 0.5rem;
+                        text-decoration: none;
+
+                        &:hover{
+                            color: #eab129;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .date-pot{
+                        color: #eab129;
+                        font-size: 13px;
+                        margin-left: 1.2rem;
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .imgb{
+
+        img{
+            margin-top: 2rem;
+            margin-left: 4rem;
+            height: 23rem;
+            width: 15.4rem;
+        }
+    }
+}
