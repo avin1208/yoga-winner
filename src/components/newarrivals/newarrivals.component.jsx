@@ -16,9 +16,7 @@ const Audio = () => {
             <div className="bnm">
             <Newitem />
             <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldstaticblocks/images/bn_2new.jpg" alt="" />
-
             </div>
-
         </div>
     );
 };

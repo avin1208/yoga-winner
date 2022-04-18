@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Menbov from "../../components/menbox/menbox.component";
 
 import Blogpost from "../../components/blog-post/blog-post.component";
+
 import Blogdat from "../../components/blog-data/blog-data.component";
 
 const Blogpage = () => {

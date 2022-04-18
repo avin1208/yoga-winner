@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import './menpage.styles.scss';
+import './accessoriespage.styles.scss';
 
 import Menbov from "../../components/menbox/menbox.component";
 
@@ -10,7 +10,8 @@ import Menproduct from "../../components/men-product/men-product.component";
 
 import Checkbox from "../../components/men-checkbox/men-checkbox.component";
 
-const Menpagee = () => {
+
+const Accessoriespage = () => {
     return (
         <div className="main-pagehj">
             <div className="namefg">
@@ -23,7 +24,7 @@ const Menpagee = () => {
                     </Link>
                     |
                     <Link className="mh">
-                        Men
+                        Accessories
                     </Link>
                 </div>
             </div>
@@ -40,5 +41,5 @@ const Menpagee = () => {
     );
 };
 
-export default Menpagee;
+export default Accessoriespage;
 

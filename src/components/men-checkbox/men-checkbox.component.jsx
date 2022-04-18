@@ -106,7 +106,7 @@ const Checkbox = () => {
                                 <span className="color4" >
                                 </span>
                                 <label className="blue">
-                                   Blue (2)
+                                    Blue (2)
                                 </label>
                             </div>
                             <div>
@@ -127,13 +127,16 @@ const Checkbox = () => {
                                 <span className="color7" >
                                 </span>
                                 <label className="pink">
-                                   Pink (1)
+                                    Pink (1)
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
-               
+
+            </div>
+            <div className="sell-ime">
+                <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldstaticblocks/images/bn_left.jpg" alt="" />
             </div>
         </div>
     );

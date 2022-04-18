@@ -57,7 +57,6 @@ const Blogpost = () => {
                         </div>
                     </div>
                 </div>
-               
             </div>
             <div className="imgb">
             <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldstaticblocks/images/bn_left.jpg" alt="" />

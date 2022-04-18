@@ -47,12 +47,15 @@
         }
     }
 
-    .sell-ime{
-        margin-top: 6rem;
-        margin-left: 4rem;
-        img{
-            height: 23rem;
-            width: 15.2rem;
+    .men-side{
+        display: flex;
+ 
+        .man-left{
+            cursor: pointer;
+        }
+ 
+        .men-rightt{
+            margin-top: 14.5rem;
         }
     }
 }

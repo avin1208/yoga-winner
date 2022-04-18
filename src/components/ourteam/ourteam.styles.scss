@@ -1,0 +1,99 @@
+.ourteam{
+    margin-top: 3rem;
+   
+
+    .story{
+        font-size: 15px;
+        margin-left: 4rem;
+        margin-top: 1.5rem;
+        padding: 5px 20px;
+        height: 20px;
+        background: #eab123;
+        display: inline-block;
+        color: white; 
+    }
+    .member{
+        display: flex;
+
+    .first-men{
+        margin-top: 3rem;
+        margin-left: 4rem;
+
+        img{
+            border-radius: 100%;
+        }
+        .men-tt{
+            margin-left: 1.6rem;
+            margin-top: 1rem;
+            font-size: 20px;
+            color: #666;
+        }
+        .men-su{
+            margin-top: 0.6rem;
+            margin-left: 2.5rem;
+            font-size: 15px;
+            color: #878787;
+        }
+    }
+    .sec-men{
+        margin-top: 3rem;
+        margin-left: 15rem;
+
+        img{
+            border-radius: 100%;
+        }
+        .sec-tt{
+            margin-left: 1.6rem;
+            margin-top: 1rem;
+            font-size: 20px;
+            color: #666;
+        }
+        .sec-su{
+            margin-top: 0.6rem;
+            margin-left: 2.5rem;
+            font-size: 15px;
+            color: #878787;
+        }
+    }
+    .td-men{
+        margin-top: 3rem;
+        margin-left: 15rem;
+
+        img{
+            border-radius: 100%;
+        }
+        .td-tt{
+            margin-left: 1.6rem;
+            margin-top: 1rem;
+            font-size: 20px;
+            color: #666;
+        }
+        .td-su{
+            margin-top: 0.6rem;
+            margin-left: 2.5rem;
+            font-size: 15px;
+            color: #878787;
+        }
+    }
+    .fr-men{
+        margin-top: 3rem;
+        margin-left: 15rem;
+
+        img{
+            border-radius: 100%;
+        }
+        .fr-tt{
+            margin-left: 1.6rem;
+            margin-top: 1rem;
+            font-size: 20px;
+            color: #666;
+        }
+        .fr-su{
+            margin-top: 0.6rem;
+            margin-left: 2.5rem;
+            font-size: 15px;
+            color: #878787;
+        }
+    }
+}
+}

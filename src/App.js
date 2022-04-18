@@ -22,6 +22,8 @@ import Womenpage from './pages/womenpage/womenpage.component';
 
 import Kidspage from './pages/kidspage/kidspage.component';
 
+import Accessoriespage from './pages/accessoriespage/accessoriespage.component';
+
 import Blogpage from './pages/blogpage/blogpage.component';
 
 import Aboutus from './pages/aboutuspage/aboutuspage.component';
@@ -40,8 +42,8 @@ const App = () => {
         <Route path='/Men' component={Menpagee} />
         <Route path='/ladies' component={Womenpage} />
         <Route path='/kids' component={Kidspage} />
+        <Route path='/accessories' component={Accessoriespage} />
         <Route path='/blog' component={Blogpage} />
-     
         <Route path='/aboutus' component={Aboutus} />
       </Switch>
       <Brand />

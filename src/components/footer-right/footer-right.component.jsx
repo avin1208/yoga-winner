@@ -14,7 +14,10 @@ const FooterRight = () => {
              club managers to our front-of-house teams.We are committed to training,   <br/>
              so you will be encouraged to improve your existing skills while    <br/>
              you develop new ones.
-             <p>We want to help our members go further, so if you have any suggestions about our clubs, classes, personal training sessions or anything else, please come in and talk to one of our team member or if you prefer, drop us a note via our online enquiry forms.
+             <p>We want to help our members go further, so if you have any suggestions about  <br />
+             clubs, classes, personal training sessions or anything else, please come in and  <br />
+             talk to one of our team member or if you prefer, drop us a note via our online  <br />
+             enquiry forms.
              </p>
              </p>
            </div>

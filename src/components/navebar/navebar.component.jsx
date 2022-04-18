@@ -15,8 +15,7 @@ import { toggleKidHidden } from "../../Redux/kids-drop/kids-drop.actions";
 import CartIcon from "../cart-icon/cart-icon.component";
 
 
-const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch, toggleKidHidden, Homepage}) => {
-
+const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden}) => {
     return (
         <div className="Nave-main">
             <div className="color">
@@ -46,7 +45,6 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, hidden, dispatch, toggleKid
                     </Link>
                     <CartIcon />
                 </div>
-                
             </div>
             <div className="color-q">
             </div>
@@ -60,8 +58,5 @@ const mapDispatchToProps = dispatch => ({
     toggleKidHidden: () => dispatch(toggleKidHidden()),
 });
 
-const mapStateToProps = ({ men: { hidden } }) => ({
-    hidden
-})
 
-export default connect(mapStateToProps ,mapDispatchToProps)(Navebar);
+export default connect(null, mapDispatchToProps)(Navebar);

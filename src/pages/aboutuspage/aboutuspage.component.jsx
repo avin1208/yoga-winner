@@ -4,6 +4,10 @@ import './aboutuspage.styles.scss';
 
 import { Link } from "react-router-dom";
 
+import Progress from "../../components/Progressbar/progressbar.component";
+
+import Ourteam from "../../components/ourteam/ourteam.component";
+
 
 const Aboutus = () => {
     return (
@@ -55,6 +59,8 @@ const Aboutus = () => {
                     </div>
                 </div>
             </div>
+            <Progress />
+            <Ourteam />
         </div>
     );
 };

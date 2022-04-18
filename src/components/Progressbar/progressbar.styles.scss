@@ -1,0 +1,149 @@
+.main-progress{
+
+    .progress{
+        display: flex;
+
+        .right-progress{
+
+            
+            .skill{
+                font-size: 15px;
+                margin-left: 4rem;
+                margin-top: 1.5rem;
+                padding: 5px 20px;
+                height: 20px;
+                background: #eab123;
+                display: inline-block;
+                color: white; 
+            }
+
+            .prestashop{
+                display: flex;
+                margin-left: 4rem;
+               
+
+                .preshop{
+                    font-size: 15px;
+                    color: #eab123;
+                    font-style: italic;
+                }
+                .perc{
+                    font-size: 15px;
+                    margin-top: 1rem;
+                    margin-left: 37rem;
+                }
+            }
+            .cont{
+                margin-left: 4rem;
+
+                .progres-cont{
+                    width: 45.6rem;
+                    background-color: #999;
+
+                    .prog{
+                        width: 45.6rem;
+                        height: 0.5rem;
+                        background-color: #eab123;
+                    }
+                }
+            }
+            .photoshop{
+                display: flex;
+                margin-left: 4rem;
+                .pohop{
+                    font-size: 15px;
+                    color: #eab123;
+                    font-style: italic;
+                }
+                .percc{
+                    font-size: 15px;
+                    margin-top: 1rem;
+                    margin-left: 30rem;
+                }
+            }
+            .cont{
+                margin-left: 4rem;
+
+                .progress-cont{
+                    width: 45.6rem;
+                    background-color: #999;
+
+                    .progg{
+                        width: 36.48rem;
+                        height: 0.5rem;
+                        background-color: #eab123;
+                    }
+                }
+            }
+            .html{
+                display: flex;
+                margin-left: 4rem;
+                .css{
+                    font-size: 15px;
+                    color: #eab123;
+                    font-style: italic;
+                }
+                .percr{
+                    font-size: 15px;
+                    margin-top: 1rem;
+                    margin-left: 34rem;
+                }
+            }
+            .cont{
+                margin-left: 4rem;
+
+                .progre-cont{
+                    width: 45.6rem;
+                    background-color: #999;
+
+                    .progo{
+                        width: 39.25rem;
+                        height: 0.5rem;
+                        background-color: #eab123;
+                    }
+                }
+            }
+            .other{
+                display: flex;
+                margin-left: 4rem;
+                .op{
+                    font-size: 15px;
+                    color: #eab123;
+                    font-style: italic;
+                }
+                .pr{
+                    font-size: 15px;
+                    margin-top: 1rem;
+                    margin-left: 19.6rem;
+                }
+            }
+            .cont{
+                margin-left: 4rem;
+
+                .progr-cont{
+                    width: 45.6rem;
+                    background-color: #999;
+
+                    .progp{
+                        width: 23.6rem;
+                        height: 0.5rem;
+                        background-color: #eab123;
+                    }
+                }
+            }
+        }
+
+        .left-progress{
+            margin-left: 9rem;
+            margin-top: 4rem;
+
+            .aboutus{
+
+                .left-aboutus{
+                    margin-top: 1rem;
+                    color: #999;
+                }
+            }
+        }
+    }
+}
