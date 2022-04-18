@@ -21,6 +21,7 @@
                 color: #eab129;
                 cursor: pointer;
             }
+
         }
 
         .women-bov{
@@ -28,16 +29,33 @@
             color: #999;
             border: 1px solid #ebebeb;
             padding-left: 2rem;
-            height: 2rem;
+            height: auto;
             padding-top: 1rem;
+
+
+            .women-acc{
+                display: flex;
+                flex-direction: column;
+                margin-left: 0.5rem;
+                font-size: 15px;
+                
+
+                .toppp{
+                    color: #999;
+                    text-decoration: none;
+                    margin-top: 0.5rem;
+                    
+                }
+            }
 
             &:hover{
                 color: #eab129;
                 cursor: pointer;
             }
-            .squre{
+            .jkl{
                 color: #999;
-                margin-left: 7.5rem;
+                margin-left: 11rem;
+                margin-top: -1rem;
 
                 &:hover{
                     color: #eab129;
@@ -51,16 +69,32 @@
             color: #999;
             border: 1px solid #ebebeb;
             padding-left: 2rem;
-            height: 2rem;
+            height: auto;
             padding-top: 1rem;
+
+            .women-acc{
+                display: flex;
+                flex-direction: column;
+                margin-left: 0.5rem;
+                font-size: 15px;
+                
+
+                .toppp{
+                    color: #999;
+                    text-decoration: none;
+                    margin-top: 0.5rem;
+                    
+                }
+            }
 
             &:hover{
                 color: #eab129;
                 cursor: pointer;
             }
-            .squre{
+            .jkn{
                 color: #999;
-                margin-left: 8.9rem;
+                margin-left: 11rem;
+                margin-top: -1rem;
 
                 &:hover{
                     color: #eab129;
@@ -74,16 +108,30 @@
             color: #999;
             border: 1px solid #ebebeb;
             padding-left: 2rem;
-            height: 2rem;
+            height: auto;
             padding-top: 1rem;
+
+            .women-acc{
+                display: flex;
+                flex-direction: column;
+                margin-left: 0.5rem;
+                font-size: 15px;
+                
+                .toppp{
+                    color: #999;
+                    text-decoration: none;
+                    margin-top: 0.5rem;   
+                }
+            }
 
             &:hover{
                 color: #eab129;
                 cursor: pointer;
             }
-            .squre{
+            .jkn{
                 color: #999;
-                margin-left: 7.4rem;
+                margin-left: 11rem;
+                margin-top: -1rem;
 
                 &:hover{
                     color: #eab129;
