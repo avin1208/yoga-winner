@@ -1,0 +1,64 @@
+.fashion-accordian{
+    padding-left: 2rem;
+    padding-bottom: 0.5rem;
+
+    .fashion-bov{
+        text-decoration: none;
+        color: #999;  
+    
+        .women-acc{
+            display: flex;
+            flex-direction: column;
+            margin-left: 0.5rem;
+            font-size: 15px;
+            
+            .toppp{
+                color: #999;
+                text-decoration: none;
+                margin-top: 0.8rem;   
+                margin-left: 0.8rem;
+               
+                .xcv{
+                    margin-left: 10rem;
+                    margin-top: -1rem;
+                }
+
+                .topfashion{
+                    margin-top: 0.5rem;
+                    margin-left: 1rem;
+
+                    .ppp{
+                        text-decoration: none;
+                        color: #999; 
+                        margin-top: 0.9rem;
+
+                        &:hover{
+                            color: #eab129;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &:hover{
+                    color: #eab129;
+                    cursor: pointer;
+                }
+            }
+           
+        }
+
+        &:hover{
+            color: #eab129;
+            cursor: pointer;
+        }
+        .jkn{
+            color: #999;
+            margin-left: 11rem;
+            margin-top: -1rem;
+
+            &:hover{
+                color: #eab129;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -26,11 +26,10 @@
 
         .women-bov{
             text-decoration: none;
-            color: #999;
-            border: 1px solid #ebebeb;
+            color: #999;  
             padding-left: 2rem;
             height: auto;
-            padding-top: 1rem;
+            padding-top: 1.5rem;
 
 
             .women-acc{
@@ -39,13 +38,35 @@
                 margin-left: 0.5rem;
                 font-size: 15px;
                 
-
                 .toppp{
                     color: #999;
-                    text-decoration: none;
-                    margin-top: 0.5rem;
-                    
+                    text-decoration: none; 
+                    margin-top: 0.9rem;
+
+                    .jghh{
+                        margin-left: 9.5rem;
+                        margin-top: -1rem;
+                    }
+                  .topcomp{
+                      margin-top: 0.5rem;
+                      margin-left: 1.5rem;
+
+                      .uppp{
+                          text-decoration: none;
+                          color: #999; 
+                          margin-top: 0.9rem;
+
+                          &:hover{
+                            color: #eab129;
+                            cursor: pointer;
+                        }
+                      }
+                  }
+                  &:hover{
+                    color: #eab129;
+                    cursor: pointer;
                 }
+                } 
             }
 
             &:hover{
@@ -62,82 +83,6 @@
                     cursor: pointer;
                 }
             }
-        }
-
-        .mens-bov{
-            text-decoration: none;
-            color: #999;
-            border: 1px solid #ebebeb;
-            padding-left: 2rem;
-            height: auto;
-            padding-top: 1rem;
-
-            .women-acc{
-                display: flex;
-                flex-direction: column;
-                margin-left: 0.5rem;
-                font-size: 15px;
-                
-
-                .toppp{
-                    color: #999;
-                    text-decoration: none;
-                    margin-top: 0.5rem;
-                    
-                }
-            }
-
-            &:hover{
-                color: #eab129;
-                cursor: pointer;
-            }
-            .jkn{
-                color: #999;
-                margin-left: 11rem;
-                margin-top: -1rem;
-
-                &:hover{
-                    color: #eab129;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .fashion-bov{
-            text-decoration: none;
-            color: #999;
-            border: 1px solid #ebebeb;
-            padding-left: 2rem;
-            height: auto;
-            padding-top: 1rem;
-
-            .women-acc{
-                display: flex;
-                flex-direction: column;
-                margin-left: 0.5rem;
-                font-size: 15px;
-                
-                .toppp{
-                    color: #999;
-                    text-decoration: none;
-                    margin-top: 0.5rem;   
-                }
-            }
-
-            &:hover{
-                color: #eab129;
-                cursor: pointer;
-            }
-            .jkn{
-                color: #999;
-                margin-left: 11rem;
-                margin-top: -1rem;
-
-                &:hover{
-                    color: #eab129;
-                    cursor: pointer;
-                }
-            }
-        }
+        }  
     }
 }

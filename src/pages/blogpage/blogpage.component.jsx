@@ -10,9 +10,26 @@ import Blogpost from "../../components/blog-post/blog-post.component";
 
 import Blogdat from "../../components/blog-data/blog-data.component";
 
-const Blogpage = () => {
+import MenDrop from "../../components/men-dropdown/men-dropdown.component";
+
+import Ladrop from "../../components/l-dropdown/l-dropdown.component";
+
+import Kiddrop from "../../components/kids-drop/kids-drop.component";
+
+import { connect } from "react-redux";
+
+const Blogpage = ({ hidden, hidden2, hidden3 }) => {
     return (
         <div className="main-blogp">
+        {
+            hidden ? null : <MenDrop />
+        }
+        {
+            hidden2 ? null : <Ladrop />
+        }
+        {
+            hidden3 ? null : <Kiddrop />
+        }
             <div className="sec-blog">
                 <div className="th-blog">
                     <div className="blog-imgn">
@@ -42,4 +59,9 @@ const Blogpage = () => {
     );
 };
 
-export default Blogpage;
+const mapStateToProps = ({ men: { hidden }, lad: { hidden2 }, kid: { hidden3 } }) => ({
+    hidden, hidden2, hidden3
+})
+
+
+export default connect(mapStateToProps)(Blogpage);

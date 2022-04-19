@@ -8,8 +8,17 @@ import { FaPlusSquare } from 'react-icons/fa';
 
 import { FaMinusSquare } from 'react-icons/fa';
 
+import Menaccordian from "../men-accordian/men-accordian.component";
+
+import Fashionaccordian from "../fashion-accordian/fashion-accordian.component";
+
 const Menbov = () => {
     const [show, setShow] = useState(false);
+    const [showt, setShowt] = useState(false);
+    const [showd, setShowd] = useState(false);
+    const [shows, setShows] = useState(false);
+    const [showc, setShowc] = useState(false);
+    
     return (
         <div className="menbov">
             <div className="menbov-title">
@@ -17,95 +26,138 @@ const Menbov = () => {
                     Home
                 </Link>
                 <Link className="women-bov">
-                    Women <div className="jkl" onClick={() => setShow(!show)}>
+                    Women<div className="jkl" onClick={() => setShow(!show)}>
                         {show ? <FaMinusSquare /> : <FaPlusSquare />}
                     </div>
+                    <hr color="#ebebeb" />
                     {show &&
                         <div className="women-acc">
                             <Link className="toppp">
-                                Top <FaPlusSquare />
+                                Top <div className="jghh"
+                                    onClick={() => setShowt(!showt)}>
+                                    {showt ? <FaMinusSquare /> : <FaPlusSquare />}
+                                </div>
+                                <hr color="#ebebeb" />
+                                {
+                                    showt &&
+                                    <div className="topcomp">
+                                        <Link className="uppp">
+                                            - Cocktail
+                                            <hr color="#ebebeb" />
+                                        </Link>
+                                        <Link className="uppp">
+                                            - Day
+                                            <hr color="#ebebeb" />
+                                        </Link>
+                                        <Link className="uppp">
+                                            - Evening
+                                            <hr color="#ebebeb" />
+                                        </Link>
+                                        <Link className="uppp">
+                                            - Sunadress
+                                            <hr color="#ebebeb" />
+                                        </Link>
+                                    </div>
+                                }
+                            </Link>
+                            <Link className="toppp">
+                                Dresses <div className="jghh"
+                                    onClick={() => setShowd(!showd)}>
+                                    {showd ? <FaMinusSquare /> : <FaPlusSquare />}
+                                </div>
+                                <hr color="#ebebeb" />
+                                {
+                                    showd &&
+                                    <div className="topcomp">
+                                        <Link className="uppp">
+                                            - Accessories
+                                            <hr color="#ebebeb" />
+                                        </Link>
+                                        <Link className="uppp">
+                                            - Hats and Bags
+                                            <hr color="#ebebeb" />
+                                        </Link>
+                                        <Link className="uppp">
+                                            - Lingerie
+                                            <hr color="#ebebeb" />
+                                        </Link>
+                                        <Link className="uppp">
+                                            - Bras
+                                            <hr color="#ebebeb" />
+                                        </Link>
+                                    </div>
+                                }
+                            </Link>
+                            <Link className="toppp">
+                                Handbags
                                 <hr color="#ebebeb" />
                             </Link>
                             <Link className="toppp">
-                                Dresses <FaPlusSquare />
-                                <hr color="#ebebeb" />
+                                Shoes  <div className="jghh"
+                                onClick={() => setShows(!shows)}>
+                                {shows ? <FaMinusSquare /> : <FaPlusSquare />}
+                            </div>
+                            <hr color="#ebebeb" />
+                            {
+                                shows &&
+                                <div className="topcomp">
+                                    <Link className="uppp">
+                                        - Toter
+                                        <hr color="#ebebeb" />
+                                    </Link>
+                                    <Link className="uppp">
+                                        - Clutches
+                                        <hr color="#ebebeb" />
+                                    </Link>
+                                    <Link className="uppp">
+                                        - Satchels
+                                        <hr color="#ebebeb" />
+                                    </Link>
+                                    <Link className="uppp">
+                                        - Cross Body
+                                        <hr color="#ebebeb" />
+                                    </Link>
+                                </div>
+                            }
                             </Link>
                             <Link className="toppp">
-                                Handbags <FaPlusSquare />
-                                <hr color="#ebebeb" />
-                            </Link>
-                            <Link className="toppp">
-                                Shoes
-                                <hr color="#ebebeb" />
-                            </Link>
-                            <Link className="toppp">
-                                Clothing <FaPlusSquare />
-                                <hr color="#ebebeb" />
+                                Clothing  <div className="jghh"
+                                onClick={() => setShowc(!showc)}>
+                                {showc ? <FaMinusSquare /> : <FaPlusSquare />}
+                            </div>
+                            <hr color="#ebebeb" />
+                            {
+                                showc &&
+                                <div className="topcomp">
+                                    <Link className="uppp">
+                                        - Coats and jacakets
+                                        <hr color="#ebebeb" />
+                                    </Link>
+                                    <Link className="uppp">
+                                        - BlazLink
+                                        <hr color="#ebebeb" />
+                                    </Link>
+                                    <Link className="uppp">
+                                        - Raincoats
+                                        <hr color="#ebebeb" />
+                                    </Link>
+                                    <Link className="uppp">
+                                        - Jacakets
+                                        <hr color="#ebebeb" />
+                                    </Link>
+                                </div>
+                            }
                             </Link>
                             <Link className="toppp">
                                 Accessories
+                                <hr color="#ebebeb" />
                             </Link>
                         </div>
                     }
-                </Link>
-              
-                <Link className="mens-bov">
-                    Men <div className="jkn" onClick={() => setShow(!show)}>
-                        {show ? <FaMinusSquare /> : <FaPlusSquare />}
-                    </div>
-                    {show &&
-                        <div className="women-acc">
-                            <Link className="toppp">
-                                Clothing
-                                <hr color="#ebebeb" />
-                            </Link>
-                            <Link className="toppp">
-                                Shoes
-                                <hr color="#ebebeb" />
-                            </Link>
-                            <Link className="toppp">
-                                Bags
-                                <hr color="#ebebeb" />
-                            </Link>
-                            <Link className="toppp">
-                                Lingerie
-                                <hr color="#ebebeb" />
-                            </Link>
-                            <Link className="toppp">
-                                Best Seller
-                                <hr color="#ebebeb" />
-                            </Link>
-                            <Link className="toppp">
-                                Collction
-                                <hr color="#ebebeb" />
-                            </Link>
-                            <Link className="toppp">
-                                trending
-                            </Link>
-                        </div>
-                    }
-                </Link>
-                <Link className="fashion-bov">
-                    Fashion <div className="jkn" onClick={() => setShow(!show)}>
-                    {show ? <FaMinusSquare /> : <FaPlusSquare />}
-                </div>
-                { show && 
-                    <div className="women-acc">
-                        <Link className="toppp">
-                            Accessories <FaPlusSquare />
-                            <hr color="#ebebeb" />
-                        </Link>
-                        <Link className="toppp">
-                            Footware <FaPlusSquare />
-                            <hr color="#ebebeb" />
-                        </Link>
-                        <Link className="toppp">
-                            Kids Fashion <FaPlusSquare />
-                        </Link>
-                    </div>
-                }
                 </Link>
             </div>
+            <Menaccordian />
+            <Fashionaccordian />
         </div>
     );
 };

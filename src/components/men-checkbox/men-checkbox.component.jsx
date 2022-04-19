@@ -2,12 +2,13 @@ import React from "react";
 
 import './men-checkbox.styles.scss';
 
+
 const Checkbox = () => {
     return (
         <div className="main-check">
             <div className="drop-check">
                 <div className="check-title">
-                    <div className="Filter">FILTER BY</div>
+                    <div className="Filter">FILTER BY</div> 
                 </div>
                 <div className="check-box">
                     <div className="clear-all">
