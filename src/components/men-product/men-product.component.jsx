@@ -6,9 +6,7 @@ import { FaTh } from 'react-icons/fa';
 
 import { FiAlignJustify } from 'react-icons/fi';
 
-import { FaCaretDown } from 'react-icons/fa';
-
-import { Link } from "react-router-dom";
+import GRID_DATA from "../../Grid.data";
 
 import PRODUCT_DATA from "../../product.data";
 
@@ -16,52 +14,54 @@ import Product from "../product/product.component";
 
 import Grid from "../mens-grid/mens-grid.component";
 
+import Dropsort from "../sort-drop/sort-drop.component";
+
 
 const Menproduct = () => {
     const [productdata] = useState(PRODUCT_DATA);
-    const [index, setIndex] = useState(1)
-
+    const [griddata] = useState(GRID_DATA);
+    const [index, setIndex] = useState(1);
+    const [selected, setSelected] = useState("");
+    
     return (
         <div className="men-product">
-        <div className="men-kj">
-            <div className="men-pro">
-                <div className="men-th">
-                    <div className="men-fath" onClick={() => {setIndex(1)}} >
-                        <FaTh />
+            <div className="men-kj">
+                <div className="men-pro">
+                    <div className="men-th">
+                        <div className="men-fath" onClick={() => { setIndex(1) }} >
+                            <FaTh />
+                        </div>
+                        <div className="men-aifi" onClick={() => { setIndex(2) }} >
+                            <FiAlignJustify />
+                        </div>
                     </div>
-                    <div className="men-aifi" onClick={() => {setIndex(2)}} >
-                        <FiAlignJustify  />
+                    <div className="men-j">
+                        <span className="men-cen">
+                            There are 9 Products.
+                        </span>
+                    </div>
+                    <div className="box-sort">
+                        <span className="sort">
+                            Sort By:
+                        </span>
+                    <Dropsort selected={selected} setSelected={setSelected}/>
                     </div>
                 </div>
-                <div className="men-j">
-                    <span className="men-cen">
-                        There are 9 Products.
-                    </span>
+                <div className="fggg" hidden={index !== 1}>
+                    {
+                        productdata
+                            .filter((item, idx) => idx === 0 || idx === 2 || idx === 15 || idx === 15 || idx === 1 || idx === 3 || idx === 4 || idx === 5 || idx === 6 || idx === 7 || idx === 8)
+                            .map(item => (<Product key={item.id} item={item} />
+                            ))
+                    }
                 </div>
-                <div className="box-sort">
-                    <span className="sort">
-                        Sort By:
-                    </span>
-                    <div className="prefer">
-                        <Link className="Relvel" to='/'>
-                            Relevance
-                            <FaCaretDown />
-                        </Link>
-                    </div>
+                <div className="ghhhg" hidden={index !== 2}>
+                    {
+                        griddata
+                        .map(item => (<Grid key={item.id} item={item}/>))
+                    }
                 </div>
             </div>
-            <div className="fggg" hidden={index !== 1}>
-                {
-                    productdata
-                        .filter((item, idx) => idx === 0 || idx === 2 || idx === 15 || idx === 15 || idx === 1 || idx === 3 || idx === 4 || idx === 5 || idx === 6 || idx === 7 || idx === 8)
-                        .map(item => (<Product key={item.id} item={item} />
-                        ))
-                }
-            </div>
-            <div className="ghhhg" hidden={index !== 2}>
-             <Grid />
-            </div>  
-            </div>      
         </div>
     );
 };

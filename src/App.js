@@ -28,6 +28,8 @@ import Blogpage from './pages/blogpage/blogpage.component';
 
 import Aboutus from './pages/aboutuspage/aboutuspage.component';
 
+import Cart from './pages/cart/cart.component';
+
 
 
 const App = () => {
@@ -45,6 +47,7 @@ const App = () => {
         <Route path='/accessories' component={Accessoriespage} />
         <Route path='/blog' component={Blogpage} />
         <Route path='/aboutus' component={Aboutus} />
+        <Route path='/cart' component={Cart} />
       </Switch>
       <Brand />
       <Footer />

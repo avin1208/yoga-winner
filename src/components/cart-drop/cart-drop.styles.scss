@@ -1,0 +1,50 @@
+.main-cart{
+    z-index: 2;
+    position: absolute;
+
+    .cart-drop{
+        height: 10rem;
+        width: 20rem;
+        padding: 25px;
+        margin-top: 0rem;
+        margin-left: 78.5rem; 
+        background: #fff;
+        box-shadow: 0 8px 14px 0 rgb(0 0 0 / 25%), inset 0 0 1px rgb(0 0 0 / 35%);
+
+        .ct-im{
+            color: #666;
+        }
+
+        .ct-total{
+            display: flex;
+            color: #666;
+
+            .wer{
+                padding-left: 8rem;
+                color: white;
+            }
+        }
+        .taxces{
+            color: #666;
+            padding-top: 2rem;
+        }
+
+        .view-cart{
+            font-size: 15px;
+            margin-left: 10rem;
+            margin-top: 1rem;
+            padding: 5px 20px;
+            height: 20px;
+            background: black;
+            display: inline-block;
+            color: white;
+    
+            &:hover{
+                cursor: pointer;
+                color: white;
+                background-color: #eab129;
+            }
+          
+        }
+    }
+}

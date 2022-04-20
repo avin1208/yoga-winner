@@ -8,14 +8,16 @@ import { connect } from "react-redux";
 
 import { toggleMenHidden } from '../../Redux/mendrop/mendrop.actions';
 
-import { toggleLadHidden } from'../../Redux/laddrop/laddrop.actions';
+import { toggleLadHidden } from '../../Redux/laddrop/laddrop.actions';
 
 import { toggleKidHidden } from "../../Redux/kids-drop/kids-drop.actions";
 
-import CartIcon from "../cart-icon/cart-icon.component";
+import { FaShoppingCart } from 'react-icons/fa';
+
+import { toggleCartHidden } from "../../Redux/cartdrop/cart-drop.action";
 
 
-const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden}) => {
+const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden, toggleCartHidden }) => {
     return (
         <div className="Nave-main">
             <div className="color">
@@ -43,7 +45,8 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden}) => {
                     <Link className="option" to='/aboutus'>
                         About us
                     </Link>
-                    <CartIcon />
+                        <FaShoppingCart className="cart-logo" onClick={toggleCartHidden}/>
+                        <label className="count">0</label>
                 </div>
             </div>
             <div className="color-q">
@@ -56,6 +59,7 @@ const mapDispatchToProps = dispatch => ({
     toggleMenHidden: () => dispatch(toggleMenHidden()),
     toggleLadHidden: () => dispatch(toggleLadHidden()),
     toggleKidHidden: () => dispatch(toggleKidHidden()),
+    toggleCartHidden: () => dispatch(toggleCartHidden())
 });
 
 

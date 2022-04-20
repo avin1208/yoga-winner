@@ -28,7 +28,8 @@ const Modal = ({ setOpenModal }) => {
                     <div className="model-post">
                         <div className="model-title">
                             <h2>SIGN UP TO OUR NEWSLETTER</h2>
-                        </div>
+             
+                            </div>
                         <div className="model-subtitle">
                             <p>Subscribe and get $5 off on your first purchase !</p>
                         </div>

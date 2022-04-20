@@ -1,0 +1,22 @@
+.main-cart-section{
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+    .cart-name{
+        border: 1px solid #ebebeb;
+        height: 7rem;
+        width: 60rem;
+        
+
+        .shopcart{
+            color: black;
+            font-size: 25px;
+            padding-left: 2rem;
+        }
+        .total-items{
+            font-size: 15px;
+            color: #999;
+            padding-left: 2rem;
+        }
+    }
+}

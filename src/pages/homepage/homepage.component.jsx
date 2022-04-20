@@ -22,9 +22,10 @@ import Ladrop from "../../components/l-dropdown/l-dropdown.component";
 
 import Kiddrop from "../../components/kids-drop/kids-drop.component";
 
+import Cartdrop from "../../components/cart-drop/cart-drop.component";
 
 
-const Homepage = ({ hidden, hidden2, hidden3 }) => {
+const Homepage = ({ hidden, hidden2, hidden3, hidden4 }) => {
 
     return (
         <div className="homepage">
@@ -36,6 +37,9 @@ const Homepage = ({ hidden, hidden2, hidden3 }) => {
             }
             {
                 hidden3 ? null : <Kiddrop />
+            }
+            {
+                hidden4 ? null : <Cartdrop />
             }
             <div className="background-image">
             <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldslideshow/images/slider-111.jpg" alt="Sports Wear"></img>
@@ -65,8 +69,8 @@ const Homepage = ({ hidden, hidden2, hidden3 }) => {
     );
 };
 
-const mapStateToProps = ({ men: { hidden }, lad: { hidden2 }, kid: { hidden3 } }) => ({
-    hidden, hidden2, hidden3
+const mapStateToProps = ({ men: { hidden }, lad: { hidden2 }, kid: { hidden3 }, cart: { hidden4 } }) => ({
+    hidden, hidden2, hidden3, hidden4
 })
 
 
