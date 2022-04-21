@@ -1,22 +1,107 @@
 .main-cart-section{
-    margin-top: 2rem;
-    margin-left: 2rem;
+    display: flex;
 
-    .cart-name{
+    .cartitem-s{
+        margin-top: 2rem;
+        margin-left: 13rem;
         border: 1px solid #ebebeb;
-        height: 7rem;
+        height: auto;
         width: 60rem;
+        .cart-name{
+      
         
-
-        .shopcart{
-            color: black;
-            font-size: 25px;
-            padding-left: 2rem;
+            .shopcart{
+                color: black;
+                font-size: 25px;
+                padding-left: 2rem;
+            }
         }
-        .total-items{
-            font-size: 15px;
-            color: #999;
-            padding-left: 2rem;
+    
+        .cart-itemn{
+            height: auto;
+            width: 60rem;
+
+            .cart-ui{
+                margin-top: 2rem;
+                color: #666;
+                margin-bottom: 1.5rem;
+                margin-left: 5rem;
+            }
+        }
+    } 
+
+    .total-cartcomponent{
+        border: 1px solid #ebebeb;
+        height: 15rem;
+        width: 25rem;
+        margin-left: 5rem;
+        margin-top: 2rem;
+
+        .total-item-count{
+
+
+            .count-item{
+                color: #666;
+                font-size: 15px;
+                margin-top: 1rem;
+                margin-left: 2rem;
+                display: flex;
+                color: #eab129;
+                
+
+                .itrm-nt{
+                    margin-left: 0.5rem;
+                    color: #666;
+
+                }
+            }
+
+            .shipping{
+                color: #666;
+                font-size: 15px;
+                margin-top: 1rem;
+                margin-left: 2rem;
+                display: flex;
+
+                .dollar{
+                    padding-left: 11rem;
+                    color: #eab129;
+                }
+            }
+
+            .total-item-cnt{
+                margin-top: 2.5rem;
+                border-top: 1px solid #ebebeb;
+            
+
+            .totop{
+                margin-top: 2rem;
+                color: #666;
+                margin-left: 2rem;
+                font-size: 15px;
+                display: flex;
+                
+                .total-payment{
+                    color: #eab129;
+                    font-size: 14px;
+                    margin-left: 12rem;
+                }
+            }
+
+            .toop{
+                color: #666;
+                margin-top: 1rem;
+                margin-left: 2rem;
+                font-size: 15px;
+                display: flex;
+
+                .total-payment{
+                    color: #eab129;
+                    margin-left: 12rem;
+                    font-size: 14px;
+                }
+            }
+        }
         }
     }
 }

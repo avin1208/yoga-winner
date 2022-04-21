@@ -23,7 +23,6 @@ const ProductList = () => {
             {
                 productdata.map((item) => (<Product key={item.id} item={item} />))
             }
-           
         </div>
         
     )

@@ -4,10 +4,15 @@ import './product.styles.scss';
 
 import { Link } from "react-router-dom";
 
-import CartIcon from "../cart-icon/cart-icon.component";
+
+import { addItem } from "../../Redux/cartdrop/cart-drop.action";
+
+import { connect } from "react-redux";
+
+import { FaShoppingCart } from 'react-icons/fa';
 
 
-const Product = ({ item }) => {
+const Product = ({ item, addItem}) => {
     const { title, imageUrl, price, regularPrice } = item;
     return (
         <div className="listofproduct">
@@ -23,12 +28,17 @@ const Product = ({ item }) => {
                         {regularPrice}
                     </div>
                     </div>
-                    <div className="icon-cart">
-                      <CartIcon />
+                    <div className="icon-cart" onClick={() => addItem(item)} inverted >
+                    <FaShoppingCart />
                     </div>
             </div>
         </div>
     );
 };
 
-export default Product;
+const mapDispatchToProps = dispatch => ({
+    addItem: item => dispatch(addItem(item))
+  })
+  
+
+export default connect(null, mapDispatchToProps)(Product);

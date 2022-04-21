@@ -2,13 +2,19 @@ import React from "react";
 
 import './mens-grid.styles.scss';
 
+import { connect } from "react-redux";
+
 import { Link } from "react-router-dom";
 
 import { FaCheck } from 'react-icons/fa';
 
 import { AiOutlineSearch } from 'react-icons/ai';
 
-const Grid = ({ item }) => {
+import { addItem} from "../../Redux/cartdrop/cart-drop.action";
+
+import { removeItem } from "../../Redux/cartdrop/cart-drop.action";
+
+const Grid = ({ item, addItem }) => {
     const { title, imageUrl, price, regularprice, description } = item;
     return (
         <div className="grid-box">
@@ -45,7 +51,7 @@ const Grid = ({ item }) => {
                             </p>
                         </div>
                         <div className="list-button">
-                            <div className="to-cart">
+                            <div className="to-cart" onClick={() => addItem(item)} inverted>
                                 Add to cart
                             </div>
                             <div className="searchk">
@@ -59,4 +65,9 @@ const Grid = ({ item }) => {
     );
 };
 
-export default Grid;
+const mapDispatchToProps = dispatch => ({
+    addItem: item => dispatch(addItem(item)),
+    removeItem: item => dispatch(removeItem(item))
+})
+
+export default connect(null, mapDispatchToProps)(Grid);
