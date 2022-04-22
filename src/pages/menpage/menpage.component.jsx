@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,11 @@ import { connect } from "react-redux";
 
 import Cartdrop from "../../components/cart-drop/cart-drop.component";
 
+import Cartbox from '../../components/cart-box/cart-box.component';
+
 const Menpagee = ( { hidden, hidden2, hidden3, hidden4 } ) => {
+
+    
     return (
        
         <div className="main-pagehj">
@@ -57,6 +61,7 @@ const Menpagee = ( { hidden, hidden2, hidden3, hidden4 } ) => {
                 </div>
                 <div className="men-rightt">
                     <Menproduct />
+                   
                 </div>
             </div>
         </div>

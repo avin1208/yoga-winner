@@ -14,7 +14,7 @@ import { addItem} from "../../Redux/cartdrop/cart-drop.action";
 
 import { removeItem } from "../../Redux/cartdrop/cart-drop.action";
 
-const Grid = ({ item, addItem }) => {
+const Grid = ({ item, addItem, setOpenModal }) => {
     const { title, imageUrl, price, regularprice, description } = item;
     return (
         <div className="grid-box">
@@ -51,7 +51,10 @@ const Grid = ({ item, addItem }) => {
                             </p>
                         </div>
                         <div className="list-button">
-                            <div className="to-cart" onClick={() => addItem(item)} inverted>
+                            <div className="to-cart" onClick={() => {
+                                addItem(item);
+                                setOpenModal(true);
+                               }} inverted>
                                 Add to cart
                             </div>
                             <div className="searchk">

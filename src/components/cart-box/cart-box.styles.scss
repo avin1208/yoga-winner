@@ -1,0 +1,102 @@
+.modal-content{
+    background-color: #e9e9e9;
+    z-index: 2;
+    margin-left: 23rem;
+    width: auto;
+    height: auto;
+    position: absolute;
+
+    .modal-header{
+        background: none;
+        padding: 0;
+        border: none;
+
+        .title-buttn{
+            margin: 0;
+            opacity: 1;
+            text-shadow: unset;
+            background: #bbb none repeat scroll 0 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .modal-body{
+        padding: 30px;
+        background-color: #f6f6f6;
+        
+
+        .modal-row{
+            margin-left: -15px;
+            margin-right: -15px;
+            display: flex;
+            
+
+            .modal-left{
+                border: none;
+                width: 50%;
+                border-right: 1px solid #ebebeb;
+
+                .modal-title{
+                    position: relative;
+                    min-height: 1px;
+                    padding-right: 15px;
+                    padding-left: 15px;
+
+                    .product-sus{
+                        color: #46a74e;
+                        font-size: 20px;
+                        line-height: 28px;
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+            .modal-right{
+                padding-right: 15px;
+                padding-left: 15px;
+
+                .modal-rtitle{
+                    position: relative;
+                    padding-bottom: 10px;
+                    font-size: 24px;
+                    padding-top: 15px;
+                    display: flex;
+
+                    .itrm-n{
+                        padding-left: 0.5rem;
+                        padding-right: 0.5rem;
+                    }
+                }
+
+                .modal-productss{
+                    margin-top: 1rem;
+
+                    .modal-price{
+                        color: #666;
+                        font-size: 15px;
+                        display: flex;
+
+                        .dd{
+                            color: #eab129;
+                            margin-left: 2rem;
+                        }
+                    }
+
+                    .modal-shipping{
+                        margin-top: 1rem;
+                        font-size: 15px;
+                        color: #666;
+                        display: flex;
+
+                        .dd{
+                            color: #eab129;
+                            margin-left: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -30,15 +30,23 @@ import Aboutus from './pages/aboutuspage/aboutuspage.component';
 
 import Cart from './pages/cart/cart.component';
 
+import Cartbox from'./components/cart-box/cart-box.component';
+
 
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(true);
+  const [showmodal, setShowModal] = useState(true);
   return (
     <div className='App'>
       <Header />
       <Navebar />
-      {modalOpen && <Modal className="model-center" setOpenModal={setModalOpen} />}
+      {
+        modalOpen && <Modal className="model-center" setOpenModal={setModalOpen} />
+      }
+      {
+        showmodal && <Cartbox className="modal-centerr" setOpenModal={setShowModal} /> 
+      }
       <Switch>
         <Route exact path='/' component={Homepage} />
         <Route path='/Men' component={Menpagee} />

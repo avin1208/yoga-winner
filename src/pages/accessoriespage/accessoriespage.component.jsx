@@ -18,8 +18,9 @@ import Kiddrop from "../../components/kids-drop/kids-drop.component";
 
 import { connect } from "react-redux";
 
+import Cartdrop from "../../components/cart-drop/cart-drop.component";
 
-const Accessoriespage = ({ hidden, hidden2, hidden3 }) => {
+const Accessoriespage = ({ hidden, hidden2, hidden3, hidden4 }) => {
     return (
         <div className="main-pagehj">
         {
@@ -30,6 +31,9 @@ const Accessoriespage = ({ hidden, hidden2, hidden3 }) => {
         }
         {
             hidden3 ? null : <Kiddrop />
+        }
+        {
+            hidden4 ? null : <Cartdrop />
         }
             <div className="namefg">
                 <div className="back-imae">
@@ -58,8 +62,8 @@ const Accessoriespage = ({ hidden, hidden2, hidden3 }) => {
     );
 };
 
-const mapStateToProps = ({ men: { hidden }, lad: { hidden2 }, kid: { hidden3 } }) => ({
-    hidden, hidden2, hidden3
+const mapStateToProps = ({ men: { hidden }, lad: { hidden2 }, kid: { hidden3 }, cart: { hidden4 }  }) => ({
+    hidden, hidden2, hidden3, hidden4
 })
 
 

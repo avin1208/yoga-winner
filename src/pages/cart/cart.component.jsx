@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './cart.styles.scss';
 
@@ -16,7 +16,11 @@ import { selectCartTotal } from '../../Redux/cartdrop/cart-drop.selectors';
 
 import { selectCartItemsCount } from '../../Redux/cartdrop/cart-drop.selectors';
 
+import Cartbox from '../../components/cart-box/cart-box.component';
+
 const Cart = ({ cartItems, total, itemCount }) => {
+
+    
     return (
         <div className='main-cart-section'>
             <div className='cartitem-s'>
@@ -62,6 +66,8 @@ const Cart = ({ cartItems, total, itemCount }) => {
                     </div>
                 </div>
             </div>
+
+           
         </div>
     );
 };
@@ -69,7 +75,7 @@ const Cart = ({ cartItems, total, itemCount }) => {
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
     total: selectCartTotal,
-    itemCount: selectCartItemsCount
+    itemCount: selectCartItemsCount,
 });
 
 export default withRouter(connect(mapStateToProps)(Cart));

@@ -4,7 +4,6 @@ import './product.styles.scss';
 
 import { Link } from "react-router-dom";
 
-
 import { addItem } from "../../Redux/cartdrop/cart-drop.action";
 
 import { connect } from "react-redux";
