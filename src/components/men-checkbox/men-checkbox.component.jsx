@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 import './men-checkbox.styles.scss';
 
+import { ItemContext } from "../../Providers/item/item.component";
+
 
 const Checkbox = () => {
+    const {filterItem} = useState(ItemContext);
     return (
         <div className="main-check">
             <div className="drop-check">
@@ -20,14 +23,15 @@ const Checkbox = () => {
                         </h5>
                         <div className="labell">
                             <div>
-                                <label className="best-seller">
-                                    <input type="checkbox" id="best-seller" name="best seller" />
+                                <div className="best-seller">
+                                    <div className="klmm" onClick={() => filterItem('Best-Seller')}>
                                     Best Seller (3)
-                                </label>
+                                    </div>
+                                </div>
                             </div>
                             <div>
                                 <label className="collection">
-                                    <input type="checkbox" id="best-seller" name="trending" />
+                                    <input type="checkbox"  onClick={() => filterItem('collection')}/>
                                     collection (3)
                                 </label>
                             </div>

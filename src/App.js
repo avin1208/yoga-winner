@@ -36,7 +36,7 @@ import Cartbox from'./components/cart-box/cart-box.component';
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(true);
-  const [showmodal, setShowModal] = useState(true);
+  const [showmodal, setShowModal] = useState(false);
   return (
     <div className='App'>
       <Header />

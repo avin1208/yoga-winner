@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import './header.styles.scss';
 
 const Header = () => {
+ 
    return (
       <nav className="main-head">
          <div className="search">

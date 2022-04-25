@@ -16,13 +16,12 @@ import Grid from "../mens-grid/mens-grid.component";
 
 import Dropsort from "../sort-drop/sort-drop.component";
 
-
 const Menproduct = () => {
     const [productdata] = useState(PRODUCT_DATA);
     const [griddata] = useState(GRID_DATA);
     const [index, setIndex] = useState(1);
     const [selected, setSelected] = useState("");
-    
+
     return (
         <div className="men-product">
             <div className="men-kj">
@@ -50,7 +49,6 @@ const Menproduct = () => {
                 <div className="fggg" hidden={index !== 1}>
                     {
                         productdata
-                            .filter((item, idx) => idx === 0 || idx === 2 || idx === 15 || idx === 15 || idx === 1 || idx === 3 || idx === 4 || idx === 5 || idx === 6 || idx === 7 || idx === 8)
                             .map(item => (<Product key={item.id} item={item} />
                             ))
                     }
