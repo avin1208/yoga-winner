@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import './men-product.styles.scss';
 
@@ -8,16 +8,16 @@ import { FiAlignJustify } from 'react-icons/fi';
 
 import GRID_DATA from "../../Grid.data";
 
-import PRODUCT_DATA from "../../product.data";
-
 import Product from "../product/product.component";
 
 import Grid from "../mens-grid/mens-grid.component";
 
 import Dropsort from "../sort-drop/sort-drop.component";
 
+import { ItemContext } from "../../Providers/item/items.providers";
+
 const Menproduct = () => {
-    const [productdata] = useState(PRODUCT_DATA);
+    const {lists} = useContext(ItemContext)
     const [griddata] = useState(GRID_DATA);
     const [index, setIndex] = useState(1);
     const [selected, setSelected] = useState("");
@@ -48,7 +48,7 @@ const Menproduct = () => {
                 </div>
                 <div className="fggg" hidden={index !== 1}>
                     {
-                        productdata
+                          lists
                             .map(item => (<Product key={item.id} item={item} />
                             ))
                     }
@@ -56,7 +56,7 @@ const Menproduct = () => {
                 <div className="ghhhg" hidden={index !== 2}>
                     {
                         griddata
-                        .map(item => (<Grid key={item.id} item={item}/>))
+                        .map(item => (<Grid key={item.id} item={item} />))
                     }
                 </div>
             </div>

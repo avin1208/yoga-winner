@@ -1,0 +1,292 @@
+.main-wcheck{
+
+
+    .drop-wcheck{
+        border: 1px solid #ebebeb;
+        height: 32rem;
+        width: 15rem;
+        margin-top: 2rem;
+        margin-left: 4rem;
+
+        .wcheck-title{
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ebebeb;
+            padding-left: 2rem;
+            height: 2rem;
+            padding-top: 0.5rem;
+
+            .Filterw{
+                margin-top: 0.2rem;
+                margin-left: -0.5rem;
+                color: #666;
+            }
+        }
+
+        .clear-allw{
+            font-size: 15px;
+            margin-left: 2.5rem;
+            margin-top: 0.8rem;
+            padding: 8px 20px;
+            height: 20px;
+            background: black;
+            display: inline-block;
+            color: white;
+            padding-left: 1rem;
+    
+            &:hover{
+                cursor: pointer;
+                color: white;
+                background-color: #eab129;
+            }
+        }
+
+        .sizee{
+            margin-top: -0.9rem;
+        .siz{
+            font-size: 15px;
+            color: #666;
+            margin-left: 2.3rem;
+        }
+
+        .labell{
+           margin-top: -1rem;
+        
+
+        .s{
+            font-size: 12px;
+            color: #666;
+            margin-left: 2rem;
+            
+        }
+        .m{
+            font-size: 12px;
+            color: #666;
+            margin-left: 2rem;
+            
+        }
+        .l{
+            font-size: 12px;
+            color: #666;
+            margin-left: 2rem;
+        }
+    }
+}
+        .colorr{
+            margin-top: -0.9rem;
+
+        .col{
+            font-size: 15px;
+            color: #666;
+            margin-left: 2.3rem;
+        }
+
+        .labell{
+        margin-top: -1rem;
+        
+        
+            .color{
+                background-color: #f5f5dc;
+                width: 1rem;
+                height: 1rem;
+                display: inline-block;
+                margin-left: 2rem;
+                box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+                border: 1px solid rgba(0,0,0,.05);
+                margin-top: 0.5rem;
+                cursor: pointer;
+                
+
+                &:hover{
+                    border: 2px solid black;
+                }
+
+            }
+            .beige{
+                font-size: 13px;
+                color: #666;
+                margin-left: 1rem;
+                margin-bottom: -1rem;
+                
+            }  
+
+        .color1{
+            background-color: white;
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            margin-left: 2rem;
+            box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+            border: 1px solid rgba(0,0,0,.05);
+            margin-top: 0.5rem;
+            cursor: pointer;
+            
+
+            &:hover{
+                border: 2px solid black;
+            }
+
+        }
+        .white{
+            font-size: 13px;
+            color: #666;
+            margin-left: 1rem;
+            margin-bottom: -1rem;
+            
+        }  
+        .color2{
+            background-color: black;
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            margin-left: 2rem;
+            box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+            border: 1px solid rgba(0,0,0,.05);
+            margin-top: 0.5rem;
+            cursor: pointer;
+            
+
+            &:hover{
+                border: 2px solid black;
+            }
+
+        }
+        .black{
+            font-size: 13px;
+            color: #666;
+            margin-left: 1rem;
+            margin-bottom: -1rem;
+            
+        }
+        .color3{
+            background-color: #eab129;
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            margin-left: 2rem;
+            box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+            border: 1px solid rgba(0,0,0,.05);
+            margin-top: 0.5rem;
+            cursor: pointer;
+            
+
+            &:hover{
+                border: 2px solid black;
+            }
+
+        }
+        .orange{
+            font-size: 13px;
+            color: #666;
+            margin-left: 1rem;
+            margin-bottom: -1rem;
+            
+        }
+        .color4{
+            background-color: blue;
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            margin-left: 2rem;
+            box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+            border: 1px solid rgba(0,0,0,.05);
+            margin-top: 0.5rem;
+            cursor: pointer;
+            
+
+            &:hover{
+                border: 2px solid black;
+            }
+
+        }
+        .blue{
+            font-size: 13px;
+            color: #666;
+            margin-left: 1rem;
+            margin-bottom: -1rem;
+            
+        }
+        .color5{
+            background-color: green;
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            margin-left: 2rem;
+            box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+            border: 1px solid rgba(0,0,0,.05);
+            margin-top: 0.5rem;
+            cursor: pointer;
+            
+
+            &:hover{
+                border: 2px solid black;
+            }
+
+        }
+        .green{
+            font-size: 13px;
+            color: #666;
+            margin-left: 1rem;
+            margin-bottom: -1rem;
+            
+        }
+        .color6{
+            background-color: yellow;
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            margin-left: 2rem;
+            box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+            border: 1px solid rgba(0,0,0,.05);
+            margin-top: 0.5rem;
+            cursor: pointer;
+            
+
+            &:hover{
+                border: 2px solid black;
+            }
+
+        }
+        .yellow{
+            font-size: 13px;
+            color: #666;
+            margin-left: 1rem;
+            margin-bottom: -1rem;
+            
+        }
+        .color7{
+            background-color: pink;
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            margin-left: 2rem;
+            box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+            border: 1px solid rgba(0,0,0,.05);
+            margin-top: 0.5rem;
+            cursor: pointer;
+            
+
+            &:hover{
+                border: 2px solid black;
+            }
+
+        }
+        .pink{
+            font-size: 13px;
+            color: #666;
+            margin-left: 1rem;
+            margin-bottom: -1rem;
+            
+        }
+        }
+        }
+    }
+    .sell-ime{
+        margin-top: 6rem;
+        margin-left: 4rem;
+        img{
+            height: 23rem;
+            width: 15.2rem;
+        }
+    }
+}

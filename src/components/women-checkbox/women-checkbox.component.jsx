@@ -1,54 +1,26 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 
-import './men-checkbox.styles.scss';
+import './women-checkbox.styles.scss';
 
 import { ItemContext } from "../../Providers/item/items.providers";
 
-
-const Checkbox = () => {
-    const {filterItem} = useContext(ItemContext);
+const Wcheckbox = () => {
     const {filterrItem} = useContext(ItemContext);
     const {filteItem} = useContext(ItemContext);
     const {ClearallItem} = useContext(ItemContext);
     return (
-        <div className="main-check">
-            <div className="drop-check">
-                <div className="check-title">
-                    <div className="Filter">FILTER BY</div> 
-                </div>
-                <div className="check-box">
-                    <div className="clear-all" onClick={ClearallItem}>
-                        x  clear all
+        <div className="main-wcheck">
+            <div className="drop-wcheck">
+                <div className="wcheck-title">
+                    <div className="Filterw">
+                        FILTER BY
                     </div>
-                    <div className="categories">
-                        <h5 className="cate">
-                            CATEGORIES
-                        </h5>
-                        <div className="labell">
-                            <div>
-                                <label className="best-seller" >
-                                    <input type="checkbox" onClick={() => filterItem('BestSeller')} />
-                                    BestSeller 
-                                    </label>
-                            </div>
-                            <div>
-                                <label className="collection">
-                                    <input type="checkbox" onClick={() => filterItem('collection')} />
-                                    collection 
-                                </label>
-                            </div>
-                            <div>
-                                <label className="trending">
-                                    <input type="checkbox" onClick={() => filterItem('trending')} />
-                                    trending
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <hr color="#ebebeb" />
                 </div>
-                <div className="check-box">
-                    <div className="sizee">
+                <div className="check-boxw">
+                 <div className="clear-allw" onClick={ClearallItem}>
+                 x clear all
+                 </div>
+                 <div className="sizee">
                         <h5 className="siz">
                             SIZE
                         </h5>
@@ -61,7 +33,7 @@ const Checkbox = () => {
                             </div>
                             <div>
                                 <label className="m">
-                                    <input type="checkbox" onClick={() => filterrItem('M')}/>
+                                    <input type="checkbox" onClick={() => filterrItem('M')} />
                                     M 
                                 </label>
                             </div>
@@ -73,7 +45,6 @@ const Checkbox = () => {
                             </div>
                         </div>
                     </div>
-                    <hr color="#ebebeb" />
                 </div>
                 <div className="check-box">
                     <div className="colorr">
@@ -84,14 +55,14 @@ const Checkbox = () => {
                             <div>
                                 <span className="color" >
                                 </span>
-                                <label className="beige" onClick={() => filteItem('Beige')} >
+                                <label className="beige" onClick={() => filteItem('Beige')}  >
                                     Beige 
                                 </label>
                             </div>
                             <div>
                                 <span className="color1" >
                                 </span>
-                                <label className="white" onClick={() => filteItem('white')} >
+                                <label className="white"  onClick={() => filteItem('white')}>
                                     White 
                                 </label>
                             </div>
@@ -148,4 +119,4 @@ const Checkbox = () => {
     );
 };
 
-export default Checkbox;
+export default Wcheckbox;

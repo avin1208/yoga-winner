@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React  from "react";
 
 import { Link } from "react-router-dom";
 
@@ -20,9 +20,9 @@ import { connect } from "react-redux";
 
 import Cartdrop from "../../components/cart-drop/cart-drop.component";
 
-import Cartbox from '../../components/cart-box/cart-box.component';
 
-const Menpagee = ( { hidden, hidden2, hidden3, hidden4 } ) => {
+
+const Menpagee = ( { hidden, hidden2, hidden3, hidden4, setShowModal } ) => {
 
     
     return (
@@ -60,8 +60,7 @@ const Menpagee = ( { hidden, hidden2, hidden3, hidden4 } ) => {
                     <Checkbox />
                 </div>
                 <div className="men-rightt">
-                    <Menproduct />
-                   
+                    <Menproduct setShowModal={setShowModal}/>
                 </div>
             </div>
         </div>

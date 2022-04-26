@@ -8,8 +8,6 @@ import Menbov from "../../components/menbox/menbox.component";
 
 import Menproduct from "../../components/men-product/men-product.component";
 
-import Checkbox from "../../components/men-checkbox/men-checkbox.component";
-
 import MenDrop from "../../components/men-dropdown/men-dropdown.component";
 
 import Ladrop from "../../components/l-dropdown/l-dropdown.component";
@@ -19,6 +17,8 @@ import Kiddrop from "../../components/kids-drop/kids-drop.component";
 import { connect } from "react-redux";
 
 import Cartdrop from "../../components/cart-drop/cart-drop.component";
+
+import Wcheckbox from "../../components/women-checkbox/women-checkbox.component";
 
 const Womenpage = ( { hidden, hidden2, hidden3, hidden4 } ) => {
     return (
@@ -52,7 +52,7 @@ const Womenpage = ( { hidden, hidden2, hidden3, hidden4 } ) => {
             <div className="men-side">
                 <div className="men-leftt">
                     <Menbov />
-                    <Checkbox />
+                    <Wcheckbox />
                 </div>
                 <div className="men-rightt">
                     <Menproduct />

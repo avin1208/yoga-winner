@@ -5,8 +5,9 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/121-home_default/printed-summer-dress.jpg',
         price: '14.35',
         regularPrice: '$20.50',
-        category:'Best-Seller',
-        size:"S"
+        category: 'BestSeller',
+        size:"S",
+        color: 'Black'
     },
     {
         id: 2,
@@ -14,8 +15,9 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/81-home_default/printed-chiffon-dress.jpg',
         price: '14.35',
         regularPrice: '$20.50',
-        category:'collection',
-        size:"M"
+        category: 'collection',
+        size:"M",
+        color: 'Green'
     },
     {
         id: 3,
@@ -23,8 +25,9 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/77-home_default/printed-chiffon-dress.jpg',
         price: '14.35',
         regularPrice: '$20.50',
-        category:"collection",
-        size:"M"
+        category: "collection",
+        size: "M",
+        color: 'Beige'
     },
     {
         id: 4,
@@ -32,8 +35,9 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/85-home_default/printed-chiffon-dress.jpg',
         price: '14.35',
         regularPrice: '$20.50',
-        category:"collection",
-        size:"M"
+        category: "collection",
+        size:"M",
+        color: 'Black'
     },
     {
         id: 5,
@@ -41,8 +45,9 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/89-home_default/printed-chiffon-dress.jpg',
         price: '14.35',
         regularPrice: '$20.50',
-        category:"Best Seller",
-        size:"S"
+        category: 'BestSeller',
+        size:"S",
+        color: 'Blue'
     },
     {
         id: 6,
@@ -50,8 +55,9 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/97-home_default/printed-chiffon-dress.jpg',
         price: '14.35',
         regularPrice: '$20.50',
-        category:"Best Seller",
-        size:"S"
+        category: 'BestSeller',
+        size:"S",
+        color: 'Black'
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ const PRODUCT_DATA = [
         price: '14.35',
         regularPrice: '$20.50',
         category:"collection",
-        size:"S"
+        size:"S",
+        color: 'Blue'
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ const PRODUCT_DATA = [
         price: '14.35',
         regularPrice: '$20.50',
         category:"trending",
-        size:"S"
+        size:"S",
+        color: 'white'
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ const PRODUCT_DATA = [
         price: '14.35',
         regularPrice: '$20.50',
         category:"trending",
-        size:"M"
+        size:"M",
+        color: 'Orange'
     },
     {
         id: 10,
@@ -86,8 +95,9 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/113-home_default/printed-chiffon-dress.jpg',
         price: '14.35',
         regularPrice: '$20.50',
-        category:"Best Seller",
-        size:"M"
+        category: 'BestSeller',
+        size:"M",
+        color: 'Blue'
     },
     {
         id: 11,
@@ -96,7 +106,8 @@ const PRODUCT_DATA = [
         price: '28.99',
         regularPrice: '$30.50',
         category:"collection",
-        size:"L"
+        size:"L",
+        color: 'Orange'
     },
     {
         id: 12,
@@ -104,15 +115,17 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/117-home_default/printed-summer-dress.jpg',
         price: '25.50',
         category:"trending",
-        size:"S"
+        size:"S",
+        color: 'Pink'
     },
     {
         id: 13,
         title: 'Suspendisse Urna Nibh',
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/121-home_default/printed-summer-dress.jpg',
         price: '14.35',
-        category:"Best Seller",
-        size:"S"
+        category: 'BestSeller',
+        size:"S",
+        color: 'Black'
     },
     {
         id: 14,
@@ -120,15 +133,17 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/129-home_default/printed-dress.jpg',
         price: '30.25',
         category:"trending",
-        size:"L"
+        size:"L",
+        color: 'Yellow'
     },
     {
         id: 15,
         title: 'Viverra Non, Semper',
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/125-home_default/printed-dress.jpg',
         price: '50.23',
-        category:"Best Seller",
-        size:"L"
+        category: 'BestSeller',
+        size:"L",
+        color: 'Pink'
     },
     {
         id: 16,
@@ -136,7 +151,8 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/133-home_default/blouse.jpg',
         price: '60.12',
         category:"collection",
-        size:"S"
+        size:"S",
+        color: 'Blue'
     },
     {
         id: 17,
@@ -144,7 +160,8 @@ const PRODUCT_DATA = [
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/81-home_default/printed-chiffon-dress.jpg',
         price: '30.56',
         category:"trending",
-        size:"L"
+        size:"L",
+        color: 'Green'
     },
 
 ];

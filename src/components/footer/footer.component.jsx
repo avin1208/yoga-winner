@@ -64,9 +64,9 @@ const Footer = () => {
                             </ul>
                       </div>
                       <div className="footer-adress">
-                      © 2017. All Rights Reserved. Designed by 
+                      © 2022. All Rights Reserved. Designed by 
                       <a href="http://fieldthemes.com/">
-                       Field Thems
+                      Avin Mangukiya
                        </a>
                        </div>
                       </div> 
