@@ -1,6 +1,7 @@
-.men-product{
+.acce-product{
 
-    .men-pro{
+
+    .acce-pro{
         border: 1px solid #ebebeb;
         height: 3rem;
         width: 88rem;
@@ -8,45 +9,44 @@
         margin-top: -12.5rem;
         display: flex;
 
-        .men-th{
+        .acce-th{
             background-color: #fff;
             display: flex;
 
-            .men-fath{
+            .acce-fath{
                 padding-top: 0.8rem;
                 font-size: 25px;
                 padding-left: 1rem;
                 color: black;
 
-            
-                    &:hover{
-                        color: #eab129;
-                        cursor: pointer;
-                     }
+                &:hover{
+                    color: #eab129;
+                    cursor: pointer;
                 }
-                .men-aifi{
-                    padding-top: 0.5rem;
-                    font-size: 33px;
-                    padding-left: 1rem;
+            }
 
-                        &:hover{
-                            color: #eab129;
-                            cursor: pointer;
-                         }
+            .acce-aifi{
+                padding-top: 0.5rem;
+                font-size: 33px;
+                padding-left: 1rem;
+
+                &:hover{
+                    color: #eab129;
+                    cursor: pointer;
                 }
-                }
-           .men-j{
+            }
+        }
+        .acce-j{
             padding-top: 1rem;
 
-           
-            .men-cen{
+            .acce-cen{
                 font-size: 15px;
                 color: #666;
                 margin-left: 35rem;
-                
-            }   
+            }
         }
-        .box-sort{
+
+        .box-sor{
             display: flex;
             padding-top: 1rem;
             margin-left: 25rem;
@@ -58,7 +58,7 @@
         }
     }
 
-    .fggg{
+    .fl{
         margin-left: 2.2rem;
     }
 }

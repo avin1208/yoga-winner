@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import './App.css';
 
@@ -32,11 +32,13 @@ import Cart from './pages/cart/cart.component';
 
 import Cartbox from'./components/cart-box/cart-box.component';
 
+import { CartContext } from './Providers/cart/cart.provider';
+
 
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(true);
-  const [showmodal, setShowModal] = useState(false);
+  const {cartHidden} = useContext(CartContext);
   return (
     <div className='App'>
       <Header />
@@ -45,7 +47,7 @@ const App = () => {
         modalOpen && <Modal className="model-center" setOpenModal={setModalOpen} />
       }
       {
-        showmodal && <Cartbox className="modal-centerr" setOpenModal={setShowModal} /> 
+       cartHidden ? null : <Cartbox />
       }
       <Switch>
         <Route exact path='/' component={Homepage} />

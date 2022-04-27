@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import './mens-grid.styles.scss';
 
@@ -10,11 +10,14 @@ import { FaCheck } from 'react-icons/fa';
 
 import { AiOutlineSearch } from 'react-icons/ai';
 
-import { addItem} from "../../Redux/cartdrop/cart-drop.action";
+import { addItem } from "../../Redux/cartdrop/cart-drop.action";
 
 import { removeItem } from "../../Redux/cartdrop/cart-drop.action";
 
-const Grid = ({ item, addItem,}) => {
+import { CartContext } from "../../Providers/cart/cart.provider";
+
+const Grid = ({ item, addItem, }) => {
+    const { toggleAddCartHidden } = useContext(CartContext);
     const { title, imageUrl, price, regularprice, description } = item;
     return (
         <div className="grid-box">
@@ -22,6 +25,14 @@ const Grid = ({ item, addItem,}) => {
                 <div className="item-box">
                     <div className="left-product"
                         style={{ backgroundImage: `url(${imageUrl})` }}>
+                        <div className="condition-box">
+                            <span className="new-product">
+                                New
+                            </span>
+                            <span className="sale-product">
+                                Sale
+                            </span>
+                        </div>
                         <div className="vl"></div>
                     </div>
                     <div className="right-text">
@@ -51,9 +62,11 @@ const Grid = ({ item, addItem,}) => {
                             </p>
                         </div>
                         <div className="list-button">
-                            <div className="to-cart" onClick={() => {
-                                addItem(item);
-                               }} inverted>
+                            <div className="to-cart"
+                                onClick={() => {
+                                    addItem(item);
+                                    toggleAddCartHidden();
+                                }} inverted>
                                 Add to cart
                             </div>
                             <div className="searchk">

@@ -46,16 +46,13 @@ const ItemProvider = ({ children }) => {
             const filteredData = lists.filter((item) => {
                 return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
             })
-            setlists(filteredData); 
-            
+            setlists(filteredData);  
         }
         else{
             setlists(lists)
         }
     setSearchInput(keyword);
   }
-
-
 
     return (
         <ItemContext.Provider

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import './men-checkbox.styles.scss';
 
@@ -10,6 +10,7 @@ const Checkbox = () => {
     const {filterrItem} = useContext(ItemContext);
     const {filteItem} = useContext(ItemContext);
     const {ClearallItem} = useContext(ItemContext);
+    const [checked, setChecked] = useState(false);
     return (
         <div className="main-check">
             <div className="drop-check">
@@ -17,7 +18,9 @@ const Checkbox = () => {
                     <div className="Filter">FILTER BY</div> 
                 </div>
                 <div className="check-box">
-                    <div className="clear-all" onClick={ClearallItem}>
+                    <div className="clear-all" 
+                    onChange={() => setChecked(!checked)}
+                    onClick={ClearallItem}>
                         x  clear all
                     </div>
                     <div className="categories">
@@ -27,19 +30,29 @@ const Checkbox = () => {
                         <div className="labell">
                             <div>
                                 <label className="best-seller" >
-                                    <input type="checkbox" onClick={() => filterItem('BestSeller')} />
+                                    <input type="checkbox" 
+                                    
+                                   
+                                    onClick={() => filterItem('BestSeller')}
+                                     />
                                     BestSeller 
                                     </label>
                             </div>
                             <div>
                                 <label className="collection">
-                                    <input type="checkbox" onClick={() => filterItem('collection')} />
+                                    <input type="checkbox" 
+                                    defaultChecked={checked}
+                                    onChange={() => setChecked(!checked)}
+                                    onClick={() => filterItem('collection')} />
                                     collection 
                                 </label>
                             </div>
                             <div>
                                 <label className="trending">
-                                    <input type="checkbox" onClick={() => filterItem('trending')} />
+                                    <input type="checkbox" 
+                                    defaultChecked={checked}
+                                    onChange={() => setChecked(!checked)}
+                                    onClick={() => filterItem('trending')} />
                                     trending
                                 </label>
                             </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import './cart-box.styles.scss';
 
@@ -18,15 +18,17 @@ import { selectCartItemsCount} from "../../Redux/cartdrop/cart-drop.selectors";
 
 import { selectCartTotal } from "../../Redux/cartdrop/cart-drop.selectors";
 
+import { CartContext } from "../../Providers/cart/cart.provider";
 
-const Cartbox = ({ cartItems, total, itemCount, setOpenModal }) => {
+
+const Cartbox = ({ cartItems, total, itemCount }) => {
+    const {toggleAddCartHidden} = useContext(CartContext)
     return (
+        <div className="hjkl">
         <div className="modal-content">
             <div className="modal-header">
                 <div className="title-buttn">
-                    <button onClick={() => {
-                        setOpenModal(false);
-                    }}>
+                    <button onClick={toggleAddCartHidden}>
                         X
                     </button>
                 </div>
@@ -75,6 +77,7 @@ const Cartbox = ({ cartItems, total, itemCount, setOpenModal }) => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

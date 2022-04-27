@@ -1,6 +1,7 @@
-.men-product{
+.kid-product{
 
-    .men-pro{
+
+    .kid-pro{
         border: 1px solid #ebebeb;
         height: 3rem;
         width: 88rem;
@@ -8,57 +9,54 @@
         margin-top: -12.5rem;
         display: flex;
 
-        .men-th{
+        .kid-th{
             background-color: #fff;
             display: flex;
 
-            .men-fath{
+            .kid-fath{
                 padding-top: 0.8rem;
                 font-size: 25px;
                 padding-left: 1rem;
                 color: black;
 
-            
-                    &:hover{
-                        color: #eab129;
-                        cursor: pointer;
-                     }
-                }
-                .men-aifi{
-                    padding-top: 0.5rem;
-                    font-size: 33px;
-                    padding-left: 1rem;
+                &:hover{
+                    color: #eab129;
+                    cursor: pointer;
+                 }
+            }
 
-                        &:hover{
-                            color: #eab129;
-                            cursor: pointer;
-                         }
+            .kid-aifi{
+                padding-top: 0.5rem;
+                font-size: 33px;
+                padding-left: 1rem;
+                    
+                &:hover{
+                    color: #eab129;
+                    cursor: pointer;
                 }
-                }
-           .men-j{
+            }
+        }
+        .kid-j{
             padding-top: 1rem;
 
-           
-            .men-cen{
+            .kid-cen{
                 font-size: 15px;
                 color: #666;
                 margin-left: 35rem;
-                
-            }   
+            }
         }
-        .box-sort{
+        .kbox-sort{
             display: flex;
             padding-top: 1rem;
             margin-left: 25rem;
 
-            .sort{
+            .sor{
                 font-size: 15px;
                 color: #666;
             }
         }
     }
-
-    .fggg{
+    .fd{
         margin-left: 2.2rem;
     }
 }

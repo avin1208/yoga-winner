@@ -6,8 +6,6 @@ import './womenpage.styles.scss';
 
 import Menbov from "../../components/menbox/menbox.component";
 
-import Menproduct from "../../components/men-product/men-product.component";
-
 import MenDrop from "../../components/men-dropdown/men-dropdown.component";
 
 import Ladrop from "../../components/l-dropdown/l-dropdown.component";
@@ -19,6 +17,8 @@ import { connect } from "react-redux";
 import Cartdrop from "../../components/cart-drop/cart-drop.component";
 
 import Wcheckbox from "../../components/women-checkbox/women-checkbox.component";
+
+import Womenproduct from "../../components/women-product/women-product.component";
 
 const Womenpage = ( { hidden, hidden2, hidden3, hidden4 } ) => {
     return (
@@ -55,7 +55,7 @@ const Womenpage = ( { hidden, hidden2, hidden3, hidden4 } ) => {
                     <Wcheckbox />
                 </div>
                 <div className="men-rightt">
-                    <Menproduct />
+                    <Womenproduct />
                 </div>
             </div>
         </div>
