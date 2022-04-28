@@ -38,8 +38,8 @@ const Grid = ({ item, addItem, }) => {
                         <div className='modal-body'>
                             <div className='modal-rw'>
                                 <div className='modal-leftt'>
-                                    <div className="img-p">
-                                        {imageUrl}
+                                    <div className="img-p" style={{ backgroundImage: `url(${imageUrl})` }}>
+                                        
                                     </div>
                                 </div>
                                 <div className="modal-rightt">

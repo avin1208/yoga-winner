@@ -13,7 +13,8 @@
         border-radius: 0;
         outline: 0 none;
         position: relative;
-        min-height: 28.125rem;
+        min-height: auto;
+        width: auto;
 
         .modal-hd{
             border: medium none;

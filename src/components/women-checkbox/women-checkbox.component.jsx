@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 
 import './women-checkbox.styles.scss';
 
@@ -8,6 +8,47 @@ const Wcheckbox = () => {
     const {filterrItem} = useContext(ItemContext);
     const {filteItem} = useContext(ItemContext);
     const {ClearallItem} = useContext(ItemContext);
+    const [checkedAll, setCheckedAll] = useState(false);
+    const [checked, setChecked] = useState({
+        nr1: false,
+        nr2: false,
+        nr3: false
+    });
+
+    const toggleCheck = (inputName) => {
+        setChecked((prevState) => {
+            const newState = { ...prevState };
+            newState[inputName] = !prevState[inputName];
+            return newState;
+        });
+    };
+
+    const selectAll = (value) => {
+        setCheckedAll(value);
+        setChecked((prevState) => {
+            const newState = { ...prevState };
+            for (const inputName in newState) {
+                newState[inputName] = value;
+            }
+            return newState;
+        });
+    };
+
+
+    useEffect(() => {
+        let allChecked = true;
+        for (const inputName in checked) {
+            if(checked[inputName] === false) {
+                allChecked = false;
+            }
+        }
+        if (allChecked) {
+            setCheckedAll(true);
+        } else {
+            setCheckedAll(false);
+        }
+    }, [checked]);
+
     return (
         <div className="main-wcheck">
             <div className="drop-wcheck">
@@ -17,7 +58,12 @@ const Wcheckbox = () => {
                     </div>
                 </div>
                 <div className="check-boxw">
-                 <div className="clear-allw" onClick={ClearallItem}>
+                 <div className="clear-allw" 
+                 checked={checkedAll}
+                 onClick={
+                    () => {selectAll(!checked) 
+                    ClearallItem();
+                }}>
                  x clear all
                  </div>
                  <div className="sizee">
@@ -27,19 +73,28 @@ const Wcheckbox = () => {
                         <div className="labell">
                             <div>
                                 <label className="s">
-                                    <input type="checkbox" onClick={() => filterrItem('S')} />
+                                    <input type="checkbox" 
+                                    onChange={() => toggleCheck("nr1")}
+                                    checked={checked["nr1"]}
+                                    onClick={() => filterrItem('S')} />
                                     S 
                                 </label>
                             </div>
                             <div>
                                 <label className="m">
-                                    <input type="checkbox" onClick={() => filterrItem('M')} />
+                                    <input type="checkbox" 
+                                    onChange={() => toggleCheck("nr2")}
+                                    checked={checked["nr2"]}
+                                    onClick={() => filterrItem('M')} />
                                     M 
                                 </label>
                             </div>
                             <div>
                                 <label className="l">
-                                    <input type="checkbox" onClick={() => filterrItem('L')}/>
+                                    <input type="checkbox" 
+                                    onChange={() => toggleCheck("nr3")}
+                                    checked={checked["nr3"]}
+                                    onClick={() => filterrItem('L')}/>
                                     L 
                                 </label>
                             </div>

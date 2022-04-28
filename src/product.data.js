@@ -2,12 +2,12 @@ const PRODUCT_DATA = [
     {
         id: 1,
         title: 'Quisque Volutpat Mattis',
-        imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/121-home_default/printed-summer-dress.jpg',
+        imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/72-home_default/printed-chiffon-dress.jpg',
         price: '14.35',
         regularPrice: '$20.50',
         category: 'BestSeller',
         size:"S",
-        color: 'Black'
+        color: 'white'
     },
     {
         id: 2,
@@ -148,7 +148,7 @@ const PRODUCT_DATA = [
     {
         id: 16,
         title: 'Suspendisse Urna Nibh',
-        imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/133-home_default/blouse.jpg',
+        imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/112-home_default/printed-chiffon-dress.jpg',
         price: '60.12',
         category:"collection",
         size:"S",
@@ -157,7 +157,7 @@ const PRODUCT_DATA = [
     {
         id: 17,
         title: 'Cras Ornare Tristique Elit',
-        imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/81-home_default/printed-chiffon-dress.jpg',
+        imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/136-home_default/faded-short-sleeves-tshirt.jpg',
         price: '30.56',
         category:"trending",
         size:"L",

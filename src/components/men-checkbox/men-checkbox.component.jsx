@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import './men-checkbox.styles.scss';
 
@@ -10,7 +10,52 @@ const Checkbox = () => {
     const {filterrItem} = useContext(ItemContext);
     const {filteItem} = useContext(ItemContext);
     const {ClearallItem} = useContext(ItemContext);
-    const [checked, setChecked] = useState(false);
+    const [checkedAll, setCheckedAll] = useState(false);
+    const [checked, setChecked] = useState({
+        nr1: false,
+        nr2: false,
+        nr3: false,
+        nr4: false,
+        nr5: false,
+        nr6: false
+    });
+
+    const toggleCheck = (inputName) => {
+        setChecked((prevState) => {
+          const newState = { ...prevState };
+          newState[inputName] = !prevState[inputName];
+          return newState;
+        });
+      };
+
+
+      const selectAll = (value) => {
+        setCheckedAll(value);
+        setChecked((prevState) => {
+          const newState = { ...prevState };
+          for (const inputName in newState) {
+            newState[inputName] = value;
+          }
+          return newState;
+        });
+      };
+
+
+      useEffect(() => {
+        let allChecked = true;
+        for (const inputName in checked) {
+          if (checked[inputName] === false) {
+            allChecked = false;
+          }
+        }
+        if (allChecked) {
+          setCheckedAll(true);
+        } else {
+          setCheckedAll(false);
+        }
+      }, [checked]);
+
+
     return (
         <div className="main-check">
             <div className="drop-check">
@@ -19,8 +64,11 @@ const Checkbox = () => {
                 </div>
                 <div className="check-box">
                     <div className="clear-all" 
-                    onChange={() => setChecked(checked)}
-                    onClick={ClearallItem}>
+                    checked={checkedAll}
+                    onClick={
+                        () => {selectAll(!checked);
+                        ClearallItem();
+                    }}>
                         x  clear all
                     </div>
                     <div className="categories">
@@ -31,8 +79,8 @@ const Checkbox = () => {
                             <div>
                                 <label className="best-seller" >
                                     <input type="checkbox" 
-                                    
-                                   
+                                    onChange={() => toggleCheck("nr1")}
+                                    checked={checked["nr1"]}
                                     onClick={() => filterItem('BestSeller')}
                                      />
                                     BestSeller 
@@ -41,8 +89,8 @@ const Checkbox = () => {
                             <div>
                                 <label className="collection">
                                     <input type="checkbox" 
-                                    defaultChecked={checked}
-                                    onChange={() => setChecked(!checked)}
+                                    onChange={() => toggleCheck("nr2")}
+                                    checked={checked["nr2"]}
                                     onClick={() => filterItem('collection')} />
                                     collection 
                                 </label>
@@ -50,8 +98,8 @@ const Checkbox = () => {
                             <div>
                                 <label className="trending">
                                     <input type="checkbox" 
-                                    defaultChecked={checked}
-                                    onChange={() => setChecked(!checked)}
+                                    onChange={() => toggleCheck("nr3")}
+                                    checked={checked["nr3"]}
                                     onClick={() => filterItem('trending')} />
                                     trending
                                 </label>
@@ -68,19 +116,28 @@ const Checkbox = () => {
                         <div className="labell">
                             <div>
                                 <label className="s">
-                                    <input type="checkbox" onClick={() => filterrItem('S')} />
+                                    <input type="checkbox" 
+                                    onChange={() => toggleCheck("nr4")}
+                                    checked={checked["nr4"]}
+                                    onClick={() => filterrItem('S')} />
                                     S 
                                 </label>
                             </div>
                             <div>
                                 <label className="m">
-                                    <input type="checkbox" onClick={() => filterrItem('M')}/>
+                                    <input type="checkbox" 
+                                    onChange={() => toggleCheck("nr5")}
+                                    checked={checked["nr5"]}
+                                    onClick={() => filterrItem('M')}/>
                                     M 
                                 </label>
                             </div>
                             <div>
                                 <label className="l">
-                                    <input type="checkbox" onClick={() => filterrItem('L')}/>
+                                    <input type="checkbox"
+                                    onChange={() => toggleCheck("nr6")}
+                                    checked={checked["nr6"]}
+                                    onClick={() => filterrItem('L')}/>
                                     L 
                                 </label>
                             </div>
