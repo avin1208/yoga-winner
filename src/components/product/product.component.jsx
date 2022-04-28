@@ -20,14 +20,6 @@ const Product = ({ item, addItem }) => {
         <div className="listofproduct">
             <div className="background-image">
                 <div className="titleblock" style={{ backgroundImage: `url(${imageUrl})` }}>
-                    <div className="condition-box">
-                        <span className="new-product">
-                            New
-                        </span>
-                        <span className="sale-product">
-                            Sale
-                        </span>
-                    </div>
                     <Link className="name" to='/'>{title}</Link>
                 </div>
             </div>

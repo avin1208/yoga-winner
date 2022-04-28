@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import './cart.styles.scss';
 
@@ -16,11 +16,9 @@ import { selectCartTotal } from '../../Redux/cartdrop/cart-drop.selectors';
 
 import { selectCartItemsCount } from '../../Redux/cartdrop/cart-drop.selectors';
 
-import Cartbox from '../../components/cart-box/cart-box.component';
 
 const Cart = ({ cartItems, total, itemCount }) => {
 
-    
     return (
         <div className='main-cart-section'>
             <div className='cartitem-s'>
@@ -66,8 +64,7 @@ const Cart = ({ cartItems, total, itemCount }) => {
                     </div>
                 </div>
             </div>
-
-           
+            
         </div>
     );
 };

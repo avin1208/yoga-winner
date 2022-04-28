@@ -3,7 +3,8 @@ import React, { createContext, useState } from "react";
 import PRODUCT_DATA from "../../product.data";
 
 export const ItemContext = createContext({
-    lists: [],
+    lists: [PRODUCT_DATA],
+    // searchList: [PRODUCT_DATA],
     filterItem: () => {},
     filterrItem: () => {},
     filteItem: () => {},
@@ -14,6 +15,7 @@ export const ItemContext = createContext({
 const ItemProvider = ({ children }) => {
 
     const [lists,setlists] = useState(PRODUCT_DATA);
+    // const [searchList, setSearchList] = useState(PRODUCT_DATA);
     const [searchInput, setSearchInput] = useState('');
   
 
@@ -49,7 +51,8 @@ const ItemProvider = ({ children }) => {
             setlists(filteredData);  
         }
         else{
-            setlists(lists)
+            // setSearchList(searchList);
+            setlists(lists);
         }
     setSearchInput(keyword);
   }
@@ -58,6 +61,7 @@ const ItemProvider = ({ children }) => {
         <ItemContext.Provider
             value={{
                 lists,
+                // searchList,
                 filterItem,
                 filterrItem,
                 filteItem,

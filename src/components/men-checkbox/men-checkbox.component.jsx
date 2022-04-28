@@ -19,7 +19,7 @@ const Checkbox = () => {
                 </div>
                 <div className="check-box">
                     <div className="clear-all" 
-                    onChange={() => setChecked(!checked)}
+                    onChange={() => setChecked(checked)}
                     onClick={ClearallItem}>
                         x  clear all
                     </div>
