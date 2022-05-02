@@ -1,0 +1,132 @@
+.modal-body{
+    min-height: 23.75rem;
+    padding-bottom: 10px;
+    padding: 30px;
+
+    .modal-bdt{
+        margin-left: 15px;
+        margin-right: 15px;
+
+        .modal-lefty{
+            width: 41.66666667%;
+
+            .modal-left-product{
+                width: 20%;
+                height: 20%;
+            }
+        }
+
+        .modal-righty{
+            width: 58.33333333%;
+
+            .modal-product-title{
+                margin-top: 1rem;
+                margin-left: 1rem;
+
+                .pro-tit{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 20px;
+                }
+            }
+            .modal-price-product{
+                margin-top: 1rem;
+                margin-left: 1rem;
+
+                .pr-pricce{
+                    border-width: 2px 0;
+                    border-style: solid;
+                    border-color: #444;
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: #444;
+                    padding: 2px 0;
+                }
+            }
+            .modal-desc-product{
+                margin-top: 1rem;
+                margin-left: 1rem;
+
+                .desc{
+                    font-size: 0.8125rem;
+                        color: #878787;
+                }
+            }
+            .sizee-i{
+
+                .p-size{
+                    float: left;
+                    line-height: 30px;
+                    margin-bottom: 0;
+                    margin-right: 15px;
+                    min-width: 65px;
+                    width: auto;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    color: #444;
+                }
+
+                .i-size{
+                    border: 1px solid #ebebeb;
+                    height: 40px;
+                    width: 100%;
+                    float: left;
+                    padding: 0 12px;
+                    margin-top: 5px;
+                    background: none;
+                    font-size: 12px;
+                }
+            }
+
+            .colorr-i{
+
+                .p-color{
+                    float: left;
+                    line-height: 30px;
+                    margin-bottom: 0;
+                    margin-right: 15px;
+                    min-width: 65px;
+                    width: auto;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    color: #444;
+                }
+                .i-color{
+                    border: 1px solid #ebebeb;
+                    height: 40px;
+                    width: 100%;
+                    float: left;
+                    padding: 0 12px;
+                    margin-top: 5px;
+                    background: none;
+                    font-size: 12px;
+                }
+            }
+            .modal-quantity-prod {
+                display: flex;
+                border: 1px solid #ebebeb;
+                box-shadow: 2px 2px 3px 0 rgb(0 0 0 / 15%);
+                margin-left: 2rem;
+          
+                .value {
+                  color: #666;
+                  margin-left: 01rem;
+                  font-size: 15px;
+                  margin-top: 0.5rem;
+                }
+                .modal-arrow-fun{
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: 1rem;
+                  margin-right: 1rem;
+              
+                    .arrow {
+                        cursor: pointer;
+                        color: #666;
+                        font-size: 15px;
+                    } 
+                }
+            }
+        }
+    }
+}

@@ -9,7 +9,6 @@ import './header.styles.scss';
 import { ItemContext } from '../../Providers/item/items.providers';
 
 
-
 const Header = () => {
    const {filter} = useContext(ItemContext)
   

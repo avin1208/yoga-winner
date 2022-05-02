@@ -34,11 +34,13 @@ import Cartbox from'./components/cart-box/cart-box.component';
 
 import { CartContext } from './Providers/cart/cart.provider';
 
+import Search from './components/search-box/search-box.compoenet';
 
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(true);
   const {cartHidden} = useContext(CartContext);
+  const {cartHidden1} = useContext(CartContext);
   return (
     <div className='App'>
       <Header />
@@ -48,6 +50,9 @@ const App = () => {
       }
       {
        cartHidden ? null : <Cartbox />
+      }
+      {
+       cartHidden1 ? null : <Search />
       }
       <Switch>
         <Route exact path='/' component={Homepage} />

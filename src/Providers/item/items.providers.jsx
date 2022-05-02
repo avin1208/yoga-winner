@@ -4,7 +4,6 @@ import PRODUCT_DATA from "../../product.data";
 
 export const ItemContext = createContext({
     lists: [PRODUCT_DATA],
-     searchList: [PRODUCT_DATA],
     filterItem: () => {},
     filterrItem: () => {},
     filteItem: () => {},
@@ -15,8 +14,8 @@ export const ItemContext = createContext({
 const ItemProvider = ({ children }) => {
 
     const [lists,setlists] = useState(PRODUCT_DATA);
-     const [searchList, setSearchList] = useState(PRODUCT_DATA);
-    const [searchInput, setSearchInput] = useState('');
+    const [listsBackup] = useState(PRODUCT_DATA);
+    const [setSearchInput] = useState('');
   
 
     const filterItem = (categItem) => {
@@ -44,15 +43,17 @@ const ItemProvider = ({ children }) => {
     const filter = (e) => {
         const keyword = e.target.value; 
      
-        if (searchInput !== '') {
-            const filteredData = lists.filter((item) => {
-                return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+        if (keyword !== '') {
+            console.log(keyword,'searchInput');
+
+            const filteredData = listsBackup.filter((item) => {
+                return Object.values(item).join('').toLowerCase().includes(keyword.toLowerCase())
             })
+            console.log(filteredData,'filteredDatafilteredData');
             setlists(filteredData);  
-        }
-        else{
-            setSearchList(searchList);
-           // setlists(lists);
+        } 
+        else {
+            setlists(PRODUCT_DATA);
         }
     setSearchInput(keyword);
   }
@@ -61,7 +62,6 @@ const ItemProvider = ({ children }) => {
         <ItemContext.Provider
             value={{
                 lists,
-                searchList,
                 filterItem,
                 filterrItem,
                 filteItem,

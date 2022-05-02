@@ -17,14 +17,14 @@ const GRID_DATA = [
         id: 3,
         title: 'Cras ornare tristique elit',
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/129-home_default/printed-dress.jpg',
-        price: '25.99',
+        price: '25.80',
         description: '100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom.'
     },
     {
         id: 4,
         title: 'Suspendisse urna nibh',
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/125-home_default/printed-dress.jpg',
-        price: '50.99',
+        price: '50.90',
         description: 'Printed evening dress with straight sleeves with black thin waist belt and ruffled linings.'
     },
     {
@@ -47,7 +47,7 @@ const GRID_DATA = [
         title: 'Viverra non, semper',
         imageUrl: 'https://demo.fieldthemes.com/ps_winner/home2/112-home_default/printed-chiffon-dress.jpg',
         price: '14.35',
-        regularprice:'20.99',
+        regularprice:'20.90',
         description: 'Short-sleeved blouse with feminine draped sleeve detail.'
     },
     {

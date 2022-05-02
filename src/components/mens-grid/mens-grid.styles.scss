@@ -5,6 +5,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    
+   
 
     .modal-con{
         background-color: #f6f6f6;
@@ -15,6 +17,7 @@
         position: relative;
         min-height: auto;
         width: auto;
+        
 
         .modal-hd{
             border: medium none;
@@ -39,10 +42,12 @@
             min-height: 23.75rem;
             padding-bottom: 10px;
             padding: 30px;
+            
 
             .modal-rw{
                 margin-left: 15px;
                 margin-right: 15px;
+                display: flex;
 
                 .modal-leftt{
                     width: 41.66666667%;
@@ -121,6 +126,167 @@
                             margin-top: 5px;
                             background: none;
                             font-size: 12px;
+                        }
+                    }
+
+                    .list-button{
+                        display: flex;
+                        margin-top: 1rem;
+                    
+                        .to-cart{
+                            font-size: 15px;
+                            margin-top: 1.5rem;
+                            padding: 5px 20px;
+                            height: 20px;
+                            color: #666;
+                            background: #ebebeb;
+                            display: inline-block;
+                    
+                            &:hover{
+                                cursor: pointer;
+                                color: white;
+                                background-color: #eab129;
+                            }  
+                        }
+                    }
+                    .stock{
+                        display: flex;
+        
+                        .mark{
+                            color: #32cd32;
+                            margin-top: 2rem;
+                            margin-left: 1rem;
+                        }
+        
+                        .ma{
+                            margin-left: 0.5rem;
+                            margin-top: 2rem;
+                            color: #999;
+                            font-size: 15px;
+                        }
+                    }
+                    .quantity-prod {
+                        display: flex;
+                        border: 1px solid #ebebeb;
+                        box-shadow: 2px 2px 3px 0 rgb(0 0 0 / 15%);
+                        margin-left: 0rem;
+                        width: 7rem;
+                        margin-top: 15rem;
+                  
+                        .value {
+                          color: #666;
+                          margin-left: 01rem;
+                          font-size: 15px;
+                          margin-top: 0.5rem;
+                        }
+                        .arrow-fun{
+                          display: flex;
+                          flex-direction: column;
+                          margin-left: 1rem;
+                          margin-right: 1rem;
+                      
+                            .arrow {
+                                cursor: pointer;
+                                color: #666;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .social-content{
+                        margin-top: 1.5rem;
+                        display: flex;
+
+                        .facebook-modal{
+                            min-width: 60px;
+                            text-align: center;
+                            float: left;
+                            box-shadow: none;
+                            font-size: 15px;
+                            color: #444;
+                            width: auto;
+                            height: auto;
+                            line-height: 35px;
+                            background: #fff;
+                            padding: 0 10px;
+                            border: 1px solid #ebebeb;
+                            
+
+                            &:hover{
+                                cursor: pointer;
+                                background-color: #28589c;
+                                color: white;
+                            }
+                        }
+
+                        .tweet-modal{
+                            min-width: 60px;
+                            text-align: center;
+                            text-indent: inherit;
+                            float: left;
+                            overflow: visible;
+                            font-size: 15px;
+                            color: #444;
+                            width: auto;
+                            height: auto;
+                            line-height: 35px;
+                            background: #fff;
+                            padding: 0 10px;
+                            border: 1px solid #ebebeb;
+                            margin-left: 1rem;
+
+                            &:hover{
+                                cursor: pointer;
+                                background-color: #00acee;
+                                color: white;
+                            }
+                        }
+                        .google-modal{
+                            min-width: 60px;
+                            text-align: center;
+                            text-indent: inherit;
+                            float: left;
+                            overflow: visible;
+                            font-size: 15px;
+                            color: #444;
+                            width: auto;
+                            height: auto;
+                            line-height: 35px;
+                            background: #fff;
+                            padding: 0 10px;
+                            border: 1px solid #ebebeb;
+                            margin-left: 1rem;
+
+                            
+                            &:hover{
+                                cursor: pointer;
+                                background-color: #db3236;
+                                color: white;
+                            }
+                        }
+
+                        
+                        .pint-modal{
+                            min-width: 60px;
+                            text-align: center;
+                            text-indent: inherit;
+                            float: left;
+                            overflow: visible;
+                            font-size: 15px;
+                            color: #444;
+                            width: auto;
+                            height: auto;
+                            line-height: 35px;
+                            background: #fff;
+                            padding: 0 10px;
+                            border: 1px solid #ebebeb;
+                            margin-left: 1rem;
+
+
+                            &:hover{
+                                cursor: pointer;
+                                background-color: #E60023;
+                                color: white;
+                            }
                         }
                     }
                 }
