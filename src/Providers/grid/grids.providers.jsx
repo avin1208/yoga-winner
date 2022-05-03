@@ -1,43 +1,43 @@
 import React, { createContext, useState } from "react";
 
-import PRODUCT_DATA from "../../product.data";
+import GRID_DATA from "../../Grid.data";
 
-export const ItemContext = createContext({
-    lists: [PRODUCT_DATA],
-    filterItem: () => {},
+export const GridContext = createContext({
+    lists: [GRID_DATA],
+    filteruItem: () => {},
     filterrItem: () => {},
     filteItem: () => {},
     ClearallItem: () => {},
     filter:  () => {}
 });
 
-const ItemProvider = ({ children }) => {
+const GridProvider = ({ children }) => {
 
-    const [lists,setlists] = useState(PRODUCT_DATA);
-    const [listsBackup] = useState(PRODUCT_DATA);
+    const [lists,setlists] = useState(GRID_DATA);
+    const [listsBackup] = useState(GRID_DATA);
     const [setSearchInput] = useState('');
   
 
-    const filterItem = (categItem) => {
-        const updatedItems = PRODUCT_DATA.filter((curElem) => {
+    const filteruItem = (categItem) => {
+        const updatedItems = GRID_DATA.filter((curElem) => {
             return curElem.category === categItem;
         })
         setlists(updatedItems);
     }
     const filterrItem = (sizeItem) => {
-        const updatedItems = PRODUCT_DATA.filter((curElem) => {
+        const updatedItems = GRID_DATA.filter((curElem) => {
             return curElem.size === sizeItem;
         })
         setlists(updatedItems);
     }
     const filteItem = (colorItem) => {
-        const updatedItems = PRODUCT_DATA.filter((curElem) => {
+        const updatedItems = GRID_DATA.filter((curElem) => {
             return curElem.color === colorItem;
         })
         setlists(updatedItems);
     }
     const ClearallItem = () => {
-        setlists(PRODUCT_DATA);
+        setlists(GRID_DATA);
     }
 
     const filter = (e) => {
@@ -50,16 +50,16 @@ const ItemProvider = ({ children }) => {
             setlists(filteredData);  
         } 
         else {
-            setlists(PRODUCT_DATA);
+            setlists(GRID_DATA);
         }
     setSearchInput(keyword);
   }
 
     return (
-        <ItemContext.Provider
+        <GridContext.Provider
             value={{
                 lists,
-                filterItem,
+                filteruItem,
                 filterrItem,
                 filteItem,
                 ClearallItem,
@@ -67,8 +67,8 @@ const ItemProvider = ({ children }) => {
             }}
         >
             {children}
-        </ItemContext.Provider>
+        </GridContext.Provider>
     );
 };
 
-export default ItemProvider;
+export default GridProvider;

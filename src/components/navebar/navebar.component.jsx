@@ -20,6 +20,8 @@ import { FaShoppingCart } from 'react-icons/fa';
 
 import { toggleCartHidden } from "../../Redux/cartdrop/cart-drop.action";
 
+import LogIn from "../login/login.component";
+
 
 const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden, toggleCartHidden, itemCount }) => {
     return (
@@ -49,8 +51,11 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden, toggleCart
                     <Link className="option" to='/aboutus'>
                         About us
                     </Link>
-                        <FaShoppingCart className="cart-logo" onClick={toggleCartHidden}/>
-                        <label className="count">{itemCount}</label>
+                    <div className="login-component">
+                        <LogIn />
+                    </div>
+                    <FaShoppingCart className="cart-logo" onClick={toggleCartHidden} />
+                    <label className="count">{itemCount}</label>
                 </div>
             </div>
             <div className="color-q">
@@ -67,6 +72,6 @@ const mapDispatchToProps = dispatch => ({
 });
 const mapStateToProps = createStructuredSelector({
     itemCount: selectCartItemsCount
-  });
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navebar);

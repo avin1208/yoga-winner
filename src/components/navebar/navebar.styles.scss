@@ -16,7 +16,7 @@
                     align-items: center;
                     justify-content: flex-start;
                     padding-right: orem;
-                    margin-left: 12rem;
+                    margin-left: 1.5rem;
                     cursor: pointer;
                     
                 
@@ -33,9 +33,13 @@
                             text-decoration: underline black;
                         }
                     }
+
+                    .login-component{
+                        margin-left: 6rem;
+                    }
                     .cart-logo{
                         font-size: 25px;
-                        margin-left: 2rem;
+                        margin-left: 5rem;
                     }
                     .count{
                         margin-left: 1rem;

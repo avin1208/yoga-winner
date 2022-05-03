@@ -108,56 +108,56 @@ const Wcheckbox = () => {
                         </h5>
                         <div className="labell">
                             <div>
-                                <span className="color" >
+                                <span className="color" onClick={() => filteItem('Beige')}>
                                 </span>
                                 <label className="beige" onClick={() => filteItem('Beige')}  >
                                     Beige 
                                 </label>
                             </div>
                             <div>
-                                <span className="color1" >
+                                <span className="color1"  onClick={() => filteItem('white')}>
                                 </span>
                                 <label className="white"  onClick={() => filteItem('white')}>
                                     White 
                                 </label>
                             </div>
                             <div>
-                                <span className="color2" >
+                                <span className="color2" onClick={() => filteItem('Black')}>
                                 </span>
                                 <label className="black" onClick={() => filteItem('Black')} >
                                     Black 
                                 </label>
                             </div>
                             <div>
-                                <span className="color3" >
+                                <span className="color3" onClick={() => filteItem('Orange')}>
                                 </span>
                                 <label className="orange" onClick={() => filteItem('Orange')} >
                                     Orange 
                                 </label>
                             </div>
                             <div>
-                                <span className="color4" >
+                                <span className="color4" onClick={() => filteItem('Blue')} >
                                 </span>
                                 <label className="blue" onClick={() => filteItem('Blue')} >
                                     Blue 
                                 </label>
                             </div>
                             <div>
-                                <span className="color5" >
+                                <span className="color5" onClick={() => filteItem('Green')} >
                                 </span>
                                 <label className="green" onClick={() => filteItem('Green')} >
                                     Green 
                                 </label>
                             </div>
                             <div>
-                                <span className="color6" >
+                                <span className="color6" onClick={() => filteItem('Yellow')}>
                                 </span>
                                 <label className="yellow" onClick={() => filteItem('Yellow')} >
                                     Yellow 
                                 </label>
                             </div>
                             <div>
-                                <span className="color7" >
+                                <span className="color7" onClick={() => filteItem('Pink')}>
                                 </span>
                                 <label className="pink" onClick={() => filteItem('Pink')} >
                                     Pink 

@@ -20,7 +20,11 @@ import { FaArrowUp } from "react-icons/fa";
 
 import { FaArrowDown } from "react-icons/fa";
 
-const Grid = ({ item, addItem,removeItem}) => {
+import { createStructuredSelector } from "reselect";
+
+import { selectCartItemsCount } from "../../Redux/cartdrop/cart-drop.selectors";
+
+const Grid = ({ item, addItem,removeItem, itemCount}) => {
     const { toggleAddCartHidden } = useContext(CartContext);
     const { title, imageUrl, price, regularprice, description, size, color } = item;
 
@@ -73,7 +77,7 @@ const Grid = ({ item, addItem,removeItem}) => {
                                         </p>
                                     </div>
                                     <div className="quantity-prod">
-                                        <div className="value">quantity</div>
+                                        <div className="value">{itemCount}</div>
                                         <div className="arrow-fun">
                                             <div className="arrow" onClick={() => addItem(item)} ><FaArrowUp /></div>
                                             <div className="arrow" onClick={() => removeItem(item)}><FaArrowDown /></div>
@@ -84,6 +88,7 @@ const Grid = ({ item, addItem,removeItem}) => {
                                         onClick={() => {
                                             addItem(item);
                                             toggleAddCartHidden();
+                                            toggleModal();
                                         }} inverted>
                                             Add to cart
                                         </div>
@@ -183,4 +188,8 @@ const mapDispatchToProps = dispatch => ({
     removeItem: item => dispatch(removeItem(item))
 })
 
-export default connect(null, mapDispatchToProps)(Grid);
+const mapStateToProps = createStructuredSelector({
+    itemCount: selectCartItemsCount
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Grid);

@@ -102,6 +102,40 @@
                         }
                     }
                 }
+                .view-cart{
+                    font-size: 15px;
+                    margin-left: 2rem;
+                    margin-top: 10rem;
+                    padding: 5px 20px;
+                    height: 20px;
+                    background: black;
+                    display: inline-block;
+                    color: white;
+            
+                    &:hover{
+                        cursor: pointer;
+                        color: white;
+                        background-color: #eab129;
+                    }
+                  
+                }
+                .continue-shopping{
+                    font-size: 15px;
+                    margin-left: 2rem;
+                    margin-top: 10rem;
+                    padding: 5px 20px;
+                    height: 20px;
+                    background: black;
+                    display: inline-block;
+                    color: white;
+            
+                    &:hover{
+                        cursor: pointer;
+                        color: white;
+                        background-color: #eab129;
+                    }
+                  
+                }
             }
         }
     }
