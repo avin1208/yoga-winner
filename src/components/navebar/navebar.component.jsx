@@ -21,6 +21,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { toggleCartHidden } from "../../Redux/cartdrop/cart-drop.action";
 
 import LogIn from "../login/login.component";
+import SignUp from "../sign-up/sign-up.component";
 
 
 const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden, toggleCartHidden, itemCount }) => {
@@ -53,6 +54,9 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden, toggleCart
                     </Link>
                     <div className="login-component">
                         <LogIn />
+                    </div>
+                    <div className="signin-component">
+                        <SignUp />
                     </div>
                     <FaShoppingCart className="cart-logo" onClick={toggleCartHidden} />
                     <label className="count">{itemCount}</label>

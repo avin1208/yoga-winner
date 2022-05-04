@@ -3,7 +3,7 @@
     transition: all 0s ease-in-out 0s;
     position: absolute;
     left: 50%;
-    top: 100%;
+    top: 50%;
     transform: translate(-50%,-50%);
 
     .modal-login{
@@ -28,7 +28,7 @@
                 margin: 0;
                 opacity: 1;
                 text-shadow: unset;
-                background: #bbb none repeat scroll 0 0;
+                background-color: #eab129;
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -121,5 +121,25 @@
                 }
             }
         }
+    }
+}
+
+.login-nav{
+    // background-color: #eab129;
+    // border: 1px solid #f6f6f6;
+    // border-radius: 50px;
+    // outline: none;
+
+
+    .login-button{
+        font-size: 12px;
+        color: white;
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 50px;
+        outline: none;
+        width: 5rem;
+        height: 2.3rem;
+        cursor: pointer;
     }
 }

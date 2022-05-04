@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
+import { withRouter } from "react-router-dom";
 
 import './login.styles.scss';
 
-const LogIn = () => {
+const LogIn = ({ history }) => {
 
     const [modal, setModal] = useState(false);
 
@@ -21,6 +22,26 @@ const LogIn = () => {
         setModal(!modal);
     };
 
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+
+        let userCredentials = { email, password }
+        console.log(userCredentials);
+        fetch("https://winner-yoga.herokuapp.com/login", {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": 'application/json'
+            },
+            body: JSON.stringify(userCredentials)
+        })
+            .then(data => { return data.json() })
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+    }
+
     return (
         <div>
             {modal &&
@@ -34,9 +55,9 @@ const LogIn = () => {
                             </div>
                             <div className="login-body">
                                 <div className="login-title">
-                                    LOG IN
+                                    SIGN IN
                                 </div>
-                                <form className="login-form">
+                                <form className="login-form" onSubmit={handleSubmit}>
                                     <FormInput
                                         name="email"
                                         type="email"
@@ -58,7 +79,7 @@ const LogIn = () => {
                                         <p className="reset-login">Reset It</p>
                                     </div>
                                     <button className="login-btn">
-                                        LOG IN
+                                        SIGN IN
                                     </button>
                                     <p className="or-login">OR</p>
                                     <div className="login-with">
@@ -78,11 +99,11 @@ const LogIn = () => {
                 )}
             <div className="login-nav">
                 <button className="login-button" onClick={toggleModal}>
-                    Log In
+                    SIGN IN
                 </button>
             </div>
         </div>
     );
 };
 
-export default LogIn;
+export default withRouter(LogIn);
