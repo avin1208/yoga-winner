@@ -1,32 +1,56 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from 'react';
+
+import {
+    addItemToCart,
+    removeItemFromCart,
+    filterItemFromCart,
+    getCartItemsCount,
+    getCartTotal
+} from './cart.utils';
 
 export const CartContext = createContext({
-    cartHidden: true,
-    cartHidden1: true,
-    toggleAddCartHidden: () => {},
-    toggleSearchCartHidden: () => {}
+    hidden: true,
+    toggleHidden: () => { },
+    cartItems: [],
+    addItem: () => { },
+    removeItem: () => { },
+    clearItemFromCart: () => { },
+    cartItemsCount: 0,
+    cartTotal: 0
 });
 
 const CartProvider = ({ children }) => {
-    const [cartHidden, setcartHidden] = useState(true);
+    const [hidden, setHidden] = useState(true);
+    const [cartItems, setCartItems] = useState([]);
+    const [cartItemsCount, setCartItemsCount] = useState(0);
+    const [cartTotal, setCartTotal] = useState(0);
 
-    const [cartHidden1, setcartHidden1] = useState(true);
+    const addItem = item => setCartItems(addItemToCart(cartItems, item));
+    const removeItem = item => setCartItems(removeItemFromCart(cartItems, item));
+    const toggleHidden = () => setHidden(!hidden);
+    const clearItemFromCart = item => setCartItems(filterItemFromCart(cartItems, item));
 
-    const toggleAddCartHidden = () => { setcartHidden(!cartHidden); };
-
-    const toggleSearchCartHidden = () => { setcartHidden1(!cartHidden1)};
+    useEffect(() => {
+        setCartItemsCount(getCartItemsCount(cartItems));
+        setCartTotal(getCartTotal(cartItems));
+    }, [cartItems]);
 
     return (
         <CartContext.Provider
             value={{
-                toggleAddCartHidden,
-                cartHidden,
-                toggleSearchCartHidden,
-                cartHidden1
-            }}>
+                hidden,
+                toggleHidden,
+                cartItems,
+                addItem,
+                removeItem,
+                clearItemFromCart,
+                cartItemsCount,
+                cartTotal
+            }}
+        >
             {children}
         </CartContext.Provider>
-    )
+    );
 };
 
 export default CartProvider;

@@ -48,12 +48,8 @@ const App = () => {
       {
         modalOpen && <Modal className="model-center" setOpenModal={setModalOpen} />
       }
-      {
-       cartHidden ? null : <Cartbox />
-      }
-      {
-       cartHidden1 ? null : <Search />
-      }
+    
+      
       <Switch>
         <Route exact path='/' component={Homepage} />
         <Route path='/Men' component={Menpagee} />

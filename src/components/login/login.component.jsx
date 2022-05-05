@@ -24,11 +24,9 @@ const LogIn = ({ history }) => {
 
 
     const handleSubmit = event => {
+
         event.preventDefault();
 
-
-        let userCredentials = { email, password }
-        console.log(userCredentials);
         fetch("https://winner-yoga.herokuapp.com/login", {
             method: 'POST',
             headers: {
@@ -37,11 +35,24 @@ const LogIn = ({ history }) => {
             },
             body: JSON.stringify(userCredentials)
         })
-            .then(data => { return data.json() })
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
-    }
 
+        .then(async (res) => {
+
+            const resData = await res.json();
+            console.log(resData);
+
+            if (resData.status === 0) {
+                return window.alert(resData.ErrorDescription || resData.message);
+            }
+            setModal(!modal);
+            localStorage.setItem("user-info",JSON.stringify(resData));
+            
+            return window.alert(resData.message);
+
+        }).catch(err => {
+            console.log(err);
+        })
+    }
     return (
         <div>
             {modal &&

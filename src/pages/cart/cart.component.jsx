@@ -1,23 +1,26 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import './cart.styles.scss';
 
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
-import { withRouter } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 
 import Carttotal from '../../components/cart-total/cart-total.component';
 
-import { createStructuredSelector } from 'reselect';
+// import { createStructuredSelector } from 'reselect';
 
-import { selectCartItems } from '../../Redux/cartdrop/cart-drop.selectors';
+// import { selectCartItems } from '../../Redux/cartdrop/cart-drop.selectors';
 
-import { selectCartTotal } from '../../Redux/cartdrop/cart-drop.selectors';
+// import { selectCartTotal } from '../../Redux/cartdrop/cart-drop.selectors';
 
-import { selectCartItemsCount } from '../../Redux/cartdrop/cart-drop.selectors';
+// import { selectCartItemsCount } from '../../Redux/cartdrop/cart-drop.selectors';
 
+import { CartContext } from '../../Providers/cart/cart.provider';
 
-const Cart = ({ cartItems, total, itemCount }) => {
+const Cart = () => {
+
+    const {cartItems, cartItemsCount, cartTotal} = useContext(CartContext);
 
     return (
         <div className='main-cart-section'>
@@ -44,7 +47,7 @@ const Cart = ({ cartItems, total, itemCount }) => {
             <div className='total-cartcomponent'>
                 <div className='total-item-count'>
                     <div className='count-item'>
-                        {itemCount} <div className='itrm-nt'>Items</div>
+                        {cartItemsCount} <div className='itrm-nt'>Items</div>
                     </div>
                     <div className='shipping'>
                         Shipping
@@ -55,7 +58,7 @@ const Cart = ({ cartItems, total, itemCount }) => {
                     <div className='total-item-cnt'>
                         <div className='totop'>
                             Total:
-                            <div className='total-payment'>${total}</div>
+                            <div className='total-payment'>${cartTotal}</div>
                         </div>
                         <div className='toop'>
                             Taxes:
@@ -69,10 +72,5 @@ const Cart = ({ cartItems, total, itemCount }) => {
     );
 };
 
-const mapStateToProps = createStructuredSelector({
-    cartItems: selectCartItems,
-    total: selectCartTotal,
-    itemCount: selectCartItemsCount,
-});
 
-export default withRouter(connect(mapStateToProps)(Cart));
+export default Cart;

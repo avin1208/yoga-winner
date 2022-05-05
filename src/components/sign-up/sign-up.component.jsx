@@ -26,8 +26,6 @@ const SignUp = () => {
             return;
         }
 
-        let userCredentials = { name, email, password, confirmPassword }
-        console.log(userCredentials);
         fetch("https://winner-yoga.herokuapp.com/register", {
             method: 'POST',
             headers: {
@@ -36,9 +34,23 @@ const SignUp = () => {
             },
             body: JSON.stringify(userCredentials)
         })
-            .then(data => { return data.json() })
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
+
+        .then(async (res) => {
+
+            const resData = await res.json();
+            console.log(resData);
+
+            if (resData.status === 0) {
+                return window.alert(resData.ErrorDescription || resData.message || resData.ErrorMessage);
+            }
+
+            localStorage.setItem("user-info",JSON.stringify(resData));
+            setModal(!modal);
+            return window.alert(resData.message);
+
+        }).catch(err => {
+            console.log(err);
+        })
     }
 
 const handleChange = event => {

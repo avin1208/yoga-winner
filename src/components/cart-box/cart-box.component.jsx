@@ -6,23 +6,28 @@ import { FiCheckSquare } from "react-icons/fi";
 
 import CartItem from "../cart-item/cart-item.component";
 
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
-import { withRouter } from "react-router-dom";
+// import { withRouter } from "react-router-dom";
 
-import { createStructuredSelector } from "reselect";
+// import { createStructuredSelector } from "reselect";
 
-import { selectCartItems } from "../../Redux/cartdrop/cart-drop.selectors";
+// import { selectCartItems } from "../../Redux/cartdrop/cart-drop.selectors";
 
-import { selectCartItemsCount } from "../../Redux/cartdrop/cart-drop.selectors";
+// import { selectCartItemsCount } from "../../Redux/cartdrop/cart-drop.selectors";
 
-import { selectCartTotal } from "../../Redux/cartdrop/cart-drop.selectors";
+// import { selectCartTotal } from "../../Redux/cartdrop/cart-drop.selectors";
+
+import { ModalContext } from "../../Providers/modal/modal.providers";
 
 import { CartContext } from "../../Providers/cart/cart.provider";
 
 
-const Cartbox = ({ cartItems, total, itemCount, history }) => {
-    const { toggleAddCartHidden } = useContext(CartContext)
+const Cartbox = ({ history }) => {
+
+    const { toggleAddCartHidden } = useContext(ModalContext);
+
+    const {cartItems, cartItemsCount, cartTotal} = useContext(CartContext);
     return (
         <div className="hjkl">
             <div className="modal-content">
@@ -53,7 +58,7 @@ const Cartbox = ({ cartItems, total, itemCount, history }) => {
                         <div className="modal-right">
                             <div className="modal-rtitle">
                                 There are
-                                <div className='itrm-n'>{itemCount}</div>items in your Cart.
+                                <div className='itrm-n'>{cartItemsCount}</div>items in your Cart.
                             </div>
                             <hr color="#ebebeb" />
                             <div className="modal-productss">
@@ -71,7 +76,7 @@ const Cartbox = ({ cartItems, total, itemCount, history }) => {
                                 </div>
                                 <div className="modal-shipping">
                                     Total:
-                                    <div className="dd">${total}</div>
+                                    <div className="dd">${cartTotal}</div>
                                 </div>
                             </div>
                             <div className="view-cart" onClick={() => {
@@ -91,10 +96,4 @@ const Cartbox = ({ cartItems, total, itemCount, history }) => {
     );
 };
 
-const mapStateToProps = createStructuredSelector({
-    cartItems: selectCartItems,
-    total: selectCartTotal,
-    itemCount: selectCartItemsCount
-});
-
-export default withRouter(connect(mapStateToProps)(Cartbox));
+export default Cartbox;

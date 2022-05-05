@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 
 import './mens-grid.styles.scss';
 
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
 import { Link } from "react-router-dom";
 
@@ -10,22 +10,28 @@ import { FaCheck, FaFacebook, FaGoogle, FaPinterest, FaTwitter } from 'react-ico
 
 import { AiOutlineSearch } from 'react-icons/ai';
 
-import { addItem } from "../../Redux/cartdrop/cart-drop.action";
+// import { addItem } from "../../Redux/cartdrop/cart-drop.action";
 
-import { removeItem } from "../../Redux/cartdrop/cart-drop.action";
+// import { removeItem } from "../../Redux/cartdrop/cart-drop.action";
 
-import { CartContext } from "../../Providers/cart/cart.provider";
+import { ModalContext } from "../../Providers/modal/modal.providers";
 
 import { FaArrowUp } from "react-icons/fa";
 
 import { FaArrowDown } from "react-icons/fa";
 
-import { createStructuredSelector } from "reselect";
+// import { createStructuredSelector } from "reselect";
 
-import { selectCartItemsCount } from "../../Redux/cartdrop/cart-drop.selectors";
+// import { selectCartItemsCount } from "../../Redux/cartdrop/cart-drop.selectors";
 
-const Grid = ({ item, addItem,removeItem, itemCount}) => {
-    const { toggleAddCartHidden } = useContext(CartContext);
+import { CartContext } from "../../Providers/cart/cart.provider";
+
+const Grid = ({item}) => {
+
+    const { toggleAddCartHidden } = useContext(ModalContext);
+
+    const { addItem, removeItem, cartItemsCount} = useContext(CartContext);
+
     const { title, imageUrl, price, regularprice, description, size, color } = item;
 
     const [modal, setModal] = useState(false);
@@ -33,7 +39,6 @@ const Grid = ({ item, addItem,removeItem, itemCount}) => {
     const toggleModal = () => {
         setModal(!modal);
     };
-
 
     return (<div>
         {
@@ -77,7 +82,7 @@ const Grid = ({ item, addItem,removeItem, itemCount}) => {
                                         </p>
                                     </div>
                                     <div className="quantity-prod">
-                                        <div className="value">{itemCount}</div>
+                                        <div className="value">{cartItemsCount}</div>
                                         <div className="arrow-fun">
                                             <div className="arrow" onClick={() => addItem(item)} ><FaArrowUp /></div>
                                             <div className="arrow" onClick={() => removeItem(item)}><FaArrowDown /></div>
@@ -183,13 +188,13 @@ const Grid = ({ item, addItem,removeItem, itemCount}) => {
     );
 };
 
-const mapDispatchToProps = dispatch => ({
-    addItem: item => dispatch(addItem(item)),
-    removeItem: item => dispatch(removeItem(item))
-})
+// const mapDispatchToProps = dispatch => ({
+//     addItem: item => dispatch(addItem(item)),
+//     removeItem: item => dispatch(removeItem(item))
+// })
 
-const mapStateToProps = createStructuredSelector({
-    itemCount: selectCartItemsCount
-})
+// const mapStateToProps = createStructuredSelector({
+//     itemCount: selectCartItemsCount
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Grid);
+export default Grid;

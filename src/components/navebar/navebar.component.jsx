@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import './navebar.styles.scss';
 
@@ -10,21 +10,25 @@ import { createStructuredSelector } from "reselect";
 
 import { selectCartItemsCount } from '../../Redux/cartdrop/cart-drop.selectors';
 
-import { toggleMenHidden } from '../../Redux/mendrop/mendrop.actions';
-
-import { toggleLadHidden } from '../../Redux/laddrop/laddrop.actions';
-
-import { toggleKidHidden } from "../../Redux/kids-drop/kids-drop.actions";
-
 import { FaShoppingCart } from 'react-icons/fa';
 
 import { toggleCartHidden } from "../../Redux/cartdrop/cart-drop.action";
 
 import LogIn from "../login/login.component";
+
 import SignUp from "../sign-up/sign-up.component";
 
+import { DropContext } from "../../Providers/drop/drop.providers";
 
-const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden, toggleCartHidden, itemCount }) => {
+
+const Navebar = ({ toggleCartHidden, itemCount }) => {
+
+    const {toggleMenHidden} = useContext(DropContext);
+
+    const {toggleWomenHidden} = useContext(DropContext);
+
+    const {toggleKidHidden} = useContext(DropContext);
+
     return (
         <div className="Nave-main">
             <div className="color">
@@ -33,11 +37,11 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden, toggleCart
                 <div className="options">
                     <Link className="option" to="/">
                         Home
-                    </Link>
+                    </Link>      
                     <Link className="option" onMouseEnter={toggleMenHidden} onMouseLeave={toggleMenHidden} to='/men'>
                         Men
                     </Link>
-                    <Link className="option" to='/ladies' onMouseEnter={toggleLadHidden} onMouseLeave={toggleLadHidden} >
+                    <Link className="option" to='/ladies' onMouseEnter={toggleWomenHidden} onMouseLeave={toggleWomenHidden} >
                         Ladies
                     </Link>
                     <Link className="option" to='/kids' onMouseEnter={toggleKidHidden} onMouseLeave={toggleKidHidden} >
@@ -69,9 +73,6 @@ const Navebar = ({ toggleMenHidden, toggleLadHidden, toggleKidHidden, toggleCart
 };
 
 const mapDispatchToProps = dispatch => ({
-    toggleMenHidden: () => dispatch(toggleMenHidden()),
-    toggleLadHidden: () => dispatch(toggleLadHidden()),
-    toggleKidHidden: () => dispatch(toggleKidHidden()),
     toggleCartHidden: () => dispatch(toggleCartHidden())
 });
 const mapStateToProps = createStructuredSelector({

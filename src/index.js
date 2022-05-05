@@ -6,21 +6,27 @@ import store from './Redux/store';
 import './index.css';
 import App from './App';
 import ItemProvider from './Providers/item/items.providers';
-import CartProvider from './Providers/cart/cart.provider';
+import ModalProvider from './Providers/modal/modal.providers';
 import GridProvider from './Providers/grid/grids.providers';
+import DropProvider from './Providers/drop/drop.providers';
+import CartProvider from './Providers/cart/cart.provider';
 
 
 ReactDOM.render(
   <ItemProvider>
-  <GridProvider>
     <CartProvider>
-      <Provider store={store}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Provider>
+      <GridProvider>
+        <ModalProvider>
+          <DropProvider>
+            <Provider store={store}>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </Provider>
+          </DropProvider>
+        </ModalProvider>
+      </GridProvider>
     </CartProvider>
-    </GridProvider>
   </ItemProvider>,
 
   document.getElementById('root')
