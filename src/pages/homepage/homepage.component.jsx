@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useContext }from "react";
 
 import Service from "../../components/service/service.component";
 
 import Banner from "../../components/product-display/product-display.component";
-
-import { connect } from "react-redux";
 
 import './homepage.styles.scss';
 
@@ -24,23 +22,35 @@ import Kiddrop from "../../components/kids-drop/kids-drop.component";
 
 import Cartdrop from "../../components/cart-drop/cart-drop.component";
 
+import { DropContext } from "../../Providers/drop/drop.providers";
 
-const Homepage = ({ hidden, hidden2, hidden3, hidden4 }) => {
+import { CartContext } from "../../Providers/cart/cart.provider";
+
+
+const Homepage = () => {
+
+    const { dropHidden } = useContext(DropContext);
+
+    const { dropHidden1 } = useContext(DropContext);
+
+    const { dropHidden2 } = useContext(DropContext);
+
+    const {hidden} = useContext(CartContext);
 
     return (
         <div className="homepage">
-            {
-                hidden ? null : <MenDrop />
-            }
-            {
-                hidden2 ? null : <Ladrop />
-            }
-            {
-                hidden3 ? null : <Kiddrop />
-            }
-            {
-                hidden4 ? null : <Cartdrop />
-            }
+        {
+            dropHidden ? null : <MenDrop />
+        }
+        {
+            dropHidden1 ? null : <Ladrop />
+        }
+        {
+            dropHidden2 ? null : <Kiddrop />
+        }
+        {
+            hidden ? null : <Cartdrop />
+        }
             <div className="background-image">
             <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldslideshow/images/slider-111.jpg" alt="Sports Wear"></img>
                 <div className="box-slider">
@@ -69,9 +79,7 @@ const Homepage = ({ hidden, hidden2, hidden3, hidden4 }) => {
     );
 };
 
-const mapStateToProps = ({ men: { hidden }, lad: { hidden2 }, kid: { hidden3 }, cart: { hidden4 } }) => ({
-    hidden, hidden2, hidden3, hidden4
-})
 
 
-export default connect(mapStateToProps)(Homepage);
+
+export default Homepage;

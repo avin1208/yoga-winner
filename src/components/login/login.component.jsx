@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
+
 import { withRouter } from "react-router-dom";
 
 import './login.styles.scss';
 
+import { UserContext } from "../../Providers/user/user.providers";
+
 const LogIn = ({ history }) => {
 
     const [modal, setModal] = useState(false);
+
+    const {LogInUser} = useContext(UserContext);
 
     const [userCredentials, setCredentials] = useState({ email: '', password: '' });
 
@@ -25,33 +30,35 @@ const LogIn = ({ history }) => {
 
     const handleSubmit = event => {
 
-        event.preventDefault();
+         event.preventDefault();
 
-        fetch("https://winner-yoga.herokuapp.com/login", {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": 'application/json'
-            },
-            body: JSON.stringify(userCredentials)
-        })
+         LogInUser(userCredentials);
 
-        .then(async (res) => {
+        // fetch("https://winner-yoga.herokuapp.com/login", {
+        //     method: 'POST',
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //         "Accept": 'application/json'
+        //     },
+        //     body: JSON.stringify(userCredentials)
+        // })
 
-            const resData = await res.json();
-            console.log(resData);
+        // .then(async (res) => {
 
-            if (resData.status === 0) {
-                return window.alert(resData.ErrorDescription || resData.message);
-            }
-            setModal(!modal);
-            localStorage.setItem("user-info",JSON.stringify(resData));
+        //     const resData = await res.json();
+        //     console.log(resData);
+
+        //     if (resData.status === 0) {
+        //         return window.alert(resData.ErrorDescription || resData.message);
+        //     }
+            //  setModal(!modal);
+        //     localStorage.setItem("user-info",JSON.stringify(resData));
             
-            return window.alert(resData.message);
+        //     return window.alert(resData.message);
 
-        }).catch(err => {
-            console.log(err);
-        })
+        // }).catch(err => {
+        //     console.log(err);
+        // })
     }
     return (
         <div>

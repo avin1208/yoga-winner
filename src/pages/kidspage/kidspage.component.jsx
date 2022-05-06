@@ -1,10 +1,12 @@
-import React from "react";
+import React , { useContext } from "react";
 
 import { Link } from "react-router-dom";
 
 import './kidspage.styles.scss';
 
-import { connect } from "react-redux";
+import { DropContext } from "../../Providers/drop/drop.providers";
+
+import { CartContext } from "../../Providers/cart/cart.provider";
 
 import Menbov from "../../components/menbox/menbox.component";
 
@@ -20,20 +22,28 @@ import Kidproduct from "../../components/kid-product/kid-product.component";
 
 import Wcheckbox from "../../components/women-checkbox/women-checkbox.component";
 
-const Kidspage = ({ hidden, hidden2, hidden3, hidden4 }) => {
+const Kidspage = () => {
+
+    const { dropHidden } = useContext(DropContext);
+
+    const { dropHidden1 } = useContext(DropContext);
+
+    const { dropHidden2 } = useContext(DropContext);
+
+    const {hidden} = useContext(CartContext);
     return (
         <div className="main-pagehj">
         {
-            hidden ? null : <MenDrop />
+            dropHidden ? null : <MenDrop />
         }
         {
-            hidden2 ? null : <Ladrop />
+            dropHidden1 ? null : <Ladrop />
         }
         {
-            hidden3 ? null : <Kiddrop />
+            dropHidden2 ? null : <Kiddrop />
         }
         {
-            hidden4 ? null : <Cartdrop />
+            hidden ? null : <Cartdrop />
         }
             <div className=" namefg">
                 <div className="back-imae">
@@ -62,9 +72,7 @@ const Kidspage = ({ hidden, hidden2, hidden3, hidden4 }) => {
     );
 };
 
-const mapStateToProps = ({ men: { hidden }, lad: { hidden2 }, kid: { hidden3 }, cart: { hidden4 } }) => ({
-    hidden, hidden2, hidden3, hidden4
-})
 
-export default connect(mapStateToProps)(Kidspage);
+
+export default Kidspage;
 

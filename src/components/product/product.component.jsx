@@ -2,19 +2,20 @@ import React, { useContext } from "react";
 
 import './product.styles.scss';
 
-import { Link } from "react-router-dom";
-
-import { addItem } from "../../Redux/cartdrop/cart-drop.action";
-
-import { connect } from "react-redux";
+import { Link } from "react-router-dom"
 
 import { FaShoppingCart } from 'react-icons/fa';
 
 import { CartContext } from "../../Providers/cart/cart.provider";
 
+import { ModalContext } from "../../Providers/modal/modal.providers";
 
-const Product = ({ item, addItem }) => {
-    const { toggleAddCartHidden } = useContext(CartContext);
+
+const Product = ({ item }) => {
+    const { toggleAddCartHidden } = useContext(ModalContext);
+
+    const {addItem} = useContext(CartContext);
+
     const { title, imageUrl, price, regularPrice } = item;
     return (
         <div className="listofproduct">
@@ -41,9 +42,6 @@ const Product = ({ item, addItem }) => {
     );
 };
 
-const mapDispatchToProps = dispatch => ({
-    addItem: item => dispatch(addItem(item))
-})
 
 
-export default connect(null, mapDispatchToProps)(Product);
+export default Product;

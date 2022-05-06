@@ -1,14 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import './cart-total.styles.scss';
-
-import { connect } from "react-redux";
-
-import { addItem } from "../../Redux/cartdrop/cart-drop.action";
-
-import { removeItem } from "../../Redux/cartdrop/cart-drop.action";
-
-import { clearItemFromCart } from "../../Redux/cartdrop/cart-drop.action";
 
 import { FaArrowUp } from 'react-icons/fa';
 
@@ -16,8 +8,16 @@ import { FaArrowDown } from "react-icons/fa";
 
 import { MdDelete } from 'react-icons/md';
 
-const Carttotal = ({ cartItem, addItem, removeItem, clearCart }) => {
+import { CartContext } from "../../Providers/cart/cart.provider";
+
+const Carttotal = ({ cartItem }) => {
     const { imageUrl, title, quantity, price } = cartItem;
+
+    const {addItem} = useContext(CartContext);
+
+    const {removeItem} = useContext(CartContext);
+
+    const {clearItemFromCart} = useContext(CartContext);
     return (
         <div className="cart-checkout">
             <div className="image-product">
@@ -40,17 +40,13 @@ const Carttotal = ({ cartItem, addItem, removeItem, clearCart }) => {
             <div className="pr-prod">
                 ${price}
             </div>
-            <div className="remove-button" onClick={() => clearCart(cartItem)}>
+            <div className="remove-button" onClick={() => clearItemFromCart(cartItem)}>
                 <MdDelete />
             </div>
         </div>
     );
 };
 
-const mapDispatchToProps = dispatch => ({
-    clearCart: item => dispatch(clearItemFromCart(item)),
-    addItem: item => dispatch(addItem(item)),
-    removeItem: item => dispatch(removeItem(item))
-})
 
-export default connect(null, mapDispatchToProps)(Carttotal);
+
+export default Carttotal;

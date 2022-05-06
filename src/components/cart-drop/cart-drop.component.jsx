@@ -1,6 +1,4 @@
-import React from "react";
-
-import { connect } from 'react-redux';
+import React, {useContext} from "react";
 
 import { withRouter } from "react-router-dom";
 
@@ -8,13 +6,13 @@ import './cart-drop.styles.scss';
 
 import CartItem from "../cart-item/cart-item.component";
 
-import { createStructuredSelector } from "reselect";
+import { CartContext }from '../../Providers/cart/cart.provider';
 
-import { selectCartItems } from "../../Redux/cartdrop/cart-drop.selectors";
+const Cartdrop = ({ history }) => {
 
-import { toggleCartHidden } from "../../Redux/cartdrop/cart-drop.action";
+    const {cartItems} = useContext(CartContext);
 
-const Cartdrop = ({ cartItems, dispatch, history }) => {
+    const {toggleHidden} = useContext(CartContext);
     return (
         <div className="main-cart">
             <div className="cart-drop">
@@ -37,7 +35,7 @@ const Cartdrop = ({ cartItems, dispatch, history }) => {
                 <hr color="#ebebeb" />
                 <div className="view-cart" onClick={() => {
                     history.push('/cart');
-                    dispatch(toggleCartHidden());
+                    toggleHidden();
                   }}>
                 View Cart
                </div>
@@ -46,8 +44,5 @@ const Cartdrop = ({ cartItems, dispatch, history }) => {
     );
 };
 
-const mapStateToProps = createStructuredSelector ({
-    cartItems: selectCartItems
-  });
 
-export default withRouter(connect(mapStateToProps)(Cartdrop));
+export default withRouter(Cartdrop);

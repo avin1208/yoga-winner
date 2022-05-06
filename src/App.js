@@ -32,15 +32,14 @@ import Cart from './pages/cart/cart.component';
 
 import Cartbox from'./components/cart-box/cart-box.component';
 
-import { CartContext } from './Providers/cart/cart.provider';
-
-import Search from './components/search-box/search-box.compoenet';
+import { ModalContext } from './Providers/modal/modal.providers';
 
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(true);
-  const {cartHidden} = useContext(CartContext);
-  const {cartHidden1} = useContext(CartContext);
+  
+  const {modalHidden} = useContext(ModalContext);
+
   return (
     <div className='App'>
       <Header />
@@ -48,8 +47,9 @@ const App = () => {
       {
         modalOpen && <Modal className="model-center" setOpenModal={setModalOpen} />
       }
-    
-      
+      {
+        modalHidden ? null : <Cartbox />
+      }
       <Switch>
         <Route exact path='/' component={Homepage} />
         <Route path='/Men' component={Menpagee} />

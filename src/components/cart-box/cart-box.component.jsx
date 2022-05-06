@@ -8,7 +8,7 @@ import CartItem from "../cart-item/cart-item.component";
 
 // import { connect } from "react-redux";
 
-// import { withRouter } from "react-router-dom";
+ import { withRouter } from "react-router-dom";
 
 // import { createStructuredSelector } from "reselect";
 
@@ -96,4 +96,4 @@ const Cartbox = ({ history }) => {
     );
 };
 
-export default Cartbox;
+export default withRouter(Cartbox);

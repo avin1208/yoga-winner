@@ -16,21 +16,23 @@ import Ladrop from "../../components/l-dropdown/l-dropdown.component";
 
 import Kiddrop from "../../components/kids-drop/kids-drop.component";
 
-import { connect } from "react-redux";
-
 import Cartdrop from "../../components/cart-drop/cart-drop.component";
 
 import { DropContext } from "../../Providers/drop/drop.providers";
 
+import { CartContext } from "../../Providers/cart/cart.provider";
 
 
-const Menpagee = ( { hidden4, setShowModal } ) => {
+
+const Menpagee = ( { setShowModal } ) => {
 
     const { dropHidden } = useContext(DropContext);
 
     const { dropHidden1 } = useContext(DropContext);
 
     const { dropHidden2 } = useContext(DropContext);
+
+    const {hidden} = useContext(CartContext);
     return (
        
         <div className="main-pagehj">
@@ -44,7 +46,7 @@ const Menpagee = ( { hidden4, setShowModal } ) => {
             dropHidden2 ? null : <Kiddrop />
         }
         {
-            hidden4 ? null : <Cartdrop />
+            hidden ? null : <Cartdrop />
         }
             <div className="namefg">
                 <div className="back-imae">
@@ -73,9 +75,7 @@ const Menpagee = ( { hidden4, setShowModal } ) => {
     );
 };
 
-const mapStateToProps = ({ cart: { hidden4 }}) => ({
-  hidden4
-})
 
-export default connect(mapStateToProps)(Menpagee);
+
+export default Menpagee;
 
