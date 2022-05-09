@@ -30,15 +30,15 @@ import Aboutus from './pages/aboutuspage/aboutuspage.component';
 
 import Cart from './pages/cart/cart.component';
 
-import Cartbox from'./components/cart-box/cart-box.component';
+import Cartbox from './components/cart-box/cart-box.component';
 
 import { ModalContext } from './Providers/modal/modal.providers';
 
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(true);
-  
-  const {modalHidden} = useContext(ModalContext);
+
+  const { modalHidden } = useContext(ModalContext);
 
   return (
     <div className='App'>

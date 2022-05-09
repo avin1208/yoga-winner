@@ -13,19 +13,20 @@ import SignUp from "../sign-up/sign-up.component";
 import { DropContext } from "../../Providers/drop/drop.providers";
 
 import { CartContext } from "../../Providers/cart/cart.provider";
+import LogOut from "../logout/logout.component";
 
 
 const Navebar = () => {
 
-    const {toggleMenHidden} = useContext(DropContext);
+    const { toggleMenHidden } = useContext(DropContext);
 
-    const {toggleWomenHidden} = useContext(DropContext);
+    const { toggleWomenHidden } = useContext(DropContext);
 
-    const {toggleKidHidden} = useContext(DropContext);
+    const { toggleKidHidden } = useContext(DropContext);
 
-    const {toggleHidden} = useContext(CartContext);
+    const { toggleHidden } = useContext(CartContext);
 
-    const {cartItemsCount} = useContext(CartContext);
+    const { cartItemsCount } = useContext(CartContext);
 
     return (
         <div className="Nave-main">
@@ -35,7 +36,7 @@ const Navebar = () => {
                 <div className="options">
                     <Link className="option" to="/">
                         Home
-                    </Link>      
+                    </Link>
                     <Link className="option" onMouseEnter={toggleMenHidden} onMouseLeave={toggleMenHidden} to='/men'>
                         Men
                     </Link>
@@ -59,6 +60,9 @@ const Navebar = () => {
                     </div>
                     <div className="signin-component">
                         <SignUp />
+                    </div>
+                    <div className="logout-component">
+                        <LogOut />
                     </div>
                     <FaShoppingCart className="cart-logo" onClick={toggleHidden} />
                     <label className="count">{cartItemsCount}</label>

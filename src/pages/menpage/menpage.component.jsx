@@ -1,4 +1,4 @@
-import React, { useContext }  from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -22,9 +22,19 @@ import { DropContext } from "../../Providers/drop/drop.providers";
 
 import { CartContext } from "../../Providers/cart/cart.provider";
 
+import Loader from "../../components/loader/loader.component";
 
 
-const Menpagee = ( { setShowModal } ) => {
+
+const Menpagee = ({ setShowModal }) => {
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+    })
 
     const { dropHidden } = useContext(DropContext);
 
@@ -32,45 +42,50 @@ const Menpagee = ( { setShowModal } ) => {
 
     const { dropHidden2 } = useContext(DropContext);
 
-    const {hidden} = useContext(CartContext);
+    const { hidden } = useContext(CartContext);
     return (
-       
-        <div className="main-pagehj">
-        {
-            dropHidden ? null : <MenDrop />
-        }
-        {
-            dropHidden1 ? null : <Ladrop />
-        }
-        {
-            dropHidden2 ? null : <Kiddrop />
-        }
-        {
-            hidden ? null : <Cartdrop />
-        }
-            <div className="namefg">
-                <div className="back-imae">
-                    <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldstaticblocks/images/banner-top.jpg" alt="" />
-                </div>
-                <div className="pagel">
-                    <Link className="hm">
-                        Home
-                    </Link>
-                    |
-                    <Link className="mh">
-                        Men
-                    </Link>
-                </div>
-            </div>
-            <div className="men-side">
-                <div className="men-leftt">
-                    <Menbov />
-                    <Checkbox />
-                </div>
-                <div className="men-rightt">
-                    <Menproduct setShowModal={setShowModal}/>
-                </div>
-            </div>
+        <div>
+            {
+                !isLoading && (
+                    <div className="main-pagehj">
+                        {
+                            dropHidden ? null : <MenDrop />
+                        }
+                        {
+                            dropHidden1 ? null : <Ladrop />
+                        }
+                        {
+                            dropHidden2 ? null : <Kiddrop />
+                        }
+                        {
+                            hidden ? null : <Cartdrop />
+                        }
+                        <div className="namefg">
+                            <div className="back-imae">
+                                <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldstaticblocks/images/banner-top.jpg" alt="" />
+                            </div>
+                            <div className="pagel">
+                                <Link className="hm">
+                                    Home
+                                </Link>
+                                |
+                                <Link className="mh">
+                                    Men
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="men-side">
+                            <div className="men-leftt">
+                                <Menbov />
+                                <Checkbox />
+                            </div>
+                            <div className="men-rightt">
+                                <Menproduct setShowModal={setShowModal} />
+                            </div>
+                        </div>
+                    </div>
+                )}
+                {isLoading && <div> <Loader /> </div>}
         </div>
     );
 };

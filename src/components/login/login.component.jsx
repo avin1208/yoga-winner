@@ -7,6 +7,7 @@ import { withRouter } from "react-router-dom";
 import './login.styles.scss';
 
 import { UserContext } from "../../Providers/user/user.providers";
+import LoginGoogle from "../login-google/login-google.component";
 
 const LogIn = ({ history }) => {
 
@@ -30,7 +31,7 @@ const LogIn = ({ history }) => {
 
     const handleSubmit = event => {
 
-         event.preventDefault();
+         event.preventDefault();                    
 
          LogInUser(userCredentials);
 
@@ -102,8 +103,7 @@ const LogIn = ({ history }) => {
                                     <p className="or-login">OR</p>
                                     <div className="login-with">
                                         <div className="login-google">
-                                            <img src="https://i.postimg.cc/tg01f82L/googlr.png" alt="icon" />
-                                            <p className="sigin">Sign In With Google</p>
+                                            <LoginGoogle />
                                         </div>
                                         <div className="login-facebook">
                                             <img src="https://i.postimg.cc/wjq4NbXY/fb.png" alt="icon" />
@@ -117,7 +117,7 @@ const LogIn = ({ history }) => {
                 )}
             <div className="login-nav">
                 <button className="login-button" onClick={toggleModal}>
-                    SIGN IN
+                    LOG IN
                 </button>
             </div>
         </div>

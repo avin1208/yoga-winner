@@ -60,3 +60,26 @@ export const signUpUser = (userCredentials) => {
             console.log(err);
         })
 }
+
+
+//LogOut
+
+
+export const setLogOut = () => {
+    const parsedUser = JSON.parse(localStorage.getItem("user-info"))
+
+    fetch("https://winner-yoga.herokuapp.com/logout", {
+        method: 'GET',
+        headers: {
+            Authorization: 'Bearer' + parsedUser.token
+        },
+    }).then(async (res) => {
+        localStorage.clear("user-info")
+        localStorage.setItem("isLogIn", JSON.stringify(false));
+        const resJSON = await res.JSON();
+        window.alert(resJSON.message)
+        console.log(resJSON);
+    }).catch((err) => {
+        console.log(err);
+    });
+}

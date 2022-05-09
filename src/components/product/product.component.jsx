@@ -34,7 +34,7 @@ const Product = ({ item }) => {
                 <div className="icon-cart" onClick={() => {
                     addItem(item)
                     toggleAddCartHidden();
-                }} inverted >
+                }} inverted="true" >
                     <FaShoppingCart />
                 </div>
             </div>

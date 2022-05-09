@@ -1,11 +1,12 @@
 import React, { createContext, useEffect, useState } from "react";
 
-import { logInUser, signUpUser } from "./user.utils";
+import { logInUser, signUpUser, setLogOut } from "./user.utils";
 
 export const UserContext = createContext({
     user: {},
     LogInUser: () => {},
-    SignUpUser: () => {}
+    SignUpUser: () => {},
+    SetLogout: () => {}
 });
 
 const UserProvider = ({children}) => {
@@ -25,12 +26,15 @@ const UserProvider = ({children}) => {
 
     const SignUpUser = userCredentials => setUser(signUpUser(userCredentials));
 
+    const SetLogOut = userCredentials => setUser(setLogOut(userCredentials));
+
     return(
         <UserContext.Provider
         value={{
             user,
             LogInUser,
-            SignUpUser
+            SignUpUser,
+            SetLogOut
         }}>
          {children}
         </UserContext.Provider>

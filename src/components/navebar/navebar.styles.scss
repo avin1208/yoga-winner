@@ -8,10 +8,9 @@
             display: flex;
             justify-content: space-between;
             background: #eab129;
-            width: 60rem;
+            width: 70rem;
     
-                .options{
-                    
+                .options{    
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
@@ -38,6 +37,9 @@
                         margin-left: 2rem;
                     }
                     .signin-component{
+                        margin-left: 0.5rem;
+                    }
+                    .logout-component{
                         margin-left: 0.5rem;
                     }
                     .cart-logo{
