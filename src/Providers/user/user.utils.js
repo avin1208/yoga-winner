@@ -74,8 +74,9 @@ export const setLogOut = () => {
             Authorization: 'Bearer' + parsedUser.token
         },
     }).then(async (res) => {
+        console.log(res);
         localStorage.clear("user-info")
-        localStorage.setItem("isLogIn", JSON.stringify(false));
+        // localStorage.setItem("isLogIn", JSON.stringify(false));
         const resJSON = await res.JSON();
         window.alert(resJSON.message)
         console.log(resJSON);

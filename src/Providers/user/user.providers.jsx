@@ -27,6 +27,7 @@ const UserProvider = ({children}) => {
     const SignUpUser = userCredentials => setUser(signUpUser(userCredentials));
 
     const SetLogOut = userCredentials => setUser(setLogOut(userCredentials));
+   
 
     return(
         <UserContext.Provider

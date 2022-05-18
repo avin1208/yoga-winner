@@ -1,4 +1,4 @@
-import React, { useContext }from "react";
+import React, { useContext, useEffect }from "react";
 
 import Service from "../../components/service/service.component";
 
@@ -28,6 +28,17 @@ import { CartContext } from "../../Providers/cart/cart.provider";
 
 
 const Homepage = () => {
+
+    const getBanners = async () => {
+        const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-homepage");
+
+        const data = await response.json();
+        console.log(data);
+    }
+
+    useEffect(() => {
+        getBanners();
+    });
 
     const { dropHidden } = useContext(DropContext);
 
