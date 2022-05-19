@@ -41,8 +41,6 @@ const Homepage = () => {
 
     const [banner, setBanner] = useState([]);
 
-    const [poster, setPoster] = useState([]);
-
     const getBanners = async () => {
         const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-homepage");
 
@@ -58,18 +56,18 @@ const Homepage = () => {
     });
 
 
-    const getPoster = async () =>{
-        const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-homepage");
+    // const getPoster = async () =>{
+    //     const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-homepage");
 
-        const data = await response.json();
-        // console.log(data.poster);
-        setPoster(data.poster)
+    //     const data = await response.json();
+    //     // console.log(data.poster);
+    //     setPoster(data.poster)
 
-    }
+    // }
 
-    useEffect(() => {
-        getPoster();
-    });
+    // useEffect(() => {
+    //     getPoster();
+    // });
 
     
     const { dropHidden } = useContext(DropContext);
@@ -101,10 +99,7 @@ const Homepage = () => {
             }
             </Carousel>
             <Service />
-            {
-                poster.map(item => (<Banner key={item.id} item={item} />
-                ))
-            }
+            <Banner />
             <ProductList />
             <NewProduct />
             <Sell />
@@ -112,8 +107,5 @@ const Homepage = () => {
         </div>
     );
 };
-
-
-
 
 export default Homepage;
