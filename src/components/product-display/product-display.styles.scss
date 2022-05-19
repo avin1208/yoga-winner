@@ -1,8 +1,14 @@
 .head{
     display: flex;
-    height: 40rem;
-    display: flex;
     margin-top: 1rem;
+
+    .main-back-block{
+        height: 500px;
+        width: 400px;
+        // background-size: cover;
+        background-size: 100% 100%;
+        background-repeat: no-repeat 
+    }
 
   .row{
     width: 50%;

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect }from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Service from "../../components/service/service.component";
 
@@ -26,62 +26,85 @@ import { DropContext } from "../../Providers/drop/drop.providers";
 
 import { CartContext } from "../../Providers/cart/cart.provider";
 
+import Bannerr from "../../components/banner/banner.component";
+
+import Carousel from "react-elastic-carousel";
+
 
 const Homepage = () => {
+
+    const breakPoints = [
+        {
+            width: "1900px", itemsToShow: 1
+        }
+    ]
+
+    const [banner, setBanner] = useState([]);
+
+    const [poster, setPoster] = useState([]);
 
     const getBanners = async () => {
         const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-homepage");
 
         const data = await response.json();
-        console.log(data);
+        // console.log(data.banner);
+        setBanner(data.banner)
+
+
     }
 
     useEffect(() => {
         getBanners();
     });
 
+
+    const getPoster = async () =>{
+        const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-homepage");
+
+        const data = await response.json();
+        // console.log(data.poster);
+        setPoster(data.poster)
+
+    }
+
+    useEffect(() => {
+        getPoster();
+    });
+
+    
     const { dropHidden } = useContext(DropContext);
 
     const { dropHidden1 } = useContext(DropContext);
 
     const { dropHidden2 } = useContext(DropContext);
 
-    const {hidden} = useContext(CartContext);
+    const { hidden } = useContext(CartContext);
 
     return (
         <div className="homepage">
-        {
-            dropHidden ? null : <MenDrop />
-        }
-        {
-            dropHidden1 ? null : <Ladrop />
-        }
-        {
-            dropHidden2 ? null : <Kiddrop />
-        }
-        {
-            hidden ? null : <Cartdrop />
-        }
-            <div className="background-image">
-            <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldslideshow/images/slider-111.jpg" alt="Sports Wear"></img>
-                <div className="box-slider">
-                    <div className="title">
-                    SPORTSWEAR.</div>
-                    <div className="subtitle">
-                        <p>Transition into Autumn with Temperley London outerwear. Shop wool twill trench coats for <br />
-                        effortless sophistication and tuxedo styles to embody the Autumn folk dandy theme.
-                        </p>
-                    </div>
-                    <div className="price">
-                     Best Price : 370$
-                    </div>
-                    <div className="shop">
-                     SHOP NOW
-                    </div>
-                </div>
-            </div>
+            {
+                dropHidden ? null : <MenDrop />
+            }
+            {
+                dropHidden1 ? null : <Ladrop />
+            }
+            {
+                dropHidden2 ? null : <Kiddrop />
+            }
+            {
+                hidden ? null : <Cartdrop />
+            }
+            <Carousel breakPoints={breakPoints}>
+            {
+                banner.map(item => (<Bannerr key={item.id} item={item} />
+                ))
+            }
+            </Carousel>
             <Service />
-            <Banner />
+            {
+                poster.map(item => (<Banner key={item.id} item={item} />
+                ))
+            }
             <ProductList />
             <NewProduct />
             <Sell />
