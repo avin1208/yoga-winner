@@ -6,7 +6,7 @@ export const UserContext = createContext({
     user: {},
     LogInUser: () => {},
     SignUpUser: () => {},
-    SetLogout: () => {}
+    Logout: () => {}
 });
 
 const UserProvider = ({children}) => {
@@ -26,7 +26,7 @@ const UserProvider = ({children}) => {
 
     const SignUpUser = userCredentials => setUser(signUpUser(userCredentials));
 
-    const SetLogOut = userCredentials => setUser(setLogOut(userCredentials));
+    const Logout = () => setUser(setLogOut());;
    
 
     return(
@@ -35,7 +35,7 @@ const UserProvider = ({children}) => {
             user,
             LogInUser,
             SignUpUser,
-            SetLogOut
+            Logout
         }}>
          {children}
         </UserContext.Provider>

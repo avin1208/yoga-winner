@@ -6,18 +6,15 @@ import './logout.styles.scss';
 
 const LogOut = () => {
 
-    const{SetLogOut} = useContext(UserContext)
+    const{Logout} = useContext(UserContext);
 
-    const handleSubmit = event => {
-
-        event.preventDefault();
-        localStorage.clear();
-        SetLogOut();
+    const handlelogout = () => {
+        Logout();
     }
 
     return (
         <div className="logout-nav">
-                <button className="logout-button" onSubmit={handleSubmit}>
+                <button className="logout-button" onClick={handlelogout}>
                    LOG OUT
                 </button>
             </div>
