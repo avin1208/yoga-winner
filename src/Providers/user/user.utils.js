@@ -65,7 +65,6 @@ export const signUpUser = (userCredentials) => {
 
 export const setLogOut = () => {
     const parsedUser = JSON.parse(localStorage.getItem("user-info"))
-    console.log(parsedUser.access_token);
 
     fetch("https://winner-yoga.herokuapp.com/logout", {
         method: 'GET',
@@ -74,13 +73,11 @@ export const setLogOut = () => {
             'Authorization': 'Bearer ' + parsedUser.access_token
         },
     }).then(async (res) => {
-        console.log(res);
         localStorage.clear("user-info")
         // localStorage.setItem("isLogIn", JSON.stringify(false));
         const resJSON = await res.json();
         window.alert(resJSON.message)
         console.log(resJSON);
-        // console.log("suu");
     }).catch((err) => {
         console.log(err);
     });
