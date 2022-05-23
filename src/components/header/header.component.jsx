@@ -44,7 +44,7 @@ const Header = () => {
             </div>
          </div>
          <div className="logo">
-            <img src="https://demo.fieldthemes.com/ps_winner/home2/img/logo.png" alt="Winner yoga Home Page 2" />
+            <img src="https://t3.ftcdn.net/jpg/03/89/30/64/360_F_389306425_zAsiEURL3pnvNC3gPotVFrz5whXzMsiB.jp0g" alt="Winner yoga Home Page 2" />
          </div>
          <SocialMedia className="icons" />
       </nav>

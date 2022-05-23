@@ -48,7 +48,6 @@ const Homepage = () => {
         // console.log(data.banner);
         setBanner(data.banner)
 
-
     }
 
     useEffect(() => {

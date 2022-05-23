@@ -5,10 +5,10 @@ import './blog.styles.scss';
 import { Link } from "react-router-dom";
 
 const Blog = ({ item }) => {
-    const { title, subtitle, imageUrl, description } = item;
+    const { title, subtitle, image, description } = item;
     return (
         <div className="main-blog">
-            <div className="back-img" style={{ backgroundImage: `url(${imageUrl})` }}>
+            <div className="back-img" style={{ backgroundImage: `url(${image})` }}>
             </div>
             <div className="blog-mainn">
                 <div className="img-st">

@@ -1,4 +1,4 @@
-import React, { useContext }  from "react";
+import React, { useContext, useEffect, useState }  from "react";
 
 import './blogpage.styles.scss';
 
@@ -8,7 +8,7 @@ import Menbov from "../../components/menbox/menbox.component";
 
 import Blogpost from "../../components/blog-post/blog-post.component";
 
-import Blogdat from "../../components/blog-data/blog-data.component";
+// import Blogdat from "../../components/blog-data/blog-data.component";
 
 import MenDrop from "../../components/men-dropdown/men-dropdown.component";
 
@@ -22,7 +22,23 @@ import { DropContext } from "../../Providers/drop/drop.providers";
 
 import { CartContext } from "../../Providers/cart/cart.provider";
 
+import Blog from "../../components/blog/blog.component";
+
 const Blogpage = () => {
+
+     const [blog, setBlog] = useState([]);
+
+    const getBlog = async () => {
+        const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-blog")
+
+        const data = await response.json();
+        // console.log(data.blog);
+        setBlog(data.blog)
+    }
+
+    useEffect(() => {
+        getBlog();
+    });
 
     const { dropHidden } = useContext(DropContext);
 
@@ -66,7 +82,10 @@ const Blogpage = () => {
                             <Blogpost />
                         </div>
                         <div className="blogshoow-right">
-                            <Blogdat />
+                            {
+                                blog.map(item => (<Blog key={item.id} item={item} />
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
