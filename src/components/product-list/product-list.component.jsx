@@ -1,29 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import Product from "../product/product.component";
 
-import PRODUCT_DATA from "../../product.data";
+
+// import Product from "../product/product.component";
+
+// import PRODUCT_DATA from "../../product.data";
 
 import './product-list.styles.scss';
 
-import ReactPaginate from "react-paginate";
+
 
 
 const ProductList = () => {
-    const [productdata] = useState(PRODUCT_DATA);
-    const [pageNumber, setPageNumber] = useState(0);
 
-    const itemsPerPage = 5
-    const pagesVisited = pageNumber * itemsPerPage
+    const [product, setProduct] = useState([]);
 
-    const displayItems = productdata
-        .slice(pagesVisited, pagesVisited + itemsPerPage)
-        .map((item) => (<Product key={item.id} item={item} />))
+    const getProduct = async () => {
+        const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-featured-product?page=1");
 
-    const pageCount = Math.ceil(productdata.length / itemsPerPage)
-    const changePage = ({ selected }) => {
-        setPageNumber(selected);
+        const data = await response.json();
+        // console.log(data.item);
+        setProduct(data.item)
+
     }
+    useEffect(() => {
+        getProduct();
+    }, []);
 
     return (
         <div className="product-list">
@@ -36,23 +38,24 @@ const ProductList = () => {
                     Top sale for all days
                 </p>
             </div>
-            
+
             <div className='flex'>
-                {displayItems}
+                {
+                    product.map(item => {
+                        // console.log("\nItem Image: ",item.item_images[0])
+                        return (<div key={item.id} item={item}>
+                        <div className="item-text">
+                            {item.name}
+                        </div>
+                        <div>
+                            <img src={ item.item_images[0] ? item.item_images[0].image : null } alt=""  style={{height:"400px",width:"400px"}}/>
+                            
+                        </div>
+                    </div>
+                    )})
+                }
             </div>
-            <ReactPaginate
-                previousLabel={'<'}
-                nextLabel={'>'}
-                pageCount={pageCount}
-                onPageChange={changePage}
-                containerClassName={'paginationbuttons'}
-                previousLinkClassName={'nextbutton'}
-                nextLinkClassName={'nextbutton'}
-                disabledClassName={'paginationDisabled'}
-                activeClassName={'paginationActive'}
-                pageClassName={'page'}
-            />
-        </div> 
+        </div>
     )
 };
 

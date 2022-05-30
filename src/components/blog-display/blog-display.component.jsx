@@ -1,14 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Blog from "../blog/blog.component";
 
-import BLOG_DATA from "../../blog.data";
+// import BLOG_DATA from "../../blog.data";
 
 import './blog-display.styles.scss'
 
 
 const BlogDisplay = () => {
-    const [blogdata] = useState(BLOG_DATA);
+
+     const [blog, setBlog] = useState([]);
+
+    const getBlog = async () => {
+        const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-blog")
+        
+        const data = await response.json();
+        // console.log(data.blog);
+        setBlog(data.blog)
+
+    }
+
+    useEffect(() => {
+        getBlog();
+    });
+
     return (
         <div className="blog-display">
             <div className="display-title">
@@ -20,7 +35,7 @@ const BlogDisplay = () => {
                 </p>
             </div>
             {
-                blogdata.map((item) => (<Blog key={item.id} item={item} />
+                blog.map((item) => (<Blog key={item.id} item={item} />
                 ))
             }
         </div>

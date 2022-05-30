@@ -46,7 +46,6 @@ export const signUpUser = (userCredentials) => {
 
             const resData = await res.json();
             console.log(resData);
-
             if (resData.status === 0) {
                 return window.alert(resData.ErrorDescription || resData.message || resData.ErrorMessage);
             }

@@ -41,14 +41,15 @@ const Homepage = () => {
 
     const [banner, setBanner] = useState([]);
 
+
     const getBanners = async () => {
         const response = await fetch("https://winner-yoga.herokuapp.com/customer/get-homepage");
 
         const data = await response.json();
         // console.log(data.banner);
         setBanner(data.banner)
-
     }
+
 
     useEffect(() => {
         getBanners();

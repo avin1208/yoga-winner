@@ -47,7 +47,7 @@ const Kidspage = () => {
         }
             <div className=" namefg">
                 <div className="back-imae">
-                    <img src="https://demo.fieldthemes.com/ps_winner/home2/modules/fieldstaticblocks/images/banner-top.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dhpvia1ae/image/upload/v1653892250/cropped-1900-700-775739_1_mt8st9.jpg" alt="" />
                 </div>
                 <div className="pagel">
                     <Link className="hm">

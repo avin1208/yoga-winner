@@ -7,7 +7,9 @@ import { withRouter } from "react-router-dom";
 import './login.styles.scss';
 
 import { UserContext } from "../../Providers/user/user.providers";
-import LoginGoogle from "../login-google/login-google.component";
+
+import LogIng from "../login-google/login-google.component";
+
 
 const LogIn = ({ history }) => {
 
@@ -103,7 +105,7 @@ const LogIn = ({ history }) => {
                                     <p className="or-login">OR</p>
                                     <div className="login-with">
                                         <div className="login-google">
-                                            <LoginGoogle />
+                                           <LogIng />
                                         </div>
                                         <div className="login-facebook">
                                             <img src="https://i.postimg.cc/wjq4NbXY/fb.png" alt="icon" />

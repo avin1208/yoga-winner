@@ -1,6 +1,10 @@
 .head{
     display: flex;
     margin-top: 1rem;
+    justify-content: space-between;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-bottom: 1rem;
 
     .main-back-block{
         height: 500px;
